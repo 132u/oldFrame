@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Core;
+
+namespace PageObjects.PageObjects
+{
+	public partial class SubscriptionPaymentPage : PageBase
+	{
+		public bool IsDisplayedCorrectly()
+		{
+			if (this.PaymentFrame.IsNotFound && this.CreditCardNumber.IsNotFound && this.ExpirationMonth.IsNotFound && this.ExpirationYear.IsNotFound && this.Buy.IsNotFound)
+			{
+				if (this.IsDisplayedErrorMessage())
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		public bool IsDisplayedErrorMessage()
+		{
+			return this.ErrorMessageIfPageIsNotDisplayed.IsFound;
+		}
+
+		public bool IsDisplayedInvalidNumberCard()
+		{
+			return (this.NumberCardWarning.IsFound);
+		}
+
+		public bool IsDisplayedInvalidInfoCard()
+		{
+			return (this.IvalidInfoWarning.IsFound);
+		}
+
+		public SubscriptionConfirmationPage FillCreditCardValidData(
+																	string typeCard,
+																	string creditCardNumber,
+																	string expDate,
+																	string expYear,
+																	string cvn)
+		{
+			WebBrowser.SwitchToFrame(this.PaymentFrame.XPath);
+			PerformActionOnControl(this.TypeCard, typeCard);
+			PerformActionOnControl(this.CreditCardNumber, creditCardNumber);
+			if (this.CVN.IsFound)
+			{
+				PerformActionOnControl(this.CVN, cvn);
+			}
+
+			PerformActionOnControlByValue(this.ExpirationYear, expYear);
+			PerformActionOnControlByValue(this.ExpirationMonth, expDate);
+			this.Buy.Click();
+			return new SubscriptionConfirmationPage();
+		}
+
+		public SubscriptionPaymentPage FillCreditCardInValidData(
+															string typeCard,
+															string creditCardNumber,
+															string expDate,
+															string expYear,
+															string cvn)
+		{
+			WebBrowser.SwitchToFrame(this.PaymentFrame.XPath);
+			PerformActionOnControl(this.TypeCard, typeCard);
+			PerformActionOnControl(this.CreditCardNumber, creditCardNumber);
+			PerformActionOnControl(this.CVN, cvn);
+			PerformActionOnControlByValue(this.ExpirationYear, expYear);
+			PerformActionOnControlByValue(this.ExpirationMonth, expDate);
+			this.Buy.Click();
+			return new SubscriptionPaymentPage();
+		}
+	}
+}

@@ -1,0 +1,15 @@
+D:\MY\UserManager\obj\Debug\EuromoneyService.csprojResolveAssemblyReference.cache
+D:\MY\UserManager\bin\Debug\phantomjs.exe
+D:\MY\UserManager\bin\Debug\phantomjs-license.txt
+D:\MY\UserManager\bin\Debug\Configuration\ApplicationConfiguration.xml
+D:\MY\UserManager\bin\Debug\EuromoneyAPI.dll.config
+D:\MY\UserManager\bin\Debug\EuromoneyAPI.dll
+D:\MY\UserManager\bin\Debug\EuromoneyAPI.pdb
+D:\MY\UserManager\bin\Debug\Core.dll
+D:\MY\UserManager\bin\Debug\WebDriver.dll
+D:\MY\UserManager\bin\Debug\WebDriver.Support.dll
+D:\MY\UserManager\bin\Debug\Core.pdb
+D:\MY\UserManager\bin\Debug\WebDriver.xml
+D:\MY\UserManager\bin\Debug\WebDriver.Support.xml
+D:\MY\UserManager\obj\Debug\EuromoneyAPI.dll
+D:\MY\UserManager\obj\Debug\EuromoneyAPI.pdb

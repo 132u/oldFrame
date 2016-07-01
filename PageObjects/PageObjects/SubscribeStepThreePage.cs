@@ -1,0 +1,609 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Core;
+using Core.Configuration;
+using Core.Controls;
+using Core.Logger;
+
+namespace PageObjects.PageObjects
+{
+	public partial class SubscribeStepThreePage : PageBase
+	{
+		public SubscriptionConfirmationPage RegisterForSubscriptionByInvoiceSuccessfuly(
+													string title,
+													string firstName,
+													string lastName,
+													string jobTitle,
+													string companyName,
+													string telephoneNumber,
+													string addressFirstLine,
+													string addressSecondLine,
+													string city,
+													string zip,
+													string country,
+													string companyPosition,
+													string companyType,
+													string invoice,
+													bool privacyPolicy,
+													bool termsAndConditions)
+		{
+			PerformActionOnControl(this.Title, title);
+			PerformActionOnControl(this.FirstName, firstName);
+			PerformActionOnControl(this.LastName, lastName);
+			PerformActionOnControl(this.JobTitle, jobTitle);
+			PerformActionOnControl(this.CompanyName, companyName);
+			PerformActionOnControl(this.Telephone, telephoneNumber);
+			PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+			PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+			PerformActionOnControl(this.City, city);
+			PerformActionOnControl(this.PostCode, zip);
+			PerformActionOnControl(this.Country, country);
+			PerformActionOnControl(this.CompanyPosition, companyPosition);
+			PerformActionOnControl(this.CompanyType, companyType);
+			PerformActionOnControl(this.PaymentMethod, invoice);
+
+			if (!ApplicationConfiguration.ZeroFreeTrialPage)
+			{
+				this.PrivacyPolicy.Select();
+			}
+
+			this.TermsAndConditions.Select();
+			this.Submit.Click();
+			return new SubscriptionConfirmationPage();
+		}
+
+		public SubscriptionPaymentPage RegisterForSubscriptionByCreditCardSuccessfuly(
+													string title,
+													string firstName,
+													string lastName,
+													string jobTitle,
+													string companyName,
+													string telephoneNumber,
+													string addressFirstLine,
+													string addressSecondLine,
+													string city,
+													string zip,
+													string country,
+													string companyPosition,
+													string companyType,
+													bool privacyPolicy,
+													bool termsAndConditions,
+													string invoice)
+		{
+			PerformActionOnControl(this.Title, title);
+			PerformActionOnControl(this.FirstName, firstName);
+			PerformActionOnControl(this.LastName, lastName);
+			PerformActionOnControl(this.JobTitle, jobTitle);
+			PerformActionOnControl(this.CompanyName, companyName);
+			PerformActionOnControl(this.Telephone, telephoneNumber);
+			PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+			PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+			PerformActionOnControl(this.City, city);
+			PerformActionOnControl(this.PostCode, zip);
+			PerformActionOnControl(this.Country, country);
+			PerformActionOnControl(this.CompanyPosition, companyPosition);
+			PerformActionOnControl(this.CompanyType, companyType);
+			PerformActionOnControl(this.PaymentMethod, invoice);
+
+			if (!ApplicationConfiguration.ZeroFreeTrialPage)
+			{
+				this.PrivacyPolicy.Select();
+			}
+
+			this.TermsAndConditions.Select();
+			this.Submit.Click();
+			return new SubscriptionPaymentPage();
+		}
+
+		public SubscribeStepThreePage FillUserDetails(
+			string title,
+											string firstName,
+											string lastName,
+											string jobTitle,
+											string companyName,
+											string telephoneNumber,
+											string addressFirstLine,
+											string addressSecondLine,
+											string addressThirdLine,
+											string city,
+											string orCountry,
+											string zipCanada,
+											string zipUS,
+											string country,
+											string companyPosition,
+											string companyType,
+											bool privacyPolicy,
+											bool termsAndConditions,
+											string yourReference,
+											string provimcies,
+											string state)
+		{
+			PerformActionOnControl(this.Title, title);
+			PerformActionOnControl(this.FirstName, firstName);
+			PerformActionOnControl(this.LastName, lastName);
+			PerformActionOnControl(this.JobTitle, jobTitle);
+			PerformActionOnControl(this.CompanyName, companyName);
+			PerformActionOnControl(this.Telephone, telephoneNumber);
+			PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+			PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+			PerformActionOnControl(this.AddressThirdLine, addressThirdLine);
+			PerformActionOnControl(this.City, city);
+			PerformActionOnControl(this.ORCountry, orCountry);
+			PerformActionOnControl(this.Country, country);
+			PerformActionOnControl(this.CompanyPosition, companyPosition);
+			PerformActionOnControl(this.CompanyType, companyType);
+			PerformActionOnControl(this.YourReference, yourReference);
+			if (country == "Canada")
+			{
+				PerformActionOnControlRemoveSpaces(this.State, provimcies);
+				PerformActionOnControl(this.PostCode, zipCanada);
+			}
+
+			if (country == "United States")
+			{
+				PerformActionOnControlRemoveSpaces(this.State, state);
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (country != "Canada" && country != "United States")
+			{
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (!ApplicationConfiguration.ZeroFreeTrialPage)
+			{
+				this.PrivacyPolicy.Select();
+			}
+
+			this.TermsAndConditions.Select();
+			return new SubscribeStepThreePage();
+		}
+
+		public SubscriptionPaymentPage RegisterForSubscriptionByCreditCardSuccessfulyFilledALLFIELDS(
+											string title,
+											string firstName,
+											string lastName,
+											string jobTitle,
+											string companyName,
+											string telephoneNumber,
+											string addressFirstLine,
+											string addressSecondLine,
+											string addressThirdLine,
+											string city,
+											string orCountry,
+											string zipCanada,
+											string zipUS,
+											string country,
+											string companyPosition,
+											string companyType,
+											bool privacyPolicy,
+											bool termsAndConditions,
+											string paymentMethod,
+											string yourReference,
+											string provimcies,
+											string state)
+		{
+			PerformActionOnControl(this.Title, title);
+			PerformActionOnControl(this.FirstName, firstName);
+			PerformActionOnControl(this.LastName, lastName);
+			PerformActionOnControl(this.JobTitle, jobTitle);
+			PerformActionOnControl(this.CompanyName, companyName);
+			PerformActionOnControl(this.Telephone, telephoneNumber);
+			PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+			PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+			PerformActionOnControl(this.AddressThirdLine, addressThirdLine);
+			PerformActionOnControl(this.City, city);
+			PerformActionOnControl(this.ORCountry, orCountry);
+			PerformActionOnControl(this.Country, country);
+			PerformActionOnControl(this.CompanyPosition, companyPosition);
+			PerformActionOnControl(this.CompanyType, companyType);
+			PerformActionOnControl(this.YourReference, yourReference);
+			PerformActionOnControl(this.PaymentMethod, paymentMethod);
+			if (country == "Canada")
+			{
+				PerformActionOnControlRemoveSpaces(this.State, provimcies);
+				PerformActionOnControl(this.PostCode, zipCanada);
+			}
+
+			if (country == "United States")
+			{
+				PerformActionOnControlRemoveSpaces(this.State, state);
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (country != "Canada" && country != "United States")
+			{
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (!ApplicationConfiguration.ZeroFreeTrialPage)
+			{
+				this.PrivacyPolicy.Select();
+			}
+
+			this.TermsAndConditions.Select();
+			this.Submit.Click();
+
+			return new SubscriptionPaymentPage();
+		}
+
+		public SubscribeStepThreePage FillBillingAddress(
+											string houseNumberBiiling,
+											string address1Billing,
+											string address2Billing,
+											string cityBilling,
+											string postCodeUSBilling,
+											string postCodeCanadaBilling,
+											string provinceBilling,
+											string stateBilling,
+											string countryBilling)
+		{
+			this.BillingAddressCheckbox.Select();
+			PerformActionOnControl(this.AddressFirstLineBillingAddress, houseNumberBiiling);
+			PerformActionOnControl(this.AddressSecondLineBillingAddress, address1Billing);
+			PerformActionOnControl(this.AddressThirdLineBillingAddress, address2Billing);
+			PerformActionOnControl(this.CityBillingAddress, cityBilling);
+			PerformActionOnControl(this.CountryBillingAddress, countryBilling);
+			switch (countryBilling)
+			{
+				case "United States":
+					PerformActionOnControlRemoveSpaces(this.StateOrProvincesBillingAddress, stateBilling);
+					PerformActionOnControl(this.PostCodeBillingAddress, postCodeUSBilling);
+					break;
+
+				case "Canada":
+					PerformActionOnControlRemoveSpaces(this.StateOrProvincesBillingAddress, provinceBilling);
+					PerformActionOnControl(this.PostCodeBillingAddress, postCodeCanadaBilling);
+					break;
+
+				default:
+					PerformActionOnControl(this.PostCodeBillingAddress, "123123");
+					break;
+			}
+
+			return new SubscribeStepThreePage();
+		}
+
+		public SubscribeStepThreePage FillAllFieldsAndBillingAddress(
+											string title,
+											string firstName,
+											string lastName,
+											string jobTitle,
+											string companyName,
+											string telephoneNumber,
+											string addressFirstLine,
+											string addressSecondLine,
+											string addressThirdLine,
+											string city,
+											string orCountry,
+											string zipCanada,
+											string zipUS,
+											string country,
+											string companyPosition,
+											string companyType,
+											bool privacyPolicy,
+											bool termsAndConditions,
+											string yourReference,
+											string provimcies,
+											string state,
+											bool billingCheckbox,
+											string houseNumberBiiling,
+											string address1Billing,
+											string address2Billing,
+											string cityBilling,
+											string postCodeUSBilling,
+											string postCodeCanadaBilling,
+											string provinceBilling,
+											string stateBilling,
+											string countryBilling)
+		{
+			this.FillUserDetails(
+											title,
+											firstName,
+											lastName,
+											jobTitle,
+											companyName,
+											telephoneNumber,
+											addressFirstLine,
+											addressSecondLine,
+											addressThirdLine,
+											city,
+											orCountry,
+											zipCanada,
+											zipUS,
+											country,
+											companyPosition,
+											companyType,
+											privacyPolicy,
+											termsAndConditions,
+											yourReference,
+											provimcies,
+											state);
+			if (billingCheckbox)
+			{
+				this.FillBillingAddress(
+												houseNumberBiiling,
+												address1Billing,
+												address2Billing,
+												cityBilling,
+												postCodeUSBilling,
+												postCodeCanadaBilling,
+												provinceBilling,
+												stateBilling,
+												countryBilling);
+			}
+
+			return new SubscribeStepThreePage();
+		}
+
+		public SubscriptionPaymentPage SelectPaymentMethod(string paymentMethod)
+		{
+			PerformActionOnControl(this.PaymentMethod, paymentMethod);
+			this.Submit.Click();
+			return new SubscriptionPaymentPage();
+		}
+
+		public List<string> ReturnListProvimcies()
+		{
+			return new List<string> { "-- Provinces --", "ALBERTA", "BRITISH COLUMBIA", "MANITOBA", "NEW BRUNSWICK", "NEWFOUNDLAND AND LABRADOR", "NORTHWEST TERRITORIES", "NOVA SCOTIA", "NUNAVUT", "ONTARIO", "PRINCE EDWARD ISLAND", "QUEBEC", "SASKATCHEWAN", "YUKON TERRITORY" };
+		}
+
+		public bool CheckThatStateComboboxIsDisable()
+		{
+			return this.State.IsDisabled;
+		}
+
+		public bool CheckThatStateWarningMessageIsDisplayed()
+		{
+			return this.StateWarningMessage.IsFound;
+		}
+
+		public SubscribeStepThreePage CehckWarningMessages(
+									string title,
+									string firstName,
+									string lastName,
+									string jobTitle,
+									string companyName,
+									string telephoneNumber,
+									string addressFirstLine,
+									string addressSecondLine,
+									string addressThirdLine,
+									string city,
+									string orCountry,
+									string zipCanada,
+									string zipUS,
+									string country,
+									string companyPosition,
+									string companyType,
+									bool privacyPolicy,
+									bool termsAndConditions,
+									string paymentMethod,
+									string yourReference,
+									string provimcies,
+									string state)
+		{
+			PerformActionOnControl(this.Title, title);
+			PerformActionOnControl(this.FirstName, firstName);
+			PerformActionOnControl(this.LastName, lastName);
+			PerformActionOnControl(this.JobTitle, jobTitle);
+			PerformActionOnControl(this.CompanyName, companyName);
+			PerformActionOnControl(this.Telephone, telephoneNumber);
+			PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+			PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+			PerformActionOnControl(this.AddressThirdLine, addressThirdLine);
+			PerformActionOnControl(this.City, city);
+			PerformActionOnControl(this.ORCountry, orCountry);
+			PerformActionOnControl(this.Country, country);
+			PerformActionOnControl(this.CompanyPosition, companyPosition);
+			PerformActionOnControl(this.CompanyType, companyType);
+			PerformActionOnControl(this.YourReference, yourReference);
+			PerformActionOnControl(this.PaymentMethod, paymentMethod);
+			if (country != "Canada" && country != "United States")
+			{
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (country == "Canada")
+			{
+				PerformActionOnControl(this.State, provimcies);
+				PerformActionOnControl(this.PostCode, zipCanada);
+			}
+
+			if (country == "United States")
+			{
+				PerformActionOnControl(this.State, state);
+				PerformActionOnControl(this.PostCode, zipUS);
+			}
+
+			if (!ApplicationConfiguration.ZeroFreeTrialPage)
+			{
+				this.PrivacyPolicy.Select();
+			}
+
+			this.TermsAndConditions.Select();
+			this.Submit.Click();
+			return new SubscribeStepThreePage();
+		}
+
+		public IList<Option> CountryLIst;
+		public int Number;
+		public SubscriptionPaymentPage SetEachCountry(
+											string title,
+											string firstName,
+											string lastName,
+											string jobTitle,
+											string companyName,
+											string telephoneNumber,
+											string addressFirstLine,
+											string addressSecondLine,
+											string addressThirdLine,
+											string city,
+											string orCountry,
+											string zipCanada,
+											string zipUS,
+											string companyPosition,
+											string companyType,
+											bool privacyPolicy,
+											bool termsAndConditions,
+											string paymentMethod,
+											string yourReference,
+											string provimcies,
+											string state)
+		{
+			new HomePage()
+						.Header
+						.NavigateToInvestHedgeSubscribePage()
+						.NavigateToTheSubscribeStepTwoPageSecondPackage()
+						.NavigateToTheSubscribeStepThreePage();
+			this.CountryLIst = this.Country.Options;
+			this.Number = this.Country.Options.Count;
+			for (int i = 1; i <= this.Number; i++)
+			{
+				PerformActionOnControl(this.Country, this.CountryLIst[i].Text);
+				if ((this.CountryLIst[i].Text == "Cote D'ivoire") || (this.CountryLIst[i].Text == "Cote D\'ivoire"))
+				{
+					continue;
+				}
+
+				if (this.CountryLIst[i].Text == "Canada")
+				{
+					PerformActionOnControl(this.PostCode, zipCanada);
+					PerformActionOnControlRemoveSpaces(this.State, provimcies);
+				}
+
+				if (this.CountryLIst[i].Text == "United States")
+				{
+					PerformActionOnControl(this.PostCode, zipUS);
+					PerformActionOnControlRemoveSpaces(this.State, state);
+				}
+
+				if (!(this.CountryLIst[i].Text == "United States") && !(this.CountryLIst[i].Text == "Canada"))
+				{
+					PerformActionOnControl(this.PostCode, "123123");
+				}
+
+				PerformActionOnControl(this.Title, title);
+				PerformActionOnControl(this.FirstName, firstName);
+				PerformActionOnControl(this.LastName, lastName);
+				PerformActionOnControl(this.JobTitle, jobTitle);
+				PerformActionOnControl(this.CompanyName, companyName);
+				PerformActionOnControl(this.Telephone, telephoneNumber);
+				PerformActionOnControl(this.AddressFirstLine, addressFirstLine);
+				PerformActionOnControl(this.AddressSecondLine, addressSecondLine);
+				PerformActionOnControl(this.AddressThirdLine, addressThirdLine);
+				PerformActionOnControl(this.City, city);
+				PerformActionOnControl(this.ORCountry, orCountry);
+				PerformActionOnControl(this.CompanyPosition, companyPosition);
+				PerformActionOnControl(this.CompanyType, companyType);
+				PerformActionOnControl(this.YourReference, yourReference);
+				PerformActionOnControl(this.PaymentMethod, paymentMethod);
+
+				this.TermsAndConditions.Select();
+				this.Submit.Click();
+				SubscriptionPaymentPage s = new SubscriptionPaymentPage();
+				if (s.IsDisplayedCorrectly())
+				{
+					new HomePage()
+								.Header
+								.NavigateToInvestHedgeSubscribePage()
+								.NavigateToTheSubscribeStepTwoPageSecondPackage()
+								.NavigateToTheSubscribeStepThreePage();
+				}
+				else if (s.IsDisplayedErrorMessage())
+				{
+					Logger.Info(string.Format("Page {0} is failed", this.CountryLIst[i].Text));
+					new HomePage()
+							.Header
+							.NavigateToInvestHedgeSubscribePage()
+							.NavigateToTheSubscribeStepTwoPageSecondPackage()
+							.NavigateToTheSubscribeStepThreePage();
+				}
+			}
+
+			return new SubscriptionPaymentPage();
+		}
+
+		public SubscribeStepThreePage TypeVaueInField(string field, string value)
+		{
+			switch (field)
+			{
+				case "FirstName":
+					PerformActionOnControl(this.FirstName, value);
+					break;
+				case "LastName":
+					PerformActionOnControl(this.LastName, value);
+					break;
+				case "CompanyName":
+					PerformActionOnControl(this.CompanyName, value);
+					break;
+				case "City":
+					PerformActionOnControl(this.City, value);
+					break;
+				case "Zip":
+					PerformActionOnControl(this.PostCode, value);
+					break;
+			}
+
+			return new SubscribeStepThreePage();
+		}
+
+		public SubscribeStepThreePage PressNextButton()
+		{
+			this.Submit.Click();
+			return new SubscribeStepThreePage();
+		}
+
+		public bool WarningMessageInvalidFirstNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageInvalidFirstName.IsFound;
+		}
+
+		public string WarningMessageInvalidFirstNameText()
+		{
+			return this.WarningMessageInvalidFirstName.Text;
+		}
+
+		public bool WarningMessageInvalidLastNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageInvalidLastName.IsFound;
+		}
+
+		public bool WarningMessageInvalidCompanyNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageInvalidCompanyName.IsFound;
+		}
+
+		public bool WarningMessageEmptyJobTitleIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyJobTitle.IsFound;
+		}
+
+		public bool WarningMessageEmptyCityIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyCity.IsFound;
+		}
+
+		public bool WarningMessageEmptyZipIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyZip.IsFound;
+		}
+
+		public bool WarningMessageEmptyFirstNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyFirstName.IsFound;
+		}
+
+		public bool WarningMessagEmptyLastNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyLastName.IsFound;
+		}
+
+		public bool WarningMessageEmptyCompanyNameIsDisplayedCorrectly()
+		{
+			return this.WarningMessageEmptyCompanyName.IsFound;
+		}
+	}
+}

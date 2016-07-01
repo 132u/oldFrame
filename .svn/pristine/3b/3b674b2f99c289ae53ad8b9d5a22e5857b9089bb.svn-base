@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using PageObjects.PageObjects;
+using TechTalk.SpecFlow;
+
+namespace Spec.Checkout
+{
+	[Binding]
+	public class PaymentSteps
+	{
+		[When(@"I go to payment page")]
+		public void WhenIGoToPaymentPage()
+		{
+			PaymentPage paymentPage = new YourDetailsPage()
+			.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "9876543", string.Empty, "United Kingdom", "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, string.Empty, string.Empty, "12345")
+			.GoNext()
+			.ProceedToPaymentPage();
+		}
+	}
+}

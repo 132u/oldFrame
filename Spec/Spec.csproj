@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spec</RootNamespace>
+    <AssemblyName>Spec</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Articles\Articles.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Articles.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Articles\ArticlesSteps.cs" />
+    <Compile Include="Checkout\LoginRegister.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginRegister.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\LoginRegisterSteps.cs" />
+    <Compile Include="Checkout\Purchase.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\PurchaseSteps.cs" />
+    <Compile Include="Checkout\YourDetails.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YourDetails.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\YourDetailsSteps.cs" />
+    <Compile Include="FreeTrial\FreeTrial.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreeTrial.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FreeTrial\FreeTrialSteps.cs" />
+    <Compile Include="Homepage\Footer.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Footer.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\FooterSteps.cs" />
+    <Compile Include="Homepage\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\Search.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Search.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\SearchSteps.cs" />
+    <Compile Include="Homepage\LoginSteps.cs" />
+    <Compile Include="Homepage\TopMenu.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopMenu.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\TopMenuSteps.cs" />
+    <Compile Include="MyAccount\ChangePassword.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangePassword.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\ChangePasswordSteps.cs" />
+    <Compile Include="MyAccount\MyAccount.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyAccount.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\MyAccountSteps.cs" />
+    <Compile Include="MyAccount\MyClippings.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyClippings.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\MyClippingsSteps.cs" />
+    <Compile Include="MyAccount\NewsletterPreferences.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsletterPreferences.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\NewsletterPreferencesSteps.cs" />
+    <Compile Include="MyAccount\RegistrationDetails.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationDetails.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount\RegistrationDetailsSteps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\SignUp.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignUp.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\SignUpSteps.cs" />
+    <Compile Include="Subscription\SubscriptionRedundancy.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubscriptionRedundancy.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\SubscriptionSteps.cs" />
+    <Compile Include="Subscription\Subscription.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Subscription.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\Validation1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Validation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\ValidationSteps.cs" />
+    <Compile Include="TestBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Articles\Articles.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Articles.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Checkout\LoginRegister.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginRegister.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Checkout\Purchase.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Purchase.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Checkout\YourDetails.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>YourDetails.feature.cs</LastGenOutput>
+    </None>
+    <None Include="FreeTrial\FreeTrial.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FreeTrial.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Homepage\Footer.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Footer.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Homepage\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Homepage\Search.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Search.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Homepage\TopMenu.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TopMenu.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MyAccount\ChangePassword.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangePassword.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MyAccount\MyAccount.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MyAccount.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MyAccount\MyClippings.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MyClippings.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MyAccount\NewsletterPreferences.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NewsletterPreferences.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MyAccount\RegistrationDetails.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegistrationDetails.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Registration\SignUp.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignUp.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Subscription\Subscription.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Subscription.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Subscription\SubscriptionRedundancy.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SubscriptionRedundancy.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Subscription\Validation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Validation1.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EuromoneyAutomationPack\Core.csproj">
+      <Project>{fe9b77e7-103f-4ebe-8571-0fe18a933aac}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PageObjects\PageObjects.csproj">
+      <Project>{cdb81262-458d-413b-bc6b-220933650680}</Project>
+      <Name>PageObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

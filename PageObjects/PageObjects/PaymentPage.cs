@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Core;
+
+namespace PageObjects.PageObjects
+{
+	public partial class PaymentPage : PageBase
+	{
+		public ConfirmationPage PaySuccesfully(string cardType, string cardNumber, string cardCVN, string expirationYear)
+		{
+			WebBrowser.SwitchToFrame("//iframe[@id='ACSFRAME']");
+			this.CardType.SelectItemByText(cardType);
+			this.CardNumber.Text = cardNumber;
+			this.CardCVN.Text = cardCVN;
+			this.CardExpirationYear.SelectItemByValue(expirationYear);
+			this.Pay.Click();
+
+			return new ConfirmationPage();
+		}
+
+		public int GetNumberOfOrderedSubscriptions()
+		{
+			return int.Parse(this.Quantity.Text);
+		}
+	}
+}

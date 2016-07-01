@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s5="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.BackOffice" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s2="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s3="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.Public" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO" />
+      <s:import namespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.Public" />
+      <s:import namespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.BackOffice" />
+      <s:element name="ConsumerLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="consumerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsumerLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsumerLoginResult" type="tns:ResultDTOOfConsumerLogonRequestDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfConsumerLogonRequestDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:ConsumerLogonRequestDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ParamErrors" type="tns:ArrayOfParamErrorDTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ResultStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorIdentifier" nillable="true" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfParamErrorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParamError" nillable="true" type="tns:ParamErrorDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParamErrorDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorType" type="tns:ParamErrorType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParamName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ParamErrorType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Format" />
+          <s:enumeration value="NullOrEmpty" />
+          <s:enumeration value="Range" />
+          <s:enumeration value="Value" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ResultStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="ConsumerLoginNeeded" />
+          <s:enumeration value="UserLoginNeeded" />
+          <s:enumeration value="SubscriptionNotValid" />
+          <s:enumeration value="AutonomyTimeout" />
+          <s:enumeration value="InternalError" />
+          <s:enumeration value="ParamError" />
+          <s:enumeration value="ContentNotAvailableForConsumer" />
+          <s:enumeration value="ElementNotFound" />
+          <s:enumeration value="ExecutionDenied" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ConsumerLogonRequestDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SiteId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSuccess" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Token" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="TokenAbsoluteExpiration" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="MethodsAllowed" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:ResultDTOOfLogonRequestDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfLogonRequestDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:LogonRequestDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LogonRequestDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LogonResult" type="tns:LoginResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogonMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriberType" nillable="true" type="s2:Enums.SubscriberType" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="tns:LogonRequestUserDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Products" type="tns:ArrayOfProductDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LoginResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="Skipped" />
+          <s:enumeration value="CAPRedirect" />
+          <s:enumeration value="CWRequired" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="LogonRequestUserDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoatSubscriptionId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriptionExpiryDate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProductDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductDTO" nillable="true" type="tns:ProductDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccessRules" type="tns:ArrayOfAccessRuleDTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriptionId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriptionExpiryDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriptionType" nillable="true" type="s2:Enums.SubscriptionType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccessRuleDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessRuleDTO" nillable="true" type="tns:AccessRuleDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccessRuleDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s2:Enums.AccessRuleRuleType" />
+          <s:element minOccurs="1" maxOccurs="1" name="Selection" type="s2:Enums.AccessRuleAccessType" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupType" type="s2:Enums.AccessRuleGroupType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginByIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginByIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginByIPResult" type="tns:ResultDTOOfLogonRequestDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutResult" type="tns:ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPasswordReminder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPasswordReminderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendPasswordReminderResult" type="tns:ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckEmailResult" type="tns:ResultDTOOfTakeTrialResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfTakeTrialResultDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:TakeTrialResultDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TakeTrialResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:TakeTrialStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvalidFields" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEmailUnique" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserToken" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TakeTrialStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Approved" />
+          <s:enumeration value="InvalidFields" />
+          <s:enumeration value="Error" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userDTO" type="tns:UserDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:UserDetailsDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserAddress" type="tns:UserAddressDTO" />
+              <s:element minOccurs="1" maxOccurs="1" name="BoatSubscriptionId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubscriberType" nillable="true" type="s2:Enums.SubscriberType" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubscriptionExpiryDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Products" type="tns:ArrayOfProductDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserDetailsDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:UserLiteDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactPreferences" type="tns:UserContactPreferencesDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserLiteDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Title" type="tns:UserTitle" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="UserTitle">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotSpecified" />
+          <s:enumeration value="Ms" />
+          <s:enumeration value="Miss" />
+          <s:enumeration value="Mrs" />
+          <s:enumeration value="Mr" />
+          <s:enumeration value="Dr" />
+          <s:enumeration value="Sir" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="UserContactPreferencesDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AllowThirdParties" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactByEmail" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactByFax" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactByPhone" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserAddressDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="tns:CountryDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CountryDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsoCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="tns:ResultDTOOfNewUserAccountResponseDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfNewUserAccountResponseDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="s3:NewUserAccountResponseDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateTrialUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trialUserDTO" type="tns:UserDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="productId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leadSource" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTrialUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTrialUserResult" type="tns:ResultDTOOfTakeTrialResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDetailsResult" type="tns:ResultDTOOfUserDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfUserDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:UserDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ChangeDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userDto" type="tns:UserDetailsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeDetailsResult" type="tns:ResultDTOOfUserDetailsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfUserDetailsDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:UserDetailsDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ChangeAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressDTO" type="tns:UserAddressDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeAddressResult" type="tns:ResultDTOOfChangeAddressResponseDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfChangeAddressResponseDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:ChangeAddressResponseDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ChangeAddressResponseDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryIsoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="tns:ResultDTOOfChangePasswordResponseDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfChangePasswordResponseDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="s5:ChangePasswordResponseDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recipientType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="tns:ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IpInCorparateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IpInCorparateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IpInCorparateRangeResult" type="tns:ResultDTOOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfBoolean">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CapMasterInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapMasterInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapMasterInfoResult" type="tns:ResultDTOOfCapMasterInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfCapMasterInfoDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:CapMasterInfoDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CapMasterInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MasterInfoId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MasterSubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNoDonors" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WelcomeStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThankyouStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDonorsReachedStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WelcomeEmailStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DonorAlreadyExistsStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginReminderStubId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CapCreateDonor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="forename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="surname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="canPhone" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="canFax" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="canThirdPartyContact" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="dpaConfirmed" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapCreateDonorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapCreateDonorResult" type="tns:ResultDTOOfNullableOfCapCreateDonorResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfNullableOfCapCreateDonorResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Result" nillable="true" type="tns:CapCreateDonorResult" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="CapCreateDonorResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ok" />
+          <s:enumeration value="DonorAlreadyExists" />
+          <s:enumeration value="MaxDonorsReached" />
+          <s:enumeration value="NoMasterforIPAddress" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="InactiveDonorAlreadyExists" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CapDonorPermissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapDonorPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapDonorPermissionsResult" type="tns:ResultDTOOfArrayOfCapDonorPermissionsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfArrayOfCapDonorPermissionsDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:ArrayOfCapDonorPermissionsDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfCapDonorPermissionsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CapDonorPermissionsDTO" nillable="true" type="tns:CapDonorPermissionsDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CapDonorPermissionsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CapDonorInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumerToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapDonorInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapDonorInfoResult" type="tns:ResultDTOOfCapDonorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultDTOOfCapDonorDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResultDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:CapDonorDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CapDonorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanFax" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanPhone" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanThirdPartyContact" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DpaConfirmed" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResultDTOOfConsumerLogonRequestDTO" nillable="true" type="tns:ResultDTOOfConsumerLogonRequestDTO" />
+      <s:element name="ResultDTOOfLogonRequestDTO" nillable="true" type="tns:ResultDTOOfLogonRequestDTO" />
+      <s:element name="ResultDTO" nillable="true" type="tns:ResultDTO" />
+      <s:element name="ResultDTOOfTakeTrialResultDTO" nillable="true" type="tns:ResultDTOOfTakeTrialResultDTO" />
+      <s:element name="ResultDTOOfUserDTO" nillable="true" type="tns:ResultDTOOfUserDTO" />
+      <s:element name="ResultDTOOfChangePasswordResponseDTO" nillable="true" type="tns:ResultDTOOfChangePasswordResponseDTO" />
+      <s:element name="ResultDTOOfBoolean" nillable="true" type="tns:ResultDTOOfBoolean" />
+      <s:element name="ResultDTOOfCapMasterInfoDTO" nillable="true" type="tns:ResultDTOOfCapMasterInfoDTO" />
+      <s:element name="ResultDTOOfNullableOfCapCreateDonorResult" nillable="true" type="tns:ResultDTOOfNullableOfCapCreateDonorResult" />
+      <s:element name="ResultDTOOfArrayOfCapDonorPermissionsDTO" nillable="true" type="tns:ResultDTOOfArrayOfCapDonorPermissionsDTO" />
+      <s:element name="ResultDTOOfCapDonorDTO" nillable="true" type="tns:ResultDTOOfCapDonorDTO" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO">
+      <s:simpleType name="Enums.SubscriberType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Registrant" />
+          <s:enumeration value="Expired_Trialist" />
+          <s:enumeration value="Expired_Subscriber" />
+          <s:enumeration value="Trialist" />
+          <s:enumeration value="Subscriber" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Enums.AccessRuleRuleType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotSet" />
+          <s:enumeration value="SiteTrial" />
+          <s:enumeration value="Campaign" />
+          <s:enumeration value="Trialist" />
+          <s:enumeration value="SiteSubscription" />
+          <s:enumeration value="Group" />
+          <s:enumeration value="Subscriber" />
+          <s:enumeration value="Product" />
+          <s:enumeration value="Anonymous" />
+          <s:enumeration value="DefaultRegistrant" />
+          <s:enumeration value="Registrant" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Enums.AccessRuleAccessType">
+        <s:restriction base="s:string">
+          <s:enumeration value="MISSING" />
+          <s:enumeration value="None" />
+          <s:enumeration value="Full" />
+          <s:enumeration value="Latest" />
+          <s:enumeration value="Range" />
+          <s:enumeration value="Future" />
+          <s:enumeration value="Blocked" />
+          <s:enumeration value="Teaser" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Enums.AccessRuleGroupType">
+        <s:restriction base="s:string">
+          <s:enumeration value="CMS" />
+          <s:enumeration value="Publications" />
+          <s:enumeration value="NonCMS" />
+          <s:enumeration value="ActionPermissions" />
+          <s:enumeration value="Delphi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Enums.SubscriptionType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Trial" />
+          <s:enumeration value="Subscription" />
+          <s:enumeration value="Expired_Trial" />
+          <s:enumeration value="Expired_Subscription" />
+          <s:enumeration value="Revoked_Trial" />
+          <s:enumeration value="Revoked_Subscription" />
+          <s:enumeration value="Registrant" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.Public">
+      <s:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <s:complexType name="NewUserAccountResponseDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Email" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Message" nillable="true" type="s4:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Euromoney.BackOffice.DTO.BackOffice">
+      <s:complexType name="ChangePasswordResponseDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Message" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasswordChanged" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsumerLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsumerLogin" />
+  </wsdl:message>
+  <wsdl:message name="ConsumerLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsumerLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginByIP" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginByIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPasswordReminder" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPasswordReminderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckEmail" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTrialUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTrialUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateTrialUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTrialUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeDetails" />
+  </wsdl:message>
+  <wsdl:message name="ChangeDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeAddress" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:IpInCorparateRange" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:IpInCorparateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:CapMasterInfo" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:CapMasterInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorSoapIn">
+    <wsdl:part name="parameters" element="tns:CapCreateDonor" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorSoapOut">
+    <wsdl:part name="parameters" element="tns:CapCreateDonorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:CapDonorPermissions" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:CapDonorPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:CapDonorInfo" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:CapDonorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsumerLoginHttpGetIn">
+    <wsdl:part name="consumerId" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsumerLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfConsumerLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="productId" type="s:string" />
+    <wsdl:part name="vendor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfTakeTrialResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfUserDTO" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfChangePasswordResponseDTO" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="recipientType" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfBoolean" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfCapMasterInfoDTO" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="forename" type="s:string" />
+    <wsdl:part name="surname" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="createdBy" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="canPhone" type="s:string" />
+    <wsdl:part name="canFax" type="s:string" />
+    <wsdl:part name="canThirdPartyContact" type="s:string" />
+    <wsdl:part name="dpaConfirmed" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfNullableOfCapCreateDonorResult" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfArrayOfCapDonorPermissionsDTO" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoHttpGetIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfCapDonorDTO" />
+  </wsdl:message>
+  <wsdl:message name="ConsumerLoginHttpPostIn">
+    <wsdl:part name="consumerId" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsumerLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfConsumerLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginByIPHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfLogonRequestDTO" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordReminderHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="productId" type="s:string" />
+    <wsdl:part name="vendor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfTakeTrialResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfUserDTO" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfChangePasswordResponseDTO" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="recipientType" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTO" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IpInCorparateRangeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfBoolean" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapMasterInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfCapMasterInfoDTO" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="forename" type="s:string" />
+    <wsdl:part name="surname" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="createdBy" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="canPhone" type="s:string" />
+    <wsdl:part name="canFax" type="s:string" />
+    <wsdl:part name="canThirdPartyContact" type="s:string" />
+    <wsdl:part name="dpaConfirmed" type="s:string" />
+    <wsdl:part name="ipAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapCreateDonorHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfNullableOfCapCreateDonorResult" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorPermissionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfArrayOfCapDonorPermissionsDTO" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoHttpPostIn">
+    <wsdl:part name="consumerToken" type="s:string" />
+    <wsdl:part name="userToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapDonorInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultDTOOfCapDonorDTO" />
+  </wsdl:message>
+  <wsdl:portType name="UserServiceSoap">
+    <wsdl:operation name="ConsumerLogin">
+      <wsdl:input message="tns:ConsumerLoginSoapIn" />
+      <wsdl:output message="tns:ConsumerLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <wsdl:input message="tns:LoginByIPSoapIn" />
+      <wsdl:output message="tns:LoginByIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <wsdl:input message="tns:SendPasswordReminderSoapIn" />
+      <wsdl:output message="tns:SendPasswordReminderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <wsdl:input message="tns:CheckEmailSoapIn" />
+      <wsdl:output message="tns:CheckEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTrialUser">
+      <wsdl:input message="tns:CreateTrialUserSoapIn" />
+      <wsdl:output message="tns:CreateTrialUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input message="tns:GetUserDetailsSoapIn" />
+      <wsdl:output message="tns:GetUserDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDetails">
+      <wsdl:input message="tns:ChangeDetailsSoapIn" />
+      <wsdl:output message="tns:ChangeDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAddress">
+      <wsdl:input message="tns:ChangeAddressSoapIn" />
+      <wsdl:output message="tns:ChangeAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <wsdl:input message="tns:IpInCorparateRangeSoapIn" />
+      <wsdl:output message="tns:IpInCorparateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <wsdl:input message="tns:CapMasterInfoSoapIn" />
+      <wsdl:output message="tns:CapMasterInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <wsdl:input message="tns:CapCreateDonorSoapIn" />
+      <wsdl:output message="tns:CapCreateDonorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <wsdl:input message="tns:CapDonorPermissionsSoapIn" />
+      <wsdl:output message="tns:CapDonorPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <wsdl:input message="tns:CapDonorInfoSoapIn" />
+      <wsdl:output message="tns:CapDonorInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UserServiceHttpGet">
+    <wsdl:operation name="ConsumerLogin">
+      <wsdl:input message="tns:ConsumerLoginHttpGetIn" />
+      <wsdl:output message="tns:ConsumerLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <wsdl:input message="tns:LoginByIPHttpGetIn" />
+      <wsdl:output message="tns:LoginByIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutHttpGetIn" />
+      <wsdl:output message="tns:LogoutHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <wsdl:input message="tns:SendPasswordReminderHttpGetIn" />
+      <wsdl:output message="tns:SendPasswordReminderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <wsdl:input message="tns:CheckEmailHttpGetIn" />
+      <wsdl:output message="tns:CheckEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input message="tns:GetUserDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetUserDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpGetIn" />
+      <wsdl:output message="tns:SendEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <wsdl:input message="tns:IpInCorparateRangeHttpGetIn" />
+      <wsdl:output message="tns:IpInCorparateRangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <wsdl:input message="tns:CapMasterInfoHttpGetIn" />
+      <wsdl:output message="tns:CapMasterInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <wsdl:input message="tns:CapCreateDonorHttpGetIn" />
+      <wsdl:output message="tns:CapCreateDonorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <wsdl:input message="tns:CapDonorPermissionsHttpGetIn" />
+      <wsdl:output message="tns:CapDonorPermissionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <wsdl:input message="tns:CapDonorInfoHttpGetIn" />
+      <wsdl:output message="tns:CapDonorInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UserServiceHttpPost">
+    <wsdl:operation name="ConsumerLogin">
+      <wsdl:input message="tns:ConsumerLoginHttpPostIn" />
+      <wsdl:output message="tns:ConsumerLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <wsdl:input message="tns:LoginByIPHttpPostIn" />
+      <wsdl:output message="tns:LoginByIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutHttpPostIn" />
+      <wsdl:output message="tns:LogoutHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <wsdl:input message="tns:SendPasswordReminderHttpPostIn" />
+      <wsdl:output message="tns:SendPasswordReminderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <wsdl:input message="tns:CheckEmailHttpPostIn" />
+      <wsdl:output message="tns:CheckEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input message="tns:GetUserDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetUserDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpPostIn" />
+      <wsdl:output message="tns:SendEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <wsdl:input message="tns:IpInCorparateRangeHttpPostIn" />
+      <wsdl:output message="tns:IpInCorparateRangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <wsdl:input message="tns:CapMasterInfoHttpPostIn" />
+      <wsdl:output message="tns:CapMasterInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <wsdl:input message="tns:CapCreateDonorHttpPostIn" />
+      <wsdl:output message="tns:CapCreateDonorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <wsdl:input message="tns:CapDonorPermissionsHttpPostIn" />
+      <wsdl:output message="tns:CapDonorPermissionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <wsdl:input message="tns:CapDonorInfoHttpPostIn" />
+      <wsdl:output message="tns:CapDonorInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceSoap" type="tns:UserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsumerLogin">
+      <soap:operation soapAction="http://tempuri.org/ConsumerLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <soap:operation soapAction="http://tempuri.org/LoginByIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <soap:operation soapAction="http://tempuri.org/SendPasswordReminder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <soap:operation soapAction="http://tempuri.org/CheckEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTrialUser">
+      <soap:operation soapAction="http://tempuri.org/CreateTrialUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap:operation soapAction="http://tempuri.org/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDetails">
+      <soap:operation soapAction="http://tempuri.org/ChangeDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAddress">
+      <soap:operation soapAction="http://tempuri.org/ChangeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <soap:operation soapAction="http://tempuri.org/IpInCorparateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <soap:operation soapAction="http://tempuri.org/CapMasterInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <soap:operation soapAction="http://tempuri.org/CapCreateDonor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <soap:operation soapAction="http://tempuri.org/CapDonorPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <soap:operation soapAction="http://tempuri.org/CapDonorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceSoap12" type="tns:UserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsumerLogin">
+      <soap12:operation soapAction="http://tempuri.org/ConsumerLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <soap12:operation soapAction="http://tempuri.org/LoginByIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://tempuri.org/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <soap12:operation soapAction="http://tempuri.org/SendPasswordReminder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <soap12:operation soapAction="http://tempuri.org/CheckEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://tempuri.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTrialUser">
+      <soap12:operation soapAction="http://tempuri.org/CreateTrialUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDetails">
+      <soap12:operation soapAction="http://tempuri.org/ChangeDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAddress">
+      <soap12:operation soapAction="http://tempuri.org/ChangeAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <soap12:operation soapAction="http://tempuri.org/IpInCorparateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <soap12:operation soapAction="http://tempuri.org/CapMasterInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <soap12:operation soapAction="http://tempuri.org/CapCreateDonor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <soap12:operation soapAction="http://tempuri.org/CapDonorPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <soap12:operation soapAction="http://tempuri.org/CapDonorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceHttpGet" type="tns:UserServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ConsumerLogin">
+      <http:operation location="/ConsumerLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <http:operation location="/LoginByIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <http:operation location="/SendPasswordReminder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <http:operation location="/CheckEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <http:operation location="/GetUserDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <http:operation location="/IpInCorparateRange" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <http:operation location="/CapMasterInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <http:operation location="/CapCreateDonor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <http:operation location="/CapDonorPermissions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <http:operation location="/CapDonorInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceHttpPost" type="tns:UserServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ConsumerLogin">
+      <http:operation location="/ConsumerLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginByIP">
+      <http:operation location="/LoginByIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReminder">
+      <http:operation location="/SendPasswordReminder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <http:operation location="/CheckEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <http:operation location="/GetUserDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IpInCorparateRange">
+      <http:operation location="/IpInCorparateRange" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapMasterInfo">
+      <http:operation location="/CapMasterInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapCreateDonor">
+      <http:operation location="/CapCreateDonor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorPermissions">
+      <http:operation location="/CapDonorPermissions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapDonorInfo">
+      <http:operation location="/CapDonorInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserServiceSoap" binding="tns:UserServiceSoap">
+      <soap:address location="http://dev.core.euromoneyapi.com/1.2/userservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceSoap12" binding="tns:UserServiceSoap12">
+      <soap12:address location="http://dev.core.euromoneyapi.com/1.2/userservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceHttpGet" binding="tns:UserServiceHttpGet">
+      <http:address location="http://dev.core.euromoneyapi.com/1.2/userservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceHttpPost" binding="tns:UserServiceHttpPost">
+      <http:address location="http://dev.core.euromoneyapi.com/1.2/userservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

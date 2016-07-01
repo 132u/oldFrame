@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="UserServiceSoap" />
+            </basicHttpBinding>
+            <customBinding>
+                <binding name="UserServiceSoap12">
+                    <textMessageEncoding messageVersion="Soap12" />
+                    <httpTransport />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://dev.core.euromoneyapi.com/1.2/userservice.asmx"
+                binding="basicHttpBinding" bindingConfiguration="UserServiceSoap"
+                contract="UserService.UserServiceSoap" name="UserServiceSoap" />
+            <endpoint address="http://dev.core.euromoneyapi.com/1.2/userservice.asmx"
+                binding="customBinding" bindingConfiguration="UserServiceSoap12"
+                contract="UserService.UserServiceSoap" name="UserServiceSoap12" />
+        </client>
+    </system.serviceModel>
+</configuration>

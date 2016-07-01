@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDB81262-458D-413B-BC6B-220933650680}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PageObjects</RootNamespace>
+    <AssemblyName>PageObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedControls\AboutUsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AbsoluteReturnPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AbsoluteUCITSPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AddressSelectionPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AdvancedSearchPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AmericasPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AnalysisPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ArticlePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AsiaHedgePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\AsiaPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\BreadcrumbComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\CFOsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ChangePasswordPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\CheckoutSelectionPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\CMOsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\CommentAndOpinionPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ConfirmationPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ConfirmTermsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ContactUsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\CookiesPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\DevelopmentPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\EconomicsAndPolicyPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\EMViewPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\EuroHedgePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\EuropePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\EventsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FaqPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FeaturesPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FeedbackPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FinancialMarketsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FooterComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FreeTrialEnterExistingUserPasswordPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FreeTrialRegistrationSucceedPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FreeTrialStepOnePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FreeTrialStepTwoPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\FreeTrialZeroStep.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\GenerateControls.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="GeneratedControls\GlobalPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\GTBTVPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\HeaderComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\HomePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\InterviewsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\InvestHedgePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\LoginPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\LoginRegisterPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ManageYourAddressesPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\MiddleEastAndAfricaPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\MyAccountBoxComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\MyAccountPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\MyClippingsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\NewsletterPreferencesComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\NewsletterPreferencesPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\NewsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\NewspaperArchivePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\PasswordUpdatedPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\PaymentPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\PollsAndAwardsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\PrivacyPolicyPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\RegionsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\RegistrationDetailsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ResearchPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\RSSPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SearchResultsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SectorsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SidePanelComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SignUpPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SignUpSuccessfulPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SponsoredReportsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscribeNBOCheckoutStepOnePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscribeStepOnePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscribeStepThreePage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscribeStepTwoPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscribtionZeroPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscriptionConfirmationPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\SubscriptionPaymentPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\TermsAndConditionsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\TopMenuComponent.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\VideoPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ViewYourPreviousPurchasesPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\ViewYourSubscriptionsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedControls\YourDetailsPage.cs">
+      <DependentUpon>GenerateControls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PageObjects\AboutUsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\AbsoluteReturnPage.cs" />
+    <Compile Include="PageObjects\AbsoluteUCITSPage.cs" />
+    <Compile Include="PageObjects\AddressSelectionPage.cs" />
+    <Compile Include="PageObjects\AdvancedSearchPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\AmericasPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\AnalysisPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ArticlePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\AsiaHedgePage.cs" />
+    <Compile Include="PageObjects\AsiaPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\BreadcrumpComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\CFOsPage.cs" />
+    <Compile Include="PageObjects\ChangePasswordPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\CheckoutSelectionPage.cs" />
+    <Compile Include="PageObjects\CMOsPage.cs" />
+    <Compile Include="PageObjects\CommentAndOpinionPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ConfirmationPage.cs" />
+    <Compile Include="PageObjects\ConfirmTermsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ContactUsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\CookiesPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\DevelopmentPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\EconomicsAndPolicyPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\EMViewPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\EuroHedgePage.cs" />
+    <Compile Include="PageObjects\EuropePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\EventsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FaqPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FeaturesPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FeedbackPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FinancialMarketsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FooterComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FreeTrialEnterExistingUserPasswordPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FreeTrialRegistrationSucceedPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FreeTrialStepOnePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FreeTrialStepTwoPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\FreeTrialZeroStep.cs" />
+    <Compile Include="PageObjects\GlobalPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\GTBTVPage.cs" />
+    <Compile Include="PageObjects\HeaderComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\HomePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\InterviewsPage.cs" />
+    <Compile Include="PageObjects\InvestHedgePage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\LoginRegisterPage.cs" />
+    <Compile Include="PageObjects\ManageYourAddressesPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\MiddleEastAndAfricaPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\MyAccountPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\MyClippingsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\MyAccountBoxComponent.cs" />
+    <Compile Include="PageObjects\NewsletterPreferencesComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\NewsletterPreferencesPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\NewsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\NewspaperArchivePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\PageBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\PasswordUpdatedPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\PaymentPage.cs" />
+    <Compile Include="PageObjects\PollsAndAwardsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\PrivacyPolicyPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\RegionsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\RegistrationDetailsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ResearchPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\RSSPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SearchResultsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SectorsPage.cs" />
+    <Compile Include="PageObjects\SidePanelComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SignUpPage.cs" />
+    <Compile Include="PageObjects\SignUpSuccessfulPage.cs" />
+    <Compile Include="PageObjects\SponsoredReportsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SubscribeNBOCheckoutStepOnePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SubscribeStepOnePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\SubscribeStepThreePage.cs" />
+    <Compile Include="PageObjects\SubscribeStepTwoPage.cs" />
+    <Compile Include="PageObjects\SubscribtionZeroPage.cs" />
+    <Compile Include="PageObjects\SubscriptionConfirmationPage.cs" />
+    <Compile Include="PageObjects\SubscriptionPaymentPage.cs" />
+    <Compile Include="PageObjects\TermsAndConditionsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\TopMenuComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\VideoPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ViewYourPreviousPurchasesPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\ViewYourSubscriptionsPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageObjects\YourDetailsPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GeneratedControls\PageControls.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneratedControls\GenerateControls.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenerateControls.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedControls\T4Manager.ttinclude" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigManager\ConfigManager.csproj">
+      <Project>{aed8a5f2-c105-42d4-9e5e-86c3f0f6649d}</Project>
+      <Name>ConfigManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EuromoneyAutomationPack\Core.csproj">
+      <Project>{fe9b77e7-103f-4ebe-8571-0fe18a933aac}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserManager\EuromoneyService.csproj">
+      <Project>{c359d2bc-9b22-4dc2-9ed1-db32091b0e07}</Project>
+      <Name>EuromoneyService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

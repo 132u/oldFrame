@@ -1,0 +1,2540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pages>
+	<Page name="HomePage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="HomePageUniqueElement" type="Label" xpath="//div[contains(@class,'top_stor')]" timeout="3" />
+	</Page>
+	<Page name="HeaderComponent">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+		<Control name="EuroHedge" type="Link" xpath="//div[@id='sites_nav']//a[@href = '/EuroHedge']" optional="true" />
+		<Control name="AsiaHedge" type="Link" xpath="//div[@id='sites_nav']//a[@href = '/AsiaHedge']" optional="true" />
+		<Control name="InvestHedge" type="Link" xpath="//div[@id='sites_nav']//a[@href = '/InvestHedge']" optional="true" />
+		<Control name="AbsoluteUcits" type="Link" xpath="//div[@id='sites_nav']//a[@href = '/UCITS']" optional="true" />
+		<Control name="AbsoluteReturn" type="Link" xpath="//div[@id='sites_nav']//a[@href = '/AbsoluteReturn']" optional="true" />
+		<Control name="MyAccountBox" access="public" type="MyAccountBoxComponent" xpath="" optionalComponent="true" />
+		<Control name="Logo" type="Link" xpath="//img[contains(@id, 'Logo') and not(contains(@id, 'Footer'))]" timeout="3" />
+		<Control name="Login" type="Link" xpath="//a[span[contains(text(), 'Login')]]|//a[text()='login']" timeout="3" />
+		<Control name="SignUpForFree" type="Link" xpath="//span[text()='Sign-up for FREE']|//span[contains(@id, 'loggedout')]/a" timeout="3" />
+		<Control name="SearchTextbox" type="Textbox" xpath="//input[contains(@id, 'Keywords')]" timeout="3" />
+		<Control name="SearchButton" type="Button" xpath="//input[contains(@value, 'Search')]" timeout="3" />
+		<Control name="MyEMAccount" type="Button" xpath="//span[text()='My EM Account']|//a[contains(@id, 'lnkMyAccount')]" />
+		<Control name="Logout" type="Button" xpath="//span[text()='Logout']|//a[text()='Logout']" />
+		<Control name="GoogleTranslate" type="Link" xpath="//div[@id='google_translate_element']/a[@class='goog-te-menu-value']" />
+		<Control name="ShoppingBasket" type="Link" xpath="//div[@class='navigation']//a[text()='Shopping Basket']" optional="true" />
+		<Control name="ContactUs" type="Link" xpath="//div[@class='navigation']//a[text()='Contact us']" optional="true" />
+		<Control name="SignUp" type="Link" xpath="//a[text()='Sign Up']" />
+	</Page>
+	<Page name="MyAccountBoxComponent">
+		<Control name="LoginInfo" type="Label" xpath="//span[@class='login_info']" />
+		<Control name="MyDetails" type="Link" xpath="//div[@class='user-menu-content']//a[text()='My Details']" />
+		<Control name="MyInterests" type="Link" xpath="//div[@class='user-menu-content']//a[text()='My Interests']" />
+		<Control name="MyEvents" type="Link" xpath="//div[@class='user-menu-content']//a[text()='My Events']" />
+		<Control name="ChangePassword" type="Link" xpath="//div[@class='user-menu-content']//a[text()='Change Password']" />
+		<Control name="Logout" type="Button" xpath="//div[@class='user-menu-content']//input[@value='Logout']" />
+		<Control name="Close" type="Button" xpath="//div[@class='user-menu']//input[@value='Close']" />
+		<Control name="MyAccountBoxUniqueElement" type="Button" xpath="//input[@value='Close']" />
+	</Page>
+	<Page name="FooterComponent">
+		<Control name="AboutUs" type="Link" xpath="//a[text()='About Us']" />
+		<Control name="ContactUs" type="Link" xpath="//a[text()='Contact Us']" />
+		<Control name="SignUp" type="Link" xpath="//a[text()='Sign-up']" />
+		<Control name="Subscribe" type="Link" xpath="//div[@class='footer']//a[text()='Subscribe']" />
+		<Control name="Feedback" type="Link" xpath="//a[text()='Feedback']" />
+		<Control name="TermsAndConditions" type="Link" xpath="//a[text()='Terms &amp; Conditions']" />
+		<Control name="PrivacyPolicy" type="Link" xpath="//a[text()='Privacy Policy']" />
+		<Control name="FAQ" type="Link" xpath="//a[text()='FAQ']" />
+		<Control name="Cookies" type="Link" xpath="//a[text()='Cookies']" />
+		<Control name="NewspaperArchive" type="Link" xpath="//a[text()='Newspaper Archive']" />
+		<Control name="SponsoredReports" type="Link" xpath="//a[text()='Sponsored Reports']" />
+		<Control name="EconomicsPolicy" type="Link" xpath="//a[text()='Economics &amp; Policy']" />
+		<Control name="FinancialMarkets" type="Link" xpath="//a[text()='Financial Markets']" />
+		<Control name="Development" type="Link" xpath="//a[text()='Development']" />
+		<Control name="MiddleEastAfrica" type="Link" xpath="//div[@id='footer']//a[text()='Middle East &amp; Africa']" />
+		<Control name="Americas" type="Link" xpath="//div[@id='footer']//a[text()='Americas']" timeout="3" />
+		<Control name="Asia" type="Link" xpath="//div[@id='footer']//a[text()='Asia']" />
+		<Control name="Europe" type="Link" xpath="//a[text()='Europe']" />
+		<Control name="PollsAndAwards" type="Link" xpath="//a[text()='Polls &amp; Awards']" />
+		<Control name="Events" type="Link" xpath="//a[text()='Events']" />
+		<Control name="CommentAndOpinion" type="Link" xpath="//div[@id='footer']//a[text()='Comment &amp; Opinion']" />
+		<Control name="Features" type="Link" xpath="//div[@id='footer']//a[text()='Features']" />
+		<Control name="News" type="Link" xpath="//div[@id='footer']//a[text()='News']" />
+		<Control name="Research" type="Link" xpath="//a[text()='Research']" />
+		<Control name="EMView" type="Link" xpath="//a[text()='EM View']" />
+		<Control name="RSS" type="Link" xpath="//a[text()='RSS']" />
+		<Control name="Copyright" type="Label" xpath="//p[contains(text(), 'Copyright')]" />
+		<RequiredElements name="FooterComponentRequiredElements" xpath="//div[@id='footer']" filter="a|h2|img|strong">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Emerging Markets" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/About-Us.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="About Us" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Contact-Us.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Contact Us" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Register.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Sign-up" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Feedback.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Feedback" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Terms.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl05_hlMenuSubItem" />
+				<Attribute name="innerText" value="Terms &amp; Conditions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Privacy.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl06_hlMenuSubItem" />
+				<Attribute name="innerText" value="Privacy Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/FAQs.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl07_hlMenuSubItem" />
+				<Attribute name="innerText" value="FAQ" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Cookies.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl08_hlMenuSubItem" />
+				<Attribute name="innerText" value="Cookies Updated" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Issue-Archive.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl09_hlMenuSubItem" />
+				<Attribute name="innerText" value="Newspaper Archive" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Sponsored-Reports.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl01_rptSubMenu_ctl10_hlMenuSubItem" />
+				<Attribute name="innerText" value="Sponsored Reports" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Topics" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Economics-and-Policy.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl02_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Economics &amp; Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Financial-Markets.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl02_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Financial Markets" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Development.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl02_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Development" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Middle-East-and-Africa.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl03_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Americas.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl03_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Asia.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl03_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Europe.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl03_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Europe" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="More" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Polls-and-Awards.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Polls &amp; Awards" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Events.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Events" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Comment-and-Opinion.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Comment &amp; Opinion" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Features.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Features" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/News.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl05_hlMenuSubItem" />
+				<Attribute name="innerText" value="News" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Research.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl06_hlMenuSubItem" />
+				<Attribute name="innerText" value="Research" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/EM-View.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl07_hlMenuSubItem" />
+				<Attribute name="innerText" value="EM View" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/RSS-Feeds.html" />
+				<Attribute name="id" value="ctl00_fmFooterMenu_rptMenu_ctl04_rptSubMenu_ctl08_hlMenuSubItem" />
+				<Attribute name="innerText" value="RSS" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="javascript:{};" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/Img/icon_font_small.gif" />
+				<Attribute name="alt" value="Switch to default font size" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="javascript:{};" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/Img/icon_font_medium.gif" />
+				<Attribute name="alt" value="Switch to medium font size" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="javascript:{};" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/Img/icon_font_large.gif" />
+				<Attribute name="alt" value="Switch to large font size" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="TopMenuComponent">
+		<Control name="Home" type="Link" xpath="//div[@class='nav_bar']//a[text()='Home']" optional="true" />
+		<Control name="Sectors" type="Link" xpath="//div[@class='nav_bar']//a[@title='Sectors']" optional="true" />
+		<Control name="Interviews" type="Link" xpath="//div[@class='nav_bar']//a[@title='Interviews']" optional="true" />
+		<Control name="CFOs" type="Link" xpath="//div[@class='nav_bar']//a[@title='GTB-CFO']" optional="true" />
+		<Control name="CMOs" type="Link" xpath="//div[@class='nav_bar']//a[@title='GTB-CMO']" optional="true" />
+		<Control name="GTBTV" type="Link" xpath="//a[text()='GTB TV']" optional="true" />
+		<Control name="AboutUs" type="Link" xpath="//div[@class='nav_bar']//a[@title='AboutUs']" optional="true" />
+		<Control name="MyAccount" type="Link" xpath="//div[@class='nav_bar']//a[@title='MyAccount']" optional="true" />
+		<Control name="News" type="Link" xpath="//div[@id='top_nav']//a[span[text()='News']]" />
+		<Control name="EMView" type="Link" xpath="//div[@id='top_nav']//a[span[text()='EM View']]" />
+		<Control name="Analysis" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Analysis']]" />
+		<Control name="CommentsAndOpinions" type="Link" xpath="//div[@id='top_nav']//a[text()='Comment &amp; Opinion']" />
+		<Control name="Features" type="Link" xpath="//div[@id='top_nav']//a[text()='Features']" />
+		<Control name="Regions" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Regions']]" />
+		<Control name="Americas" type="Link" xpath="//div[@id='top_nav']//a[text()='Americas']" />
+		<Control name="Asia" type="Link" xpath="//div[@id='top_nav']//a[text()='Asia']" />
+		<Control name="EmergingEurope" type="Link" xpath="//div[@id='top_nav']//a[text()='Emerging Europe']" />
+		<Control name="Global" type="Link" xpath="//div[@id='top_nav']//a[text()='Global']" />
+		<Control name="MiddleEastAndAfrica" type="Link" xpath="//div[@id='top_nav']//a[text()='Middle East &amp; Africa']" />
+		<Control name="EconomicsAndPolicy" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Economics &amp; Policy']]" />
+		<Control name="FinancialMarkets" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Financial Markets']]" />
+		<Control name="Development" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Development']]" />
+		<Control name="PollsAndAwards" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Polls &amp; Awards']]" />
+		<Control name="Events" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Events']]" />
+		<Control name="Video" type="Link" xpath="//div[@id='top_nav']//a[span[text()='Video']]" />
+		<RequiredElements name="TopMenuDefaultComponentRequiredElements" xpath="//div[@id='top_nav']" filter="a">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/News.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl01_hlLink" />
+				<Attribute name="innerText" value="News" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/EM-View.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl02_hlLink" />
+				<Attribute name="innerText" value="EM View" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Analysis.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_hlLink" />
+				<Attribute name="innerText" value="Analysis" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Comment-and-Opinion.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Comment &amp; Opinion" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Features.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Features" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Regions.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_hlLink" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Americas.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Asia.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Europe.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Emerging Europe" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Global.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Global" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Middle-East-and-Africa.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl05_hlMenuSubItem" />
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Economics-and-Policy.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl05_hlLink" />
+				<Attribute name="innerText" value="Economics &amp; Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Financial-Markets.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl06_hlLink" />
+				<Attribute name="innerText" value="Financial Markets" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Development.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl07_hlLink" />
+				<Attribute name="innerText" value="Development" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Polls-and-Awards.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl08_hlLink" />
+				<Attribute name="innerText" value="Polls &amp; Awards" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Events.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl09_hlLink" />
+				<Attribute name="innerText" value="Events" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Video-Library.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl10_hlLink" />
+				<Attribute name="innerText" value="Video" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="http://www.twitter.com/emrgingmarkets" />
+				<Attribute name="innerText" value="" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="TopMenuAboutUsComponentRequiredElements" xpath="//div[@id='top_nav']" filter="a">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/News.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl01_hlLink" />
+				<Attribute name="innerText" value="News" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/EM-View.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl02_hlLink" />
+				<Attribute name="innerText" value="EM View" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Analysis.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_hlLink" />
+				<Attribute name="innerText" value="Analysis" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Comment-and-Opinion.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Comment &amp; Opinion" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Features.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Features" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Regions.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_hlLink" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Americas.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Asia.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Europe.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Emerging Europe" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Global.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Global" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Middle-East-and-Africa.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl05_hlMenuSubItem" />
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Economics-and-Policy.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl05_hlLink" />
+				<Attribute name="innerText" value="Economics &amp; Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Financial-Markets.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl06_hlLink" />
+				<Attribute name="innerText" value="Financial Markets" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Development.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl07_hlLink" />
+				<Attribute name="innerText" value="Development" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Polls-and-Awards.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl08_hlLink" />
+				<Attribute name="innerText" value="Polls &amp; Awards" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Events.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl09_hlLink" />
+				<Attribute name="innerText" value="Events" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Video-Library.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl10_hlLink" />
+				<Attribute name="innerText" value="Video" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="http://www.twitter.com/emrgingmarkets" />
+				<Attribute name="innerText" value="" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="TopMenuEventsComponentRequiredElements" xpath="//div[@id='top_nav']" filter="a">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/News.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl01_hlLink" />
+				<Attribute name="innerText" value="News" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/EM-View.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl02_hlLink" />
+				<Attribute name="innerText" value="EM View" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Analysis.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_hlLink" />
+				<Attribute name="innerText" value="Analysis" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Comment-and-Opinion.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Comment &amp; Opinion" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Features.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Features" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Regions.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_hlLink" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Americas.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl01_hlMenuSubItem" />
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Asia.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl02_hlMenuSubItem" />
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Europe.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl03_hlMenuSubItem" />
+				<Attribute name="innerText" value="Emerging Europe" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Global.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl04_hlMenuSubItem" />
+				<Attribute name="innerText" value="Global" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Middle-East-and-Africa.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_rptSubMenu_ctl05_hlMenuSubItem" />
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Economics-and-Policy.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl05_hlLink" />
+				<Attribute name="innerText" value="Economics &amp; Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Financial-Markets.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl06_hlLink" />
+				<Attribute name="innerText" value="Financial Markets" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Development.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl07_hlLink" />
+				<Attribute name="innerText" value="Development" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Polls-and-Awards.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl08_hlLink" />
+				<Attribute name="innerText" value="Polls &amp; Awards" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Events.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl09_hlLink" />
+				<Attribute name="innerText" value="Events" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Video-Library.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl10_hlLink" />
+				<Attribute name="innerText" value="Video" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="http://www.twitter.com/emrgingmarkets" />
+				<Attribute name="innerText" value="" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SignUpTopMenuComponentRequiredElements" xpath="//div[@id='top_nav']" filter="a">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/About-Us.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl01_hlLink" />
+				<Attribute name="innerText" value="About Us" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Contact-Us.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl02_hlLink" />
+				<Attribute name="innerText" value="Contact Us" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/FAQs.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl03_hlLink" />
+				<Attribute name="innerText" value="FAQs" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Terms-And-Conditions.html" />
+				<Attribute name="id" value="ctl00_mhHeader_tmHeaderMenu_rptMenu_ctl04_hlLink" />
+				<Attribute name="innerText" value="Terms &amp; Conditions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="http://www.twitter.com/emrgingmarkets" />
+				<Attribute name="innerText" value="" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="TopMenuCookiesComponentRequiredElements" xpath="//div[@class='nav']" filter="a"></RequiredElements>
+	</Page>
+	<Page name="SidePanelComponent">
+		<RequiredElements name="SidePanelDefaultRequiredElements" xpath="//h2[contains(text(), 'Editor')]|//h2[contains(text(), 'In Focus')]|//h2[contains(text(), 'Most Read')]" filter="h2">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Editor's Picks" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="In Focus" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SidePanelArticlesPageRequiredElements" xpath="//div[@class='secondary_content']" filter="h2" optional="true"></RequiredElements>
+	</Page>
+	<Page name="BreadcrumbComponent">
+		<RequiredElements name="AboutUsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="About us" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="ContactUsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Contact Us" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FeedbackBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Feedback" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="TermsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Terms" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="PrivacyBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Privacy" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FAQBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="FAQs" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="CookiesBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Cookies" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="NewspaperArchiveBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Issue Archive" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SponsoredReportsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Sponsored Reports" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="EconomicsAndPolicyBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Economics &amp; Policy" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FinancialMarketsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Financial Markets" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="DevelopmentBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Development" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MiddleEastAndAfricaBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Regions.html" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="AmericasBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Regions.html" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="AsiaBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Regions.html" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="EmergingEuropeBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Regions.html" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Europe" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="PollsAndAwardsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Polls and Awards" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="EventsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Events" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="CommentAndOpinionBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Comment &amp; Opinion" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FeaturesBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Features" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="NewsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="News" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="ResearchBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Research" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="EMViewBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="EM View" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="RSSFeedsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="RSS Feeds" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="LoginBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Login" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="AnalysisBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Analysis" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="RegionsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="VideoBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Video Library" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="GlobalBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Regions.html" />
+				<Attribute name="innerText" value="Regions" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Global" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MyAccountBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MyAccountChangePasswordBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="My-Account.html" />
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Change Password" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MyAccountPasswordUpdatedBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="My-Account.html" />
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Change Password" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="Change-Password.html" />
+				<Attribute name="innerText" value="Change Password" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Password Updated" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MyAccountNewsletterPreferencesBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="My-Account.html" />
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Email Preferences" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="MyAccountMyClippingsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="My-Account.html" />
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="My Clippings" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SearchResultsBreadcrumb" xpath="//div[@class='breadcrumb']" filter="span|a" optional="true">
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="./" />
+				<Attribute name="innerText" value="Home" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="::" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Search Results" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="LoginPage">
+		<Control name="Username" type="Textbox" access="public" xpath="//input[@id=//label[text()='Username:']/@for]" />
+		<Control name="Password" type="Textbox" access="private" xpath="//input[@id=//label[text()='Password:']/@for]" />
+		<Control name="Login" type="Button" xpath="//input[@value='Go']" timeout="3" />
+		<Control name="RememberMe" type="Checkbox" xpath="//input[@id=//label[text()='Remember me']/@for]" timeout="3" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<RequiredElements name="LoginPageRequiredElements" xpath="//div[div/h1[text()='Login']]" filter="a|label|h2">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Already have an account?" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_znLeft_ctl01_lblUsername" />
+				<Attribute name="innerText" value="Username:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_znLeft_ctl01_lblPassword" />
+				<Attribute name="innerText" value="Password:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_znLeft_ctl01_lblRemeberMe" />
+				<Attribute name="innerText" value="Remember me" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="javascript:{};" />
+				<Attribute name="innerText" value="Forgot password" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Sign-up for FREE" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Register.html" />
+				<Attribute name="id" value="ctl00_cphMain_znLeft_ctl01_hlSignUp" />
+				<Attribute name="innerText" value="Sign-up for FREE" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="SearchResultsPage">
+		<Control name="SearchResultsHeader" type="Label" xpath="//h1[contains(text(),'Search Results')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+	</Page>
+	<Page name="ConfirmTermsPage">
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//input[contains(@name, 'privacypolicy')]" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//input[contains(@name, 'termsconditions')]" />
+		<Control name="Continue" type="Button" xpath="//input[@value='Continue']" />
+	</Page>
+	<Page name="TermsAndConditionsPage">
+		<Control name="TermsAndConditions" type="Label" xpath="//strong[text()='TERMS AND CONDITIONS']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="PrivacyPolicyPage">
+		<Control name="PrivacyPolicy" type="Label" xpath="//span[text() = 'Privacy']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="MyAccountPage">
+		<Control name="MyAccountHeader" type="Label" xpath="//h1[text()='My Account']" />
+		<Control name="UpdateDetails" type="Button" xpath="//a[span[text()='Update details']]" timeout="5" />
+		<Control name="ChangePassword" type="Button" xpath="//span[contains(text(), 'Change password')]" />
+		<Control name="NewsletterPreferences" type="Button" xpath="//span[contains(text(), 'Update newsletter preferences')]" />
+		<Control name="MyClippings" type="Button" xpath="//span[contains(text(), 'Manage clippings')]" />
+		<Control name="ManageYourAddresses" access="public" type="Link" xpath="//a[text()='Manage Your Addresses']" />
+		<Control name="ViewYourPreviousPurchases" access="public" type="Link" xpath="//a[text()='View Your Previous Purchases']" />
+		<Control name="ViewYourSubscriptions" access="public" type="Link" xpath="//a[text()='View Your Subscriptions']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<RequiredElements name="MyAccountPageRequiredElements" xpath="//div[@class='column_10']" filter="h1|h2|p">
+			<Element name="h1" type="h1">
+				<Attribute name="innerText" value="My Account" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="My personal details" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="View and update your stored details and password." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Update details" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Change password" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="My e-newsletter preferences" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="View and update your email newsletter preferences." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Update newsletter preferences" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="My Clippings" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Review or delete your stored clippings." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Manage clippings" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="ChangePasswordPage">
+		<Control name="ChangePasswordHeader" type="Label" xpath="//h1[text()='Change password']" />
+		<Control name="Submit" type="Button" xpath="//input[contains(@name, 'btnSubmit')]" />
+		<Control name="OldPassword" type="Textbox" access="public" xpath="//input[contains(@name, 'OldPassword')]" />
+		<Control name="NewPassword" type="Textbox" access="public" xpath="//input[contains(@name, 'txtNewPassword')]" />
+		<Control name="ConfirmNewPassword" type="Textbox" access="public" xpath="//input[contains(@name, 'ConfirmNewPassword')]" />
+		<Control name="MissingOldPasswordValidationMessage" type="Label" xpath="//span[text()='Please enter your old password']" />
+		<Control name="MissingNewPasswordValidationMessage" type="Label" xpath="//span[text()='Please enter your new password']" />
+		<Control name="MissingConfirmNewPasswordValidationMessage" type="Label" xpath="//span[text()='Please confirm your new password']" />
+		<Control name="PasswordDoNotMatchValidationMessage" type="Label" xpath="//span[text()='The details you have provided are invalid. Please re-enter and try again. ']" timeout="3" />
+		<Control name="YourNewPasswordDoNotMatchValidationMessage" type="Label" xpath="//span[text()='Your new passwords do not match']" timeout="3" />
+		<Control name="YourPasswordHasBeenUpdated" type="Label" xpath="//span[text()='Your password has been updated.']" timeout="3" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<RequiredElements name="ChangePasswordPageRequiredElements" xpath="//div[@class='column_10']" filter="label|input">
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_lblOldPassword" />
+				<Attribute name="innerText" value="Old Password" />
+			</Element>
+			<Element name="input" type="TextBox">
+				<Attribute name="id" value="ctl00_cphMain_txtOldPassword" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_lblNewPassword" />
+				<Attribute name="innerText" value="New Password" />
+			</Element>
+			<Element name="input" type="TextBox">
+				<Attribute name="id" value="ctl00_cphMain_txtNewPassword" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_lblConfirmNewPassword" />
+				<Attribute name="innerText" value="Confirm new password" />
+			</Element>
+			<Element name="input" type="TextBox">
+				<Attribute name="id" value="ctl00_cphMain_txtConfirmNewPassword" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="Submit" />
+				<Attribute name="id" value="ctl00_cphMain_btnSubmit" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="PasswordUpdatedPage">
+		<Control name="PasswordUpdatedHeader" type="Label" xpath="//span[text()='Password Updated']" timeout="3" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="NewsletterPreferencesPage">
+		<Control name="NewsletterPreferencesHeader" type="Label" xpath="//h1[text()='Email Newsletter Settings']" />
+		<Control name="Submit" type="Button" xpath="//input[@value='Update']" />
+		<Control name="UpdatedSettingsConfirmation" type="Label" xpath="//span[text()='Your Email Newsletter Settings have been updated']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<Control name="NewsletterPreferences" access="public" type="NewsletterPreferencesComponent" xpath="" />
+		<RequiredElements name="NewsletterPreferencesRequiredElements" xpath="//div[@class='column_10']" filter="h1|span">
+			<Element name="h1" type="h1">
+				<Attribute name="innerText" value="Email Newsletter Settings" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_epSelect_sucSignUp" />
+				<Attribute name="innerText" value="Emerging Markets News Alerts - Emerging Markets News Alerts	Email Format (Text version recommended for Lotus Notes and BlackBerry users)HTMLText" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_epSelect_sucSignUp_format" />
+				<Attribute name="innerText" value="HTMLText" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="NewsletterPreferencesComponent">
+		<Control name="EMNewsAlerts" type="Checkbox" xpath="//input[contains(@name, 'NewsletterList')]" />
+		<Control name="PEMonthlyMagazineUpdate" type="Checkbox" xpath="//tr[td[text()='Petroleum Economist - Monthly Magazine Update']]//input" access="public" timeout="5" />
+		<Control name="PEBreakingNews" type="Checkbox" xpath="//tr[td[text()='Petroleum Economist - Breaking News']]//input" access="public" timeout="5" />
+		<Control name="PEBlogEmail" type="Checkbox" xpath="//tr[td[text()='Petroleum Economist - Blog Email']]//input" access="public" timeout="5" />
+		<Control name="Html" type="Radio" xpath="//input[@id=//label[text()='HTML']/@for]" />
+		<Control name="Text" type="Radio" xpath="//input[@id=//label[text()='Text']/@for]" />
+	</Page>
+	<Page name="MyClippingsPage">
+		<Control name="MyClippingsHeader" type="Label" xpath="//h1[text()='My Clippings']" />
+		<Control name="FirstArticleLink" type="Link" xpath="//ul[@class='clippings']/li[1]/a" />
+		<Control name="DeleteByParam" type="Button" xpath="//ul[@class='clippings']//li[a[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '@param')]]/input" />
+		<Control name="FindArticleByParam" type="Link" xpath="//ul[@class='clippings']//li[a[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '@param')]]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="FreeTrialStepOnePage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="EmailAddressTextbox" type="Textbox" xpath="//input[@id=//label[text()='Email address:']/@for]" />
+		<Control name="ConfirmEmailAddressTextbox" type="Textbox" xpath="//input[@id=//label[text()='Confirm email address:']/@for]" />
+		<Control name="SubmitButton" type="Button" xpath="//input[@value='Submit']" />
+		<Control name="MissingEmailAddressValidationMessage" type="Textbox" xpath="//span[text()='You must enter an e-mail address']" />
+		<Control name="MissingEmailAddressConfirmationValidationMessage" type="Textbox" xpath="//span[text()='You must confirm your e-mail address']" />
+		<Control name="EmailAddressMustBeTheSameValidationMessage" type="Textbox" xpath="//span[text()='The email address must be the same']" />
+		<RequiredElements name="FreeTrialStepOneSignUpStatus" xpath="//ol[@class='checkout']" filter="li">
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Email validation" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Details" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FreeTrialStepOneRegistrationPanel" xpath="//div[@class='registration_box']" filter="label|input">
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblEmailAddress" />
+				<Attribute name="innerText" value="Email address:" />
+			</Element>
+			<Element name="input" type="TextBox">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_EmailContainer_EmailAddress" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblConfirmEmail" />
+				<Attribute name="innerText" value="Confirm email address:" />
+			</Element>
+			<Element name="input" type="TextBox">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_EmailContainer_EmailCompare" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="Submit" />
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_EmailContainer_btnNext" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="FreeTrialEnterExistingUserPasswordPage">
+		<Control name="PasswordTextbox" type="Textbox" xpath="//input[@id=//label[text()='Password:']/@for]" />
+		<Control name="NextButton" type="Button" xpath="//input[@value='Next']" />
+		<Control name="PasswordValidationMessage" type="Button" xpath="//span[text()='The password you supplied was incorrect']" />
+		<RequiredElements name="FreeTrialEnterExistingUserPasswordSignUpStatus" xpath="//ol[@class='checkout']" filter="li">
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Email validation" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Details" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="FreeTrialStepTwoPage">
+		<Control name="YourDetailsHeader" type="Label" xpath="//*[contains(text(), 'Your details')]" />
+		<Control name="Title" type="Dropdown" xpath="//div[@class='personaldetails']/select[contains(@name, 'Title')]" />
+		<Control name="FirstName" type="Textbox" xpath="//div[@class='personaldetails']/input[contains(@name, 'FirstName')]" />
+		<Control name="LastName" type="Textbox" xpath="//div[@class='personaldetails']/input[contains(@name, 'LastName')]" />
+		<Control name="JobTitle" type="Textbox" xpath="//div[@class='personaldetails']/input[contains(@name, 'Position')]" />
+		<Control name="CompanyName" type="Textbox" xpath="//div[@class='personaldetails']/input[contains(@name, 'CompanyName')]" />
+		<Control name="CompanyPosition" type="Dropdown" xpath="//fieldset[legend[text()='YOUR DETAILS']]//select[contains(@id, 'Position')]" optional="true" />
+		<Control name="CompanyType" type="Dropdown" xpath="//fieldset[legend[text()='YOUR DETAILS']]//select[contains(@id, 'CompanyType')]" optional="true" />
+		<Control name="Country" type="Dropdown" xpath="//div[@class='deliveryaddress']/select[contains(@name, 'Country')]" />
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//input[@id=//label[a[text()='Privacy Policy']]/@for]" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//input[@id=//label[a[text()='Terms and Conditions']]/@for]" />
+		<Control name="AddressFirstLine" type="Textbox" xpath="//input[contains(@id, 'Address1')]" />
+		<Control name="AddressSecondLine" type="Textbox" xpath="//fieldset[legend[text()='ADDRESS']]//input[contains(@id, 'Address2')]" optional="true" />
+		<Control name="City" type="Textbox" xpath="//input[contains(@id, 'City')]" />
+		<Control name="PostCode" type="Textbox" xpath="//input[contains(@id, 'Post')]" />
+		<Control name="Telephone" type="Textbox" xpath="//input[contains(@id, 'Telephone')]" />
+		<Control name="Submit" type="Button" xpath="//input[@value='Submit']" />
+		<Control name="TitleValidationMessage" type="Label" xpath="//span[contains(@id, 'UserDetails_rfvTitle') and contains(@style, 'visibility: visible')]" />
+		<Control name="FirstNameValidationMessage" type="Label" xpath="//span[contains(., 'You must enter a first name') and contains(@style, 'display: inline')]" />
+		<Control name="LastNameValidationMessage" type="Label" xpath="//span[contains(., 'You must enter a surname') and contains(@style, 'display: inline')]" />
+		<Control name="JobTitleValidationMessage" type="Label" xpath="//span[contains(., 'You must enter a job title') and contains(@style, 'display: inline')]" />
+		<Control name="CompanyNameValidationMessage" type="Label" xpath="//span[contains(., 'You must enter a company name') and contains(@style, 'display: inline')]" />
+		<Control name="CompanyPositionValidationMessage" type="Label" xpath="//span[contains(., 'Please select a position') and contains(@style, 'display: inline')]" optional="true" />
+		<Control name="CompanyTypeValidationMessage" type="Label" xpath="//span[contains(., 'Please select a company type') and contains(@style, 'display: inline')]" optional="true" />
+		<Control name="AddressFirstLineValidationMessage" type="Label" xpath="//span[text()='You must enter the first line of your address']" />
+		<Control name="AddressSecondLineValidationMessage" type="Label" xpath="//span[text()='You must enter the second line of your address']" optional="true" />
+		<Control name="TelephoneNumberValidationMessage" type="Label" xpath="//span[contains(@id, 'UserDetails_rfvTelephone') and contains(@style, 'display: inline')]" />
+		<Control name="AddressValidationMessage" type="Label" xpath="//span[contains(@id, 'rfvAddressLine1') and contains(@style, 'visibility: visible')]" />
+		<Control name="CityValidationMessage" type="Label" xpath="//span[contains(@id, 'rfvCity') and contains(@style, 'visibility: visible')]" />
+		<Control name="ZipValidationMessage" type="Label" xpath="//span[contains(@id, 'Zip') and contains(@style, 'visibility: visible')]" />
+		<Control name="CountryValidationMessage" type="Label" xpath="//span[contains(@id, 'Countries') and contains(@style, 'visibility: visible')]" />
+		<RequiredElements name="FreeTrialStepTwoSignUpStatus" xpath="//ol[@class='checkout']" filter="li">
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Email validation" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Details" />
+			</Element>
+			<Element name="li" type="li">
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FreeTrialStepTwoYourDetailsSection" xpath="//div[@class='personaldetails']" filter="label|p|h2">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Your details" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Enter your details below, selecting from the options shown." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Fields marked * are mandatory." />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblTitle" />
+				<Attribute name="innerText" value="Title:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblFirstName" />
+				<Attribute name="innerText" value="First Name: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblLastName" />
+				<Attribute name="innerText" value="Last Name: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblJobTitle" />
+				<Attribute name="innerText" value="Job Title: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="lblCompanyName" />
+				<Attribute name="innerText" value="Company Name: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Emerging Europe" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Global" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FreeTrialStepTwoDeliveryAddressSection" xpath="//div[@class='deliveryaddress']" filter="label|p|h2">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Delivery address" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Fields marked * are mandatory." />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblAddress1" />
+				<Attribute name="innerText" value="Address 1:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblAddress2" />
+				<Attribute name="innerText" value="Address 2:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblAddress3" />
+				<Attribute name="innerText" value="Address 3:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="City:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblCounty" />
+				<Attribute name="innerText" value="County:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblZipCode" />
+				<Attribute name="innerText" value="Zip/Postal Code:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblCountry" />
+				<Attribute name="innerText" value="Country: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblEmailAddress" />
+				<Attribute name="innerText" value="Email Address: *" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblTelephone" />
+				<Attribute name="innerText" value="Telephone:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_chkCheckout_PurchaseContainer_lblFax" />
+				<Attribute name="innerText" value="Fax:" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FreeTrialStepTwoEmailPreferencesSection" xpath="//div[@class='emailPrefs']" filter="p|h2|tr">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Email preferences" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="" />
+			</Element>
+			<Element name="tr" type="tr">
+				<Attribute name="innerText" value="Emerging Markets News Alerts - Emerging Markets News Alerts" />
+			</Element>
+			<Element name="tr" type="tr">
+				<Attribute name="innerText" value="" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Email Format (Text version recommended for Lotus Notes and BlackBerry users)" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="FreeTrialStepTwoDataProtectionSection" xpath="//div[@class='dataprotection']" filter="label|p|h2">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Data protection" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Emerging Markets is part of the Euromoney Institutional Investor      PLC group of companies. Click       here for more details on our group’s activities." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="We will use the information you provide here to process your      order/registration/request including communicating with you about it. If      you are registering for a trial, you will receive follow up emails and/or      a telephone call about your trial. As part of the trial, you may also      receive email updates and other features as specified for that product.      We may monitor your use of our website(s). As an international group, we      may transfer your data on a global basis. Subject to your choices below,      we may also use your data for marketing purposes. By submitting your      details, you will be indicating your consent to the use of your data as      identified here. Further information is set out in our privacy policy on      this site." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Please tick if you don't want to receive details of products, services      and special offers from our group companies by:	      Telephone      Fax      Email      Mail            Please tick if you don't want to receive details of relevant products,      services and special offers from selected companies outside our group      ." />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Telephone" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Fax" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Email" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Mail" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="I have read and agree to the Privacy Policy  Please tick to confirm agreement and press continue.      I have read and agree to the Terms and Conditions  Please tick to confirm agreement and press continue." />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="I have read and agree to the Privacy Policy" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="I have read and agree to the Terms and Conditions" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="FreeTrialRegistrationSucceedPage">
+		<Control name="RegistrationSucceedMessage" type="Label" xpath="//span[contains(text(), 'Thank you for registering to Emerging Markets.')]" />
+	</Page>
+	<Page name="SubscribeStepOnePage">
+		<Control name="Next" type="Button" xpath="(//input[@value='Next'])[1]" />
+		<Control name="Next2" type="Button" xpath="(//input[@value='Next'])[2]" />
+		<RequiredElements name="SubscribeStepOneForm" xpath="//div[@class='padder']" filter="label|input|span"></RequiredElements>
+		<RequiredElements name="SubscribeStepOneRegistrationPanel" xpath="//div[h2[text()='Subscribe to Petroleum Economist']]/dl" filter="img|dd"></RequiredElements>
+		<RequiredElements name="SubscribeStepOneToolbar" xpath="//ul[@class='subscribeProgress']" filter="li"></RequiredElements>
+	</Page>
+	<Page name="SubscribeNBOCheckoutStepOnePage">
+		<RequiredElements name="SubscribeNBOCheckoutStepOneRegistrationPanel" xpath="//div[@class='steps']" filter="p|span|h2|h3|h4|h5" optional="true">
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Managing Intellectual Property" />
+			</Element>
+			<Element name="p" type="p" />
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Managing IP covers all aspects of IP law and practice, focusing on the business and practical issues of importance to IP owners.Online resources include regularly updated news and reports; interviews; surveys; in-depth features; special reports; and data. Coverage spans patents, trade marks, copyright, domain names and other areas of intellectual property." />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Managing IP covers all aspects of IP law and practice, focusing on the business and practical issues of importance to IP owners." />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Online resources include regularly updated news and reports; interviews; surveys; in-depth features; special reports; and data. Coverage spans patents, trade marks, copyright, domain names and other areas of intellectual property." />
+			</Element>
+			<Element name="p" type="p" />
+			<Element name="h3" type="h3">
+				<Attribute name="innerText" value="Subscribe to Managing Intellectual Property" />
+			</Element>
+			<Element name="h4" type="h4">
+				<Attribute name="innerText" value="12 Months" />
+			</Element>
+			<Element name="h5" type="h5">
+				<Attribute name="innerText" value="£1500.00" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_MainContent_baseProduct_SubscriptionProduct_SubscriptionsRepeater_ctl00_spanTick" />
+			</Element>
+			<Element name="h4" type="h4">
+				<Attribute name="innerText" value="24 Months" />
+			</Element>
+			<Element name="h5" type="h5">
+				<Attribute name="innerText" value="£2700.00" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Saving of 10%:                                                £300.00" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_MainContent_baseProduct_SubscriptionProduct_SubscriptionsRepeater_ctl01_spanTick" />
+			</Element>
+			<Element name="h4" type="h4">
+				<Attribute name="innerText" value="36 Months" />
+			</Element>
+			<Element name="h5" type="h5">
+				<Attribute name="innerText" value="£3825.00" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Saving of 15%:                                                £675.00" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_MainContent_baseProduct_SubscriptionProduct_SubscriptionsRepeater_ctl02_spanTick" />
+			</Element>
+			<Element name="span" type="span" />
+			<Element name="span" type="span" />
+			<Element name="span" type="span">
+				<Attribute name="id" value="mySelectText0" />
+				<Attribute name="innerText" value="1" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="£1500.00" />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="id" value="ctl00_MainContent_baseProduct_TaxSection" />
+				<Attribute name="innerText" value="Tax (if applicable) will be added later" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SubscribeNBOCheckoutStepOneToolbar" xpath="//div[@class='toolbar']" filter="span|img|input" optional="true">
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_HeaderModule_lblProduct" />
+				<Attribute name="innerText" value="Choose Term" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/SITE_BUILDER_FILES/assets/images/site/active.gif" />
+				<Attribute name="alt" value="Choose Term: you are here" />
+				<Attribute name="id" value="ctl00_HeaderModule_step1Image" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_HeaderModule_lblDetails" />
+				<Attribute name="innerText" value="Your Details" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/SITE_BUILDER_FILES/assets/images/site/default.gif" />
+				<Attribute name="alt" value="Your Details" />
+				<Attribute name="id" value="ctl00_HeaderModule_step2Image" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_HeaderModule_lblPayment" />
+				<Attribute name="innerText" value="Payment" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/SITE_BUILDER_FILES/assets/images/site/default.gif" />
+				<Attribute name="alt" value="Payment" />
+				<Attribute name="id" value="ctl00_HeaderModule_step3Image" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_HeaderModule_lblConfirmation" />
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="/SITE_BUILDER_FILES/assets/images/site/default.gif" />
+				<Attribute name="alt" value="Confirmation" />
+				<Attribute name="id" value="ctl00_HeaderModule_step4Image" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_lblCurrency" />
+				<Attribute name="innerText" value="UK (£)" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="Change Region" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_lnkCountry" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="United Kingdom (GBP)" />
+			</Element>
+			<Element name="input" type="radio">
+				<Attribute name="checked" value="checked" />
+				<Attribute name="value" value="chkGBP" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_chkGBP" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Rest of Europe (EUR)" />
+			</Element>
+			<Element name="input" type="radio">
+				<Attribute name="value" value="chkEUR" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_chkEUR" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Rest of World (USD)" />
+			</Element>
+			<Element name="input" type="radio">
+				<Attribute name="value" value="chkUSD" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_chkUSD" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="close" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_lnkCloseCountry" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="X" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_lnkCloseX" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="Live Chat" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_btnShowLiveChat" />
+			</Element>
+			<Element name="input" type="Button">
+				<Attribute name="value" value="X" />
+				<Attribute name="id" value="ctl00_HeaderModule_UserStatusCtrl_btnCloseLiveChat" />
+			</Element>
+			<Element name="img" type="Image">
+				<Attribute name="src" value="http://image.providesupport.com/image/acname/online-208149153.gif" />
+			</Element>
+		</RequiredElements>
+		<RequiredElements name="SubscribeNBOCheckoutStepOneFooterLinks" xpath="//div[@id='footerlinks']" filter="a" optional="true">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/About-Us.html" />
+				<Attribute name="id" value="ctl00_FooterModule_lnkFAQ" />
+				<Attribute name="innerText" value="FAQs" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Privacy.html" />
+				<Attribute name="id" value="ctl00_FooterModule_lnkPrivacy" />
+				<Attribute name="innerText" value="Privacy Policy" />
+			</Element>
+			<Element name="a" type="Link">
+				<Attribute name="href" value="/Terms.html" />
+				<Attribute name="id" value="ctl00_FooterModule_lnkTcs" />
+				<Attribute name="innerText" value="Terms &amp; Conditions" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="AboutUsPage">
+		<Control name="AboutUs" type="Label" xpath="//span[text()='About us']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<RequiredElements name="AboutUsRequiredElementsList" xpath="//div[@class='column_10']" filter="p">
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Emerging Markets is a unique source of news, analysis and commentary on economic policy, international economics and global financial markets, with a special focus on the emerging world. Access is free." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="The website is created by the editorial team that runs the daily news magazine of the same name. The print edition is produced during the annual meetings of the IMF, World Bank and regional development banks, where it has been the most widely read and respected publication for the last 25 years." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Emerging Markets gives you access to numerous sources of information in one place. We bring you exclusive interviews with leading public figures, analysis by our team of journalists worldwide, and comment from leading voices on economics, finance and international political economy. Our own editorial is supplemented by contributions from experts on developing country economies, news from our sister publications, and analysis from academics, bankers and economists. All content can be found through our powerful search engine." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="Emerging Markets is part of Euromoney Institutional Investor plc, one of the largest and most respected providers of financial information worldwide." />
+			</Element>
+			<Element name="p" type="p">
+				<Attribute name="innerText" value="For more information on Emerging Markets, please contact our editorial and/or sales and marketing teams. Details may be found in the section ‘Contact Us’." />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="ContactUsPage">
+		<Control name="ContactUs" type="Label" xpath="//h1[text()='Contact Us']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<RequiredElements name="ContactUsRequiredElementsList" xpath="//div[@class='column_10']" filter="b">
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="EDITORIAL" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="SALES &amp; MARKETING" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="OPERATIONS" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="VIDEO PRODUCERS" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="POSTAL ADDRESS" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="FAX NUMBER" />
+			</Element>
+			<Element name="b" type="b">
+				<Attribute name="innerText" value="TWITTER" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="FeedbackPage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<Control name="FullName" type="Label" xpath="//label[text()='Full Name']" />
+		<Control name="Email" type="Label" xpath="//label[text()='Email']" />
+		<Control name="Send" type="Button" xpath="//input[contains(@id, 'Send')]" />
+		<RequiredElements name="FeedbackForm" xpath="//fieldset" filter="legend">
+			<Element name="legend" type="legend">
+				<Attribute name="innerText" value="Search" />
+			</Element>
+			<Element name="legend" type="legend">
+				<Attribute name="innerText" value="Contact us" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="FaqPage">
+		<Control name="FAQ" type="Label" xpath="//h1/span[text()='FAQs']" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="CookiesPage">
+		<Control name="Cookies" type="Label" xpath="//h2[contains(text(), 'COOKIES')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="NewspaperArchivePage">
+		<Control name="NewspaperArchive" type="Label" xpath="//h1[contains(text(), 'Newspaper Archive')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="SponsoredReportsPage">
+		<Control name="SponsoredReports" type="Label" xpath="//h1[contains(text(), 'Sponsored Reports')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="EconomicsAndPolicyPage">
+		<Control name="EconomicsAndPolicy" type="Label" xpath="//h1[contains(text(), 'Economics &amp; Policy')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="FinancialMarketsPage">
+		<Control name="FinancialMarkets" type="Label" xpath="//h1[contains(text(), 'Financial Markets')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="DevelopmentPage">
+		<Control name="Development" type="Label" xpath="//h1[contains(text(), 'Development')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="MiddleEastAndAfricaPage">
+		<Control name="MiddleEastAndAfrica" type="Label" xpath="//h1[contains(text(), 'Middle East &amp; Africa')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="AmericasPage">
+		<Control name="Americas" type="Label" xpath="//h1[contains(text(), 'Americas')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="AsiaPage">
+		<Control name="Asia" type="Label" xpath="//h1[contains(text(), 'Asia')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="EuropePage">
+		<Control name="Europe" type="Label" xpath="//h1[contains(text(), 'Emerging Europe')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="PollsAndAwardsPage">
+		<Control name="PollsAndAwards" type="Label" xpath="//span[contains(text(), 'Polls and Awards')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="EventsPage">
+		<Control name="Events" type="Label" xpath="//h1[contains(text(), 'Events')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="CommentAndOpinionPage">
+		<Control name="CommentAndOpinion" type="Label" xpath="//h1[contains(text(), 'Comment &amp; Opinion')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="FeaturesPage">
+		<Control name="Features" type="Label" xpath="//h1[contains(text(), 'Features')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="SectorsPage">
+		<Control name="Sectors" type="Label" xpath="//h2//a[contains(text(), 'Management issues')]" />
+	</Page>
+	<Page name="InterviewsPage">
+		<Control name="Interviews" type="Label" xpath="//h2[contains(text(), 'All interviews')]" />
+	</Page>
+	<Page name="CFOsPage">
+		<Control name="CFOs" type="Label" xpath="//h2//span[contains(text(), 'GTB for chief financial officers')]" />
+	</Page>
+	<Page name="CMOsPage">
+		<Control name="CMOs" type="Label" xpath="//h2//span[contains(text(), 'GTB for chief marketing officers')]" />
+	</Page>
+	<Page name="GTBTVPage">
+		<Control name="GTBTV" type="Label" xpath="//h2//span[contains(text(), 'Video Archive')]" />
+	</Page>
+	<Page name="NewsPage">
+		<Control name="News" type="Label" xpath="//h1[contains(text(), 'News')]" />
+		<Control name="FirstArticleLink" type="Link" xpath="//ul[@class='news_list section_archive']/li[1]/span/h3/a" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="ResearchPage">
+		<Control name="Research" type="Label" xpath="//span[contains(text(), 'Research')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="EMViewPage">
+		<Control name="EMView" type="Label" xpath="//span[contains(text(), 'EM View')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="RSSPage">
+		<Control name="RSS" type="Label" xpath="//span[contains(text(), 'RSS Feeds')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="AnalysisPage">
+		<Control name="Analysis" type="Label" xpath="//h1[contains(text(), 'Analysis')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="RegionsPage">
+		<Control name="Regions" type="Label" xpath="//h1[contains(text(), 'Regions')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="VideoPage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+		<RequiredElements name="VideoPageRequiredElements" xpath="//div" filter="object">
+			<Element name="object" type="object">
+				<Attribute name="id" value="myExperience" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="GlobalPage">
+		<Control name="Global" type="Label" xpath="//h1[contains(text(), 'Global')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="ArticlePage">
+		<Control name="AddComment" type="Button" xpath="//span[text()='Add comment']" />
+		<Control name="AddCommentConfirmationMessage" type="Label" xpath="//span[text()='Thank you for your comments. Subject to approval, they will be published on the site shortly.']" />
+		<Control name="Print" type="Button" xpath="//span[text()='Print']" />
+		<Control name="AddToMyClippings" type="Button" xpath="//span[contains(text(), 'Add to my clippings')]" />
+		<Control name="YourName" type="Textbox" xpath="//input[@id=//label[text()='Your name (required)']/@for]" />
+		<Control name="YourEmail" type="Textbox" xpath="//input[@id=//label[text()='Your email address (required)']/@for]" />
+		<Control name="YourComments" type="Textbox" xpath="//textarea[@id=//label[text()='Your comments (required)']/@for]" />
+		<Control name="Captcha" type="Textbox" xpath="//input[contains(@id, 'recaptcha') and @type='text']" optional="true" />
+		<Control name="Submit" type="Button" xpath="//input[@value='Submit']" />
+		<Control name="ArticleTitle" type="Label" xpath="//h1[span/text()]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<Control name="Breadcrumb" access="public" type="BreadcrumbComponent" xpath="" />
+	</Page>
+	<Page name="RegistrationDetailsPage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="NewsletterPreferences" access="public" type="NewsletterPreferencesComponent" xpath="" />
+		<Control name="PageTitle" type="Label" xpath="//h1[text()='Registration details']" />
+		<Control name="Title" type="Dropdown" xpath="//select[contains(@id, 'Title')]" />
+		<Control name="FirstName" type="Textbox" xpath="//input[contains(@id, 'FirstName')]" />
+		<Control name="LastName" type="Textbox" xpath="//input[contains(@id, 'LastName')]" />
+		<Control name="CompanyName" type="Textbox" xpath="//input[contains(@id, 'CompanyName')]" />
+		<Control name="AddressLineOne" type="Textbox" xpath="//input[contains(@id, 'Address1')]" />
+		<Control name="AddressLineTwo" type="Textbox" xpath="//input[contains(@id, 'Address2')]" />
+		<Control name="AddressLineThree" type="Textbox" xpath="//input[contains(@id, 'Address3')]" />
+		<Control name="City" type="Textbox" xpath="//input[contains(@id, 'City')]" />
+		<Control name="State" type="Dropdown" xpath="//select[contains(@id, 'State')]" />
+		<Control name="County" type="Textbox" xpath="//input[contains(@id, 'County')]" />
+		<Control name="PostCode" type="Textbox" xpath="//input[contains(@id, 'Postcode')]" />
+		<Control name="Country" type="Dropdown" xpath="//select[contains(@id, 'Country')]" />
+		<Control name="Telephone" type="Textbox" xpath="//input[contains(@id, 'TelephoneNumber')]" />
+		<Control name="Fax" type="Textbox" xpath="//input[contains(@id, 'Fax')]" />
+		<Control name="Update" type="Button" xpath="//input[contains(@id, 'btnSubmit')]" />
+		<Control name="AccountUpdatedSuccessfully" type="Label" xpath="//*[contains(text(), 'Your account details have been updated.')]" />
+		<Control name="TelephoneChoice" type="Checkbox" xpath="//input[@id=//label[text()='Telephone']/@for]" access="public" />
+		<Control name="FaxChoice" type="Checkbox" xpath="//input[@id=//label[text()='Fax']/@for]" access="public" />
+		<Control name="EmailChoice" type="Checkbox" xpath="//input[@id=//label[text()='Email']/@for]" access="public" />
+		<Control name="MailChoice" type="Checkbox" xpath="//input[@id=//label[text()='Mail']/@for]" access="public" />
+		<Control name="OffersFromOtherCompaniesChoice" type="Checkbox" xpath="//input[contains(@id, 'bythird') and @type='checkbox']" access="public" />
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//input[contains(@id, 'privacypolicy') and @type='checkbox']" optional="true" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//input[contains(@id, 'termsconditions') and @type='checkbox']" optional="true" />
+		<RequiredElements name="RegistrationDetailsPageRequiredElements" xpath="//div[h1[text()='Registration details']]" filter="h2|span|label">
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_lblMessage" />
+				<Attribute name="innerText" value="On this page you can update your details, including your registered address, e-newsletter preferences and your privacy settings." />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl" />
+				<Attribute name="innerText" value="Your details					Fields marked * are mandatory.											Title:											Select Title	Mr	Mrs	Miss	Ms	Dr	Prof	Sir	Other																First Name: *																											You must enter a first name					                            																Last Name: *																											You must enter a last name					                            																Company Name:														                                                    Address                    Fields marked * are mandatory.                                            Address 1:                                                                                                                            Address 2:                                                                                                                            Address 3:                                                                                                                            City:                                                                                                                            US State:                                        		ALASKA                                  	ALABAMA                                 	ARKANSAS                                	ARIZONA                                 	CALIFORNIA                     	COLORADO                                	CONNECTICUT                             	DIST OF COLUMBIA                        	DELAWARE                                	FLORIDA                                 	GEORGIA                                 	HAWAII                                  	IOWA                                    	IDAHO                                   	ILLINOIS                                	INDIANA                                 	KANSAS                                  	KENTUCKY                                	LOUISIANA                               	MASSACHUSETTS                           	MARYLAND                                	MAINE                                   	MICHIGAN                                	MINNESOTA                               	MISSOURI                                	MISSISSIPPI                             	MONTANA                                 	NORTH CAROLINA                          	NORTH DAKOTA                            	NEBRASKA                                	NEW HAMPSHIRE                           	NEW JERSEY                              	NEW MEXICO                              	NEVADA                                  	NEW YORK                                	OHIO                                    	OKLAHOMA                                	OREGON                                  	PENNSYLVANIA                            	RHODE ISLAND                            	SOUTH CAROLINA                          	SOUTH DAKOTA                            	TENNESSEE                               	TEXAS                                   	UTAH                                    	VIRGINIA                                	VERMONT                                 	WASHINGTON                              	WISCONSIN                               	WEST VIRGINIA                           	WYOMING                                                                                                 OR County:                                                                                                        Postcode/Zip:                                                                                                                            Country:                                        	Afghanistan	Albania	Algeria	American Samoa	Andorra	Angola	Anguilla                                                                                            	Antarctica	Antigua and Barbuda                                                                                 	Argentina	Armenia	Aruba	Ascension Islands	Australia	Austria	Azerbaijan	Azores	Bahamas	Bahrain	BALEARIC ISLANDS	Baltics	Bangladesh	Barbados	Barbuda	Belarus	Belgium	Belize	Benin                                                                                               	Bermuda	Bhutan                                                                                              	Bolivia                                                                                             	BONAIRE	BORNEO	Bosnia and Herzegovina	Botswana	Bouvet Island	Brazil	British Indian Ocean Territory	British Virgin Islands                                                                              	Brunei	Brunei Darussalam	Bulgaria	Burkina Faso                                                                                        	Burma	Burundi	Byelarus	Cambodia                                                                                            	Cameroon	Canada	CANAL ZONE	Canary Isles	Cape Verde                                                                                          	CAROLINE ISLANDS (PONAPE &amp;	Cayman Islands	Central African Republic                                                                            	Chad                                                                                                	Channel Islands                                                                                     	Channel Islands Guernsey                                                                            	Channel Islands Jersey                                                                              	Chile	China	Christmas Island	Cocos (Keeling) Islands	Colombia	Comoros                                                                                             	Congo                                                                                               	Cook Islands	Corsica	Costa Rica	Cote D'ivoire	CRETE	Croatia	Cuba	CURACAO	Curacao	Cyprus	Czech Republic	Democratic Republic of the Congo	Denmark	Djibouti	Dominica	Dominican Republic	Dominican Republic	East Timor	Ecuador	Egypt	El salvador	Equatorial Guinea	Eritrea	Estonia	Ethiopia	Falkland Islands                                                                                    	Faroe Islands	Fiji	Finland	France	France Metropolitan	French Guiana	French Polynesia	French Somaliland	French Southern Territories	French W Indies	Gabon	Gambia	Georgia	Germany	Ghana	Gibraltar                                                                                           	GILBERY &amp; ELLICE	GORDA CAY  (BA.)	Greece	Greenland	Grenada	Guadeloupe	Guam	Guatemala	Guernsey	Guinea	Guinea	Guinea-Bissau	Guyana	Haiti	Heard and McDonald Islands	Honduras	Hong Kong	Hong Kong, China	Hungary	Iceland	India	Indonesia	Iran	Iraq                                                                                                	Ireland	Isle of Man                                                                                         	Israel	Italy	IVORY COAST	Jamaica	Japan	Jordan	KAMPUCHEA (CAMBODIA)	Kazakhstan	Kenya	Kiribati	Korea, Democratic Republic of	Korea, Republic of                                                                         	Kosovo	Kuwait	Kyrgyzstan	Lao People's Democratic Republic	Laos	Latvia	Lebanon	Lesotho	Liberia	Libya	Liechtenstein	Lithuania	Luxembourg	Macau	Macedonia	Madagascar	Madeira	Malawi	Malaysia	Maldives	Mali	Malta	Marshall Islands	Martinique	Mauritania	Mauritius	Mayotte	Mexico	Micronesia, Federated States of	Midway Island	Moldova, Republic of	Monaco	Mongolia	Montenegro	Montenegro	Montserrat	Morocco	Mozambique	Myanmar                                                                                             	Namibia	NANSI-SHOTO(RYUKYU)	Nauru	Nepal	Netherlands	Netherlands Antilles	New Caledonia	NEW HEBRIDES	New Zealand	Nicaragua	Niger	Nigeria	Niue	Norfolk Island	Northern Mariana Islands	Norway	OKINAWA (JAPAN)	Oman	Oman	Pakistan	Palau	Palestinian Territory	Panama	Papua New Guinea	Paraguay	Peru	Philippines	Pitcairn	Poland	Portugal	Portuguese Guinea	Puerto Rico	Qatar	Reunion	Romania	Russia	Rwanda	S. Georgia and the S. Sandwich Islands	Saint Kitts and Nevis	Saint Lucia	Saint Martin (French Part)	Saint Vincent and the Grenadines	Samoa	San Marino	SANTA CRUZ ISLANDS	Sao Tome and Principe	Saudi Arabia	Senegal	Serbia	Seychelles	Sierra Leone	SIKKIM(ST OF INDIA)	Singapore	Slovakia	Slovenia	Solomon Islands	Somalia                                                                                           	South Africa	South Korea	Spain	Sri Lanka	ST AUGUSTINE WI	ST CHRISTOPHER	St Helena	ST MARTEN	St Pierre and Miquelon	ST. CROIX	ST. JOAN	ST. Thomas	Sudan	Suriname	Svalbard and Jan Mayen Islands	SWAN ISLAND	Swaziland	Sweden	Switzerland	Syrian Arab Republic	TAHITI	Taipei	Taiwan	Tajikistan	Tanzania, United Republic of	Thailand	The Syrian Arab Republic	TINIAN	Togo	Tokelau	Tonga	TORTOLA	Trinidad and Tobago	Tristan Da Cunha	Tunisia	Turkey	Turkmenistan                                                                                        	Turks and Caicos Islands	Tuvalu	Uganda	UK England &amp; Wales                                                                                  	UK Isle of Man                                                                                      	UK Jersey	UK Northern Ireland                                                                                 	UK Scotland                                                                                         	Ukraine	United Arab Emirates	United Kingdom	United States	United States Minor Outlying Islands	Unknown	UPPER VOLTA	Uruguay	US Central &amp; Northern States                                                                        	US North East &amp; Eastern States                                                                      	US Pacific Coast                                                                                    	US South and South West                                                                             	US: Central                                                                                         	US: East Coast                                                                                      	US: West Coast                                                                                      	Uzbekistan                                                                                          	Vanuatu	Vatican City State	Venezuela	Vietnam	Virgin Islands (British)	Virgin Islands (U.S.)	Wake Islands	Wallis and Futuna Islands	West Indies	Western Sahara	Western Samoa	Yemen	Yugoslavia	Zaire                                                                                               	Zambia	Zimbabwe                                                                                    Telephone:                                                                                                                            Fax:                                                                                                                                                			Areas of Interest							Americas							Asia							Emerging Europe							Global							Middle East &amp; Africa										                 Email newsletter preferences                                            			Emerging Markets News Alerts - Emerging Markets News Alerts	Email Format (Text version recommended for Lotus Notes and BlackBerry users)HTMLText                                				Data protection					 	#lc-popup-companies-fade {    display: none;    position: fixed;    top: 0%;    left: 0%;    width: 100%;    height: 100%;    background-color: black;    z-index:1001;    -moz-opacity: 0.8;    opacity:.60;    filter: alpha(opacity=60);    }    #lc-popup-companies-light {    display: none;    position: fixed;    top: 37%;    left: 33%;    width: 30%;    height: 20%;    padding: 30px;    border: 2px solid black;    background-color: white;    z-index:1002;    overflow: auto;    }        USE OF YOUR INFORMATION          Emerging Markets is part of the Euromoney Institutional Investor      PLC group of companies. Click       here for more details on our group’s activities.              We will use the information you provide here to process your      order/registration/request including communicating with you about it. If      you are registering for a trial, you will receive follow up emails and/or      a telephone call about your trial. As part of the trial, you may also      receive email updates and other features as specified for that product.      We may monitor your use of our website(s). As an international group, we      may transfer your data on a global basis. Subject to your choices below,      we may also use your data for marketing purposes. By submitting your      details, you will be indicating your consent to the use of your data as      identified here. Further information is set out in our privacy policy on      this site.        Your marketing choices:          Please tick if you don't want to receive details of products, services      and special offers from our group companies by:	      Telephone      Fax      Email      Mail            Please tick if you don't want to receive details of relevant products,      services and special offers from selected companies outside our group      .              Euromoney Institutional Investor PLC group companies provide a range of      business to business products and services. These are focused on      international finance, metals, commodities, telecoms, law, tax,      insurance, energy, transport and emerging markets. Products and services      include magazines, newsletters, books, directories, electronic      information and data, training, seminars and conferences. Full details      are available at www.euromoneyplc.com                        Close        var webtrendsJsLog = function() {if (typeof dcsMultiTrack !== 'undefined') {dcsMultiTrack('DCSext.legalcompliancecontainerviewedname', 'dataprotection', 'DCSext.legalcompliancecontainerviewedtag', 'common', 'DCSext.legalcompliancecontainerviewed', '1'); } else { setTimeout(webtrendsJsLog, 100); } }; webtrendsJsLog();" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer" />
+				<Attribute name="innerText" value="Your details					Fields marked * are mandatory.											Title:											Select Title	Mr	Mrs	Miss	Ms	Dr	Prof	Sir	Other																First Name: *																											You must enter a first name					                            																Last Name: *																											You must enter a last name					                            																Company Name:														                                                    Address                    Fields marked * are mandatory.                                            Address 1:                                                                                                                            Address 2:                                                                                                                            Address 3:                                                                                                                            City:                                                                                                                            US State:                                        		ALASKA                                  	ALABAMA                                 	ARKANSAS                                	ARIZONA                                 	CALIFORNIA                     	COLORADO                                	CONNECTICUT                             	DIST OF COLUMBIA                        	DELAWARE                                	FLORIDA                                 	GEORGIA                                 	HAWAII                                  	IOWA                                    	IDAHO                                   	ILLINOIS                                	INDIANA                                 	KANSAS                                  	KENTUCKY                                	LOUISIANA                               	MASSACHUSETTS                           	MARYLAND                                	MAINE                                   	MICHIGAN                                	MINNESOTA                               	MISSOURI                                	MISSISSIPPI                             	MONTANA                                 	NORTH CAROLINA                          	NORTH DAKOTA                            	NEBRASKA                                	NEW HAMPSHIRE                           	NEW JERSEY                              	NEW MEXICO                              	NEVADA                                  	NEW YORK                                	OHIO                                    	OKLAHOMA                                	OREGON                                  	PENNSYLVANIA                            	RHODE ISLAND                            	SOUTH CAROLINA                          	SOUTH DAKOTA                            	TENNESSEE                               	TEXAS                                   	UTAH                                    	VIRGINIA                                	VERMONT                                 	WASHINGTON                              	WISCONSIN                               	WEST VIRGINIA                           	WYOMING                                                                                                 OR County:                                                                                                        Postcode/Zip:                                                                                                                            Country:                                        	Afghanistan	Albania	Algeria	American Samoa	Andorra	Angola	Anguilla                                                                                            	Antarctica	Antigua and Barbuda                                                                                 	Argentina	Armenia	Aruba	Ascension Islands	Australia	Austria	Azerbaijan	Azores	Bahamas	Bahrain	BALEARIC ISLANDS	Baltics	Bangladesh	Barbados	Barbuda	Belarus	Belgium	Belize	Benin                                                                                               	Bermuda	Bhutan                                                                                              	Bolivia                                                                                             	BONAIRE	BORNEO	Bosnia and Herzegovina	Botswana	Bouvet Island	Brazil	British Indian Ocean Territory	British Virgin Islands                                                                              	Brunei	Brunei Darussalam	Bulgaria	Burkina Faso                                                                                        	Burma	Burundi	Byelarus	Cambodia                                                                                            	Cameroon	Canada	CANAL ZONE	Canary Isles	Cape Verde                                                                                          	CAROLINE ISLANDS (PONAPE &amp;	Cayman Islands	Central African Republic                                                                            	Chad                                                                                                	Channel Islands                                                                                     	Channel Islands Guernsey                                                                            	Channel Islands Jersey                                                                              	Chile	China	Christmas Island	Cocos (Keeling) Islands	Colombia	Comoros                                                                                             	Congo                                                                                               	Cook Islands	Corsica	Costa Rica	Cote D'ivoire	CRETE	Croatia	Cuba	CURACAO	Curacao	Cyprus	Czech Republic	Democratic Republic of the Congo	Denmark	Djibouti	Dominica	Dominican Republic	Dominican Republic	East Timor	Ecuador	Egypt	El salvador	Equatorial Guinea	Eritrea	Estonia	Ethiopia	Falkland Islands                                                                                    	Faroe Islands	Fiji	Finland	France	France Metropolitan	French Guiana	French Polynesia	French Somaliland	French Southern Territories	French W Indies	Gabon	Gambia	Georgia	Germany	Ghana	Gibraltar                                                                                           	GILBERY &amp; ELLICE	GORDA CAY  (BA.)	Greece	Greenland	Grenada	Guadeloupe	Guam	Guatemala	Guernsey	Guinea	Guinea	Guinea-Bissau	Guyana	Haiti	Heard and McDonald Islands	Honduras	Hong Kong	Hong Kong, China	Hungary	Iceland	India	Indonesia	Iran	Iraq                                                                                                	Ireland	Isle of Man                                                                                         	Israel	Italy	IVORY COAST	Jamaica	Japan	Jordan	KAMPUCHEA (CAMBODIA)	Kazakhstan	Kenya	Kiribati	Korea, Democratic Republic of	Korea, Republic of                                                                         	Kosovo	Kuwait	Kyrgyzstan	Lao People's Democratic Republic	Laos	Latvia	Lebanon	Lesotho	Liberia	Libya	Liechtenstein	Lithuania	Luxembourg	Macau	Macedonia	Madagascar	Madeira	Malawi	Malaysia	Maldives	Mali	Malta	Marshall Islands	Martinique	Mauritania	Mauritius	Mayotte	Mexico	Micronesia, Federated States of	Midway Island	Moldova, Republic of	Monaco	Mongolia	Montenegro	Montenegro	Montserrat	Morocco	Mozambique	Myanmar                                                                                             	Namibia	NANSI-SHOTO(RYUKYU)	Nauru	Nepal	Netherlands	Netherlands Antilles	New Caledonia	NEW HEBRIDES	New Zealand	Nicaragua	Niger	Nigeria	Niue	Norfolk Island	Northern Mariana Islands	Norway	OKINAWA (JAPAN)	Oman	Oman	Pakistan	Palau	Palestinian Territory	Panama	Papua New Guinea	Paraguay	Peru	Philippines	Pitcairn	Poland	Portugal	Portuguese Guinea	Puerto Rico	Qatar	Reunion	Romania	Russia	Rwanda	S. Georgia and the S. Sandwich Islands	Saint Kitts and Nevis	Saint Lucia	Saint Martin (French Part)	Saint Vincent and the Grenadines	Samoa	San Marino	SANTA CRUZ ISLANDS	Sao Tome and Principe	Saudi Arabia	Senegal	Serbia	Seychelles	Sierra Leone	SIKKIM(ST OF INDIA)	Singapore	Slovakia	Slovenia	Solomon Islands	Somalia                                                                                           	South Africa	South Korea	Spain	Sri Lanka	ST AUGUSTINE WI	ST CHRISTOPHER	St Helena	ST MARTEN	St Pierre and Miquelon	ST. CROIX	ST. JOAN	ST. Thomas	Sudan	Suriname	Svalbard and Jan Mayen Islands	SWAN ISLAND	Swaziland	Sweden	Switzerland	Syrian Arab Republic	TAHITI	Taipei	Taiwan	Tajikistan	Tanzania, United Republic of	Thailand	The Syrian Arab Republic	TINIAN	Togo	Tokelau	Tonga	TORTOLA	Trinidad and Tobago	Tristan Da Cunha	Tunisia	Turkey	Turkmenistan                                                                                        	Turks and Caicos Islands	Tuvalu	Uganda	UK England &amp; Wales                                                                                  	UK Isle of Man                                                                                      	UK Jersey	UK Northern Ireland                                                                                 	UK Scotland                                                                                         	Ukraine	United Arab Emirates	United Kingdom	United States	United States Minor Outlying Islands	Unknown	UPPER VOLTA	Uruguay	US Central &amp; Northern States                                                                        	US North East &amp; Eastern States                                                                      	US Pacific Coast                                                                                    	US South and South West                                                                             	US: Central                                                                                         	US: East Coast                                                                                      	US: West Coast                                                                                      	Uzbekistan                                                                                          	Vanuatu	Vatican City State	Venezuela	Vietnam	Virgin Islands (British)	Virgin Islands (U.S.)	Wake Islands	Wallis and Futuna Islands	West Indies	Western Sahara	Western Samoa	Yemen	Yugoslavia	Zaire                                                                                               	Zambia	Zimbabwe                                                                                    Telephone:                                                                                                                            Fax:                                                                                                                                                			Areas of Interest							Americas							Asia							Emerging Europe							Global							Middle East &amp; Africa										                 Email newsletter preferences                                            			Emerging Markets News Alerts - Emerging Markets News Alerts	Email Format (Text version recommended for Lotus Notes and BlackBerry users)HTMLText                                				Data protection					 	#lc-popup-companies-fade {    display: none;    position: fixed;    top: 0%;    left: 0%;    width: 100%;    height: 100%;    background-color: black;    z-index:1001;    -moz-opacity: 0.8;    opacity:.60;    filter: alpha(opacity=60);    }    #lc-popup-companies-light {    display: none;    position: fixed;    top: 37%;    left: 33%;    width: 30%;    height: 20%;    padding: 30px;    border: 2px solid black;    background-color: white;    z-index:1002;    overflow: auto;    }        USE OF YOUR INFORMATION          Emerging Markets is part of the Euromoney Institutional Investor      PLC group of companies. Click       here for more details on our group’s activities.              We will use the information you provide here to process your      order/registration/request including communicating with you about it. If      you are registering for a trial, you will receive follow up emails and/or      a telephone call about your trial. As part of the trial, you may also      receive email updates and other features as specified for that product.      We may monitor your use of our website(s). As an international group, we      may transfer your data on a global basis. Subject to your choices below,      we may also use your data for marketing purposes. By submitting your      details, you will be indicating your consent to the use of your data as      identified here. Further information is set out in our privacy policy on      this site.        Your marketing choices:          Please tick if you don't want to receive details of products, services      and special offers from our group companies by:	      Telephone      Fax      Email      Mail            Please tick if you don't want to receive details of relevant products,      services and special offers from selected companies outside our group      .              Euromoney Institutional Investor PLC group companies provide a range of      business to business products and services. These are focused on      international finance, metals, commodities, telecoms, law, tax,      insurance, energy, transport and emerging markets. Products and services      include magazines, newsletters, books, directories, electronic      information and data, training, seminars and conferences. Full details      are available at www.euromoneyplc.com                        Close        var webtrendsJsLog = function() {if (typeof dcsMultiTrack !== 'undefined') {dcsMultiTrack('DCSext.legalcompliancecontainerviewedname', 'dataprotection', 'DCSext.legalcompliancecontainerviewedtag', 'common', 'DCSext.legalcompliancecontainerviewed', '1'); } else { setTimeout(webtrendsJsLog, 100); } }; webtrendsJsLog();" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Your details" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblTitle" />
+				<Attribute name="innerText" value="Title:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblFirstName" />
+				<Attribute name="innerText" value="First Name: *" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_rfvFirstName" />
+				<Attribute name="innerText" value="You must enter a first name" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblLastName" />
+				<Attribute name="innerText" value="Last Name: *" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_rfvLastName" />
+				<Attribute name="innerText" value="You must enter a last name" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblCompanyName" />
+				<Attribute name="innerText" value="Company Name:" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Address" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblAddress1" />
+				<Attribute name="innerText" value="Address 1:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblAddress2" />
+				<Attribute name="innerText" value="Address 2:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblAddress3" />
+				<Attribute name="innerText" value="Address 3:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblCity" />
+				<Attribute name="innerText" value="City:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblState" />
+				<Attribute name="innerText" value="US State:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblCounty" />
+				<Attribute name="innerText" value="OR County:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblPostcode" />
+				<Attribute name="innerText" value="Postcode/Zip:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblCountry" />
+				<Attribute name="innerText" value="Country:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblTelephone" />
+				<Attribute name="innerText" value="Telephone:" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lblFax" />
+				<Attribute name="innerText" value="Fax:" />
+			</Element>
+			<Element name="h2" type="h2" />
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Americas" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Asia" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Emerging Europe" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Global" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Middle East &amp; Africa" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Email newsletter preferences" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_SelectEmailPreferences_sucSignUp" />
+				<Attribute name="innerText" value="Emerging Markets News Alerts - Emerging Markets News Alerts	Email Format (Text version recommended for Lotus Notes and BlackBerry users)HTMLText" />
+			</Element>
+			<Element name="label" type="label" />
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_SelectEmailPreferences_sucSignUp_format" />
+				<Attribute name="innerText" value="HTMLText" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="HTML" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Text" />
+			</Element>
+			<Element name="h2" type="h2">
+				<Attribute name="innerText" value="Data protection" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Telephone" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Telephone" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Fax" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Fax" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Email" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Email" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="Mail" />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="Mail" />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="innerText" value="." />
+			</Element>
+			<Element name="label" type="label">
+				<Attribute name="innerText" value="." />
+			</Element>
+			<Element name="span" type="span">
+				<Attribute name="id" value="ctl00_cphMain_AccControl_ArticleContainer_lcContainer_renderedDescriptor" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="ManageYourAddressesPage">
+		<Control name="AddNewAddress" type="Label" xpath="//notSet" />
+	</Page>
+	<Page name="ViewYourPreviousPurchasesPage">
+		<RequiredElements name="ViewYourPreviousPurchasesRequiredElements" xpath="" filter="" />
+	</Page>
+	<Page name="ViewYourSubscriptionsPage">
+		<RequiredElements name="ViewYourSubscriptionsRequiredElements" xpath="" filter="" />
+	</Page>
+	<Page name="AdvancedSearchPage">
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+		<Control name="Footer" access="public" type="FooterComponent" xpath="" />
+		<Control name="SidePanel" access="public" type="SidePanelComponent" xpath="" optional="true" />
+		<Control name="TopMenu" access="public" type="TopMenuComponent" xpath="" />
+		<RequiredElements name="AdvancedSearchPageRequiredElements" xpath="//section" filter="label|input|select"></RequiredElements>
+	</Page>
+	<Page name="FreeTrialZeroStep">
+		<Control name="Next" type="Button" xpath="//input[contains(@id,'SubmitNews')]" />
+		<Control name="RegisterHereForAFreeTrial" type="Label" xpath="//h4[contains(text(),'Register here for a free trial!')]" />
+	</Page>
+	<Page name="SignUpPage">
+		<Control name="Email" type="Textbox" xpath="//div[contains(@id, 'pnlDetails')]//input[@id=//label[contains(text(), 'Email:')]/@for]" />
+		<Control name="Title" type="Dropdown" xpath="//div[contains(@id, 'pnlDetails')]//select[@id=//label[contains(text(), 'Title:')]/@for]" />
+		<Control name="FirstName" type="Textbox" xpath="//div[contains(@id, 'pnlDetails')]//input[@id=//label[contains(text(), 'First Name:')]/@for]" />
+		<Control name="LastName" type="Textbox" xpath="//div[contains(@id, 'pnlDetails')]//input[@id=//label[contains(text(), 'Last Name:')]/@for]" />
+		<Control name="JobTitle" type="Textbox" xpath="//div[contains(@id, 'pnlDetails')]//input[@id=//label[contains(text(), 'Job Title:')]/@for]" />
+		<Control name="Company" type="Textbox" xpath="//div[contains(@id, 'pnlDetails')]//input[@id=//label[contains(text(), 'Company:')]/@for]" />
+		<Control name="Country" type="Dropdown" xpath="//div[contains(@id, 'pnlDetails')]//select[@id=//label[contains(text(), 'Country:')]/@for]" />
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//input[contains(@id, 'privacypolicy') and @type='checkbox']" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//input[contains(@id, 'termsconditions') and @type='checkbox']" />
+		<Control name="SignUp" type="Button" xpath="//input[contains(@value, 'Sign up')]" />
+	</Page>
+	<Page name="SignUpSuccessfulPage">
+		<Control name="SuccessfulMessage" type="Label" xpath="//p[contains(text(), 'Thank you for setting up your online account for Euromoney Conferences.')]" />
+		<Control name="Header" access="public" type="HeaderComponent" xpath="" />
+	</Page>
+	<Page name="SubscribtionZeroPage">
+		<Control name="EuroHedge" type="Link" xpath="//a[contains(@href,'EuroHedge-SubscribeNow.html')]" />
+		<Control name="AsiaHedge" type="Link" xpath="//a[contains(@href,'AsiaHedge-SubscribeNow.html')]" />
+		<Control name="InvestHedge" type="Link" xpath="//a[contains(@href,'InvestHedge-SubscribeNow.html')]" />
+		<Control name="AU" type="Link" xpath="//a[contains(@href,'Absolute-UCITS-SubscribeNow.html')]" />
+		<Control name="AR" type="Link" xpath="//a[contains(@href,'/AbsoluteReturn-SubscribeNow.html?ls=Main_Sub_pg')]" />
+	</Page>
+	<Page name="SubscribeStepTwoPage">
+		<Control name="EmailAddress" type="Textbox" xpath="//input[contains(@id,'EmailAddress')]" />
+		<Control name="EmailCompare" type="Textbox" xpath="//input[contains(@id,'EmailCompare')]" />
+		<Control name="Next" type="Button" xpath="//input[@value='Next']" />
+		<Control name="WarningMessageEmptyEmail" type="Label" xpath="//span[text()='You must enter an e-mail address']" />
+		<Control name="WarningMessageEmptyCompareEmail" type="Label" xpath="//span[text()='You must confirm your e-mail address']" />
+		<Control name="WarningMessage1" type="Label" xpath="//span[text()='You must enter a valid e-mail address'][1]" />
+		<Control name="WarningMessage2" type="Label" xpath="//span[text()='You must enter a valid e-mail address'][2]" />
+		<RequiredElements name="SubscribeStepTwoToolbar" xpath="//table[@class='progressbar']" filter="td">
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="Select Products" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="class" value="selectedStep" />
+				<Attribute name="innerText" value="E-mail Address" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="Details and Payment" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="SubscribeStepThreePage">
+		<Control name="YourDetailsHeader" type="Label" xpath="//h2[text()='YOUR DETAILS']" />
+		<Control name="Title" type="Dropdown" xpath="//select[contains(@id,'Title')]" />
+		<Control name="FirstName" type="Textbox" xpath="//input[contains(@id,'FirstName')]" />
+		<Control name="LastName" type="Textbox" xpath="//input[contains(@id,'LastName')]" />
+		<Control name="JobTitle" type="Textbox" xpath="//input[contains(@id,'Position')]" />
+		<Control name="CompanyName" type="Textbox" xpath="//input[contains(@id,'CompanyName')]" />
+		<Control name="CompanyPosition" type="Dropdown" xpath="//span[contains(., 'Please select a position') and contains(@style, 'display: inline')]" optional="true" />
+		<Control name="CompanyType" type="Dropdown" xpath="//select[contains(@id,'CompanyType')]" />
+		<Control name="State" type="Dropdown" xpath="//select[contains(@id,'PurchaseContainer_State')]" />
+		<Control name="ORCountry" type="Textbox" xpath="//input[contains(@id,'PurchaseContainer_County')]" />
+		<Control name="YourReference" type="Textbox" xpath="//input[contains(@id,'ReferenceText')]" />
+		<Control name="AddressThirdLine" type="Textbox" xpath="//input[contains(@id, 'Address3')]" />
+		<Control name="StateWarningMessage" type="Label" xpath="//span[contains(@id,'PurchaseContainer_cvState')]" />
+		<Control name="BillingAddressCheckbox" type="Checkbox" xpath="//input[contains(@id,'DifferentBillingAddress')]" />
+		<Control name="AddressFirstLineBillingAddress" type="Textbox" xpath="//input[contains(@id, 'Address1')]" />
+		<Control name="AddressSecondLineBillingAddress" type="Textbox" xpath="//input[contains(@id, 'Address2')]" />
+		<Control name="AddressThirdLineBillingAddress" type="Textbox" xpath="//input[contains(@id, 'Address3')]" />
+		<Control name="PostCodeBillingAddress" type="Textbox" xpath="//input[contains(@id, 'Address3')]" />
+		<Control name="CountryBillingAddress" type="Dropdown" xpath="//input[contains(@id, 'Address3')]" />
+		<Control name="Country" type="Dropdown" xpath="//select[contains(@id,'Country')]" />
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//input[@id=//label[a[text()='Privacy Policy']]/@for]" optional="true" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//input[contains(@id,'TermsAndConditions')]" />
+		<Control name="AddressFirstLine" type="Textbox" xpath="//input[contains(@id, 'Address1')]" />
+		<Control name="AddressSecondLine" type="Textbox" xpath="//input[contains(@id, 'Address2')]" />
+		<Control name="City" type="Textbox" xpath="//input[contains(@id, 'City')]" />
+		<Control name="PostCode" type="Textbox" xpath="//input[contains(@id, 'Post')]" />
+		<Control name="Telephone" type="Textbox" xpath="//input[contains(@id, 'TelephoneNumber')]" />
+		<Control name="Submit" type="Button" xpath="//input[@value='Next']" />
+		<Control name="TitleValidationMessage" type="Label" xpath="//span[text()='You must select a title']" />
+		<Control name="FirstNameValidationMessage" type="Label" xpath="//span[text()= 'You must enter an first name']" />
+		<Control name="LastNameValidationMessage" type="Label" xpath="//span[text()= 'You must enter a surname']" />
+		<Control name="JobTitleValidationMessage" type="Label" xpath="//span[text()='You must enter a job title']" />
+		<Control name="CompanyNameValidationMessage" type="Label" xpath="//span[text()= 'You must enter a company name']" />
+		<Control name="CompanyPositionValidationMessage" type="Label" xpath="//span[text()= 'You must select a  job title']" optional="true" />
+		<Control name="CompanyTypeValidationMessage" type="Label" xpath="//span[text()= 'You must select a company type']" optional="true" />
+		<Control name="AddressFirstLineValidationMessage" type="Label" xpath="//span[text()='You must enter the first line of your address']" />
+		<Control name="AddressSecondLineValidationMessage" type="Label" xpath="//span[text()='You must enter the second line of your address']" optional="true" />
+		<Control name="TelephoneNumberValidationMessage" type="Label" xpath="//span[text()= 'You must enter a telephone number']" />
+		<Control name="AddressValidationMessage" type="Label" xpath="//span[text()='You must enter the first line of your address']" />
+		<Control name="CityValidationMessage" type="Label" xpath="//span[text()='You must enter a city']" />
+		<Control name="ZipValidationMessage" type="Label" xpath="//span[text()='You must enter a post/zip code']" />
+		<Control name="CountryValidationMessage" type="Label" xpath="//span[text()='You must select a country']" />
+		<Control name="PaymentMethod" type="Dropdown" xpath="//select[contains(@id,'PaymentType')]" />
+		<Control name="WarningMessageInvalidFirstName" type="Label" xpath="//span[text()='The first name you have entered is invalid']" />
+		<Control name="WarningMessageInvalidLastName" type="Label" xpath="//span[text()='The last name you have entered is invalid']" />
+		<Control name="WarningMessageInvalidCompanyName" type="Label" xpath="//span[text()='The company name you have entered is invalid']" />
+		<Control name="WarningMessageEmptyCompanyName" type="Label" xpath="//span[text()='You must enter a company name']" />
+		<Control name="WarningMessageEmptyFirstName" type="Label" xpath="//span[text()='You must enter a first name']" />
+		<Control name="WarningMessageEmptyLastName" type="Label" xpath="//span[text()='You must enter a surname']" />
+		<Control name="WarningMessageEmptyCity" type="Label" xpath="//span[text()='You must enter a city']" />
+		<Control name="WarningMessageEmptyJobTitle" type="Label" xpath="//span[text()='You must enter a job title']" />
+		<Control name="WarningMessageEmptyZip" type="Label" xpath="//span[text()='You must enter a post/zip code']" />
+	</Page>
+	<Page name="SubscriptionConfirmationPage">
+		<Control name="Message" type="Label" xpath="//p[text()='Thank you for subscribing to ']" />
+		<Control name="SelctedStep" type="Label" xpath="//td[@class='selectedStep']" />
+		<RequiredElements name="SubscribeStepTwoToolbar" xpath="//table[@class='progressbar']" filter="td">
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="Select Products" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="E-mail Address" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="innerText" value="Details and Payment" />
+			</Element>
+			<Element name="td" type="td">
+				<Attribute name="class" value="selectedStep" />
+				<Attribute name="innerText" value="Confirmation" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="SubscriptionPaymentPage">
+		<Control name="PaymentFrame" access="public" type="Label" xpath="//iframe[contains(@id,'CyberSource')]" />
+		<Control name="ErrorMessageIfPageIsNotDisplayed" access="public" type="Label" xpath="//*[contains(text(),'Sorry, we are experiencing some technical problems with the page you requested.') or contains(text(),'An error has occurred') or contains(text(),'The page cannot be displayed because an internal server error has occurred.') or contains(text(),'error')]" />
+		<Control name="CreditCardNumber" type="Textbox" xpath="//input[@id='card_number']" />
+		<Control name="CVN" type="Textbox" xpath="//input[@id='card_cvn']" />
+		<Control name="TypeCard" type="Dropdown" xpath="//select[@id='card_type']" />
+		<Control name="ExpirationMonth" type="Dropdown" xpath="//select[contains(@id, 'card_expiry_month')]" />
+		<Control name="ExpirationYear" type="Dropdown" xpath="//select[contains(@id, 'card_expiry_year')]" />
+		<Control name="Buy" type="Button" xpath="//input[@value='Pay']" />
+		<Control name="NumberCardWarning" type="Label" xpath="//div[text()='Enter a valid card number']" />
+		<Control name="IvalidInfoWarning" type="Label" xpath="//p[text()='Your order was declined. Please verify your information.']" />
+		<RequiredElements name="SubscriptionPaymentPageRequiredElements" xpath="//div[@class='footer_box']" filter="a">
+			<Element name="a" type="Link">
+				<Attribute name="href" value="javascript:{};" />
+			</Element>
+		</RequiredElements>
+	</Page>
+	<Page name="EuroHedgePage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="AsiaHedgePage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="EuroHedgePage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="AbsoluteReturnPage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="AbsoluteUCITSPage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="InvestHedgePage">
+		<Control name="Subscribe" type="Link" xpath="//a[text()='Subscribe Now']" />
+	</Page>
+	<Page name="CheckoutSelectionPage">
+		<Control name="Next" type="Button" xpath="//input[contains(@name,'NextButton')]" />
+	</Page>
+	<Page name="LoginRegisterPage">
+		<Control name="NewEmail" type="Textbox" xpath="//input[contains(@name, 'txtNewEmail')]" />
+		<Control name="Register" type="Button" xpath="//input[contains(@name,'btnRegister')]" />
+		<Control name="InvalidEmailMessage" type="Label" xpath="//span[contains(@id, 'rfvNewEmail') and contains(@style, 'visible')]" />
+	</Page>
+	<Page name="YourDetailsPage">
+		<Control name="TitleOpener" type="Button" xpath="//div[label[contains(text(),'Title') and not(contains(text(),'Job Title'))]]//a" />
+		<Control name="Title" type="Link" xpath="//a[text()='@param']" />
+		<Control name="FirstName" type="Textbox" xpath="//input[contains(@id, 'txtFirstName')]" />
+		<Control name="LastName" type="Textbox" xpath="//input[contains(@id, 'txtLastName')]" />
+		<Control name="JobTitle" type="Textbox" xpath="//input[contains(@id, 'txtJobTitle')]" />
+		<Control name="Company" type="Textbox" xpath="//input[contains(@id, 'txtCompany')]" />
+		<Control name="Telephone" type="Textbox" xpath="//input[contains(@id, 'txtTelephone')]" />
+		<Control name="Fax" type="Textbox" xpath="//input[contains(@id, 'txtFax')]" />
+		<Control name="CountryOpener" type="Button" xpath="//div[label[contains(text(),'Country')]]//a" />
+		<Control name="Country" type="Link" xpath="//a[text()='@param']" />
+		<Control name="FirstAddress" type="Textbox" xpath="//input[contains(@id, 'txtAddress1')]" />
+		<Control name="SecondAddress" type="Textbox" xpath="//input[contains(@id, 'txtAddress2')]" />
+		<Control name="ThirdAddress" type="Textbox" xpath="//input[contains(@id, 'txtAddress3')]" />
+		<Control name="Town" type="Textbox" xpath="//input[contains(@id, 'txtTown')]" />
+		<Control name="County" type="Textbox" xpath="//input[contains(@id, 'txtCounty')]" />
+		<Control name="PostCode" type="Textbox" xpath="//input[contains(@id, 'txtPostcode')]" />
+		<Control name="PrivacyPolicy" type="Checkbox" xpath="//div[input[contains(@id, 'cbPrivacyPolicy')]]/div" />
+		<Control name="TermsAndConditions" type="Checkbox" xpath="//div[input[contains(@id, 'cbTerms')]]/div" />
+		<Control name="Register" type="Button" xpath="//input[contains(@id, 'btnRegister')]" />
+		<Control name="StateOpener" type="Button" xpath="//div[label[contains(text(),'State')]]//a" />
+		<Control name="State" type="Link" xpath="//a[text()='@param']" />
+		<Control name="ProvinceOpener" type="Button" xpath="//div[label[contains(text(),'Province')]]//a" />
+		<Control name="Province" type="Link" xpath="//a[text()='@param']" />
+		<Control name="FirstNameValidation" type="Label" xpath="//span[contains(@id, 'regexFirstName') and contains(@style, 'inline')]" />
+		<Control name="SurameValidation" type="Label" xpath="//span[contains(@id, 'regexLastName') and contains(@style, 'inline')]" />
+		<Control name="Header" type="Label" xpath="//h2[contains(text(), 'Your Details')]" />
+		<Control name="CompanyNameValidation" type="Label" xpath="//span[contains(@id, 'regexCompany') and contains(@style, 'inline')]" />
+		<Control name="AddressOneValidation" type="Label" xpath="//span[contains(@id, 'regexAddress1') and contains(@style, 'inline')]" />
+		<Control name="AddressTwoValidation" type="Label" xpath="//span[contains(@id, 'Address2CharacterValidator') and contains(@style, 'inline')]" />
+		<Control name="AddressThreeValidation" type="Label" xpath="//span[contains(@id, 'Address3CharacterValidator') and contains(@style, 'inline')]" />
+		<Control name="CityValidation" type="Label" xpath="//span[contains(@id, 'regexTown') and contains(@style, 'inline')]" />
+		<Control name="CountyValidation" type="Label" xpath="//span[contains(@id, 'CountyCharacterValidator') and contains(@style, 'inline')]" />
+		<Control name="FaxValidation" type="Label" xpath="//span[contains(@id, 'regexFaxNumber') and contains(@style, 'visible')]" />
+		<Control name="ZipValidation" type="Label" xpath="//span[contains(@id, 'regexPostcode') and contains(@style, 'inline')]" />
+		<Control name="TelephoneNumber" type="Label" xpath="//span[contains(@id, 'regexTelephoneNumber') and contains(@style, 'visible')]" />
+	</Page>
+	<Page name="AddressSelectionPage">
+		<Control name="ProceedToPayment" type="Button" xpath="//input[contains(@id, 'btnProceed')]" />
+	</Page>
+	<Page name="PaymentPage">
+		<Control name="CardType" type="Dropdown" xpath="//select[@id='card_type']" />
+		<Control name="CardNumber" type="Textbox" xpath="//input[@id='card_number']" />
+		<Control name="CardCVN" type="Textbox" xpath="//input[@id='card_cvn']" />
+		<Control name="CardExpirationYear" type="Dropdown" xpath="//select[@id='card_expiry_year']" />
+		<Control name="Pay" type="Button" xpath="//input[@value='Pay']" />
+	</Page>
+	<Page name="ConfirmationPage">
+		<Control name="Title" type="Label" xpath="//h2[text()='Confirmation Page']" timeout="5" />
+	</Page>
+	<Page name="CheckoutSelectionPage">
+		<Control name="Next" type="Button" xpath="//input[contains(@name,'NextButton')]" />
+	</Page>
+</Pages>

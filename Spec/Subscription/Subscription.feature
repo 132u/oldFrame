@@ -1,0 +1,180 @@
+﻿@Subscription
+Feature: Subscription
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get EuroHedge subscription 1st package by credit card as a new user with valid data provided
+	Given I'm on the Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com 
+Scenario: Subscribe page - Should get EuroHedge subscription 2nd package by credit card as a new user with valid data provided
+	Given I'm on the Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AsiaHedge subscription 1st package by credit card as a new user with valid data provided
+	Given I'm on the Asia Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AsiaHedge subscription 2nd package by credit card as a new user with valid data provided
+	Given I'm on the Asia Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get InvestHedge subscription 1st package by credit card as a new user with valid data provided
+	Given I'm on the InvestHedge page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get InvestHedge subscription 2nd package by credit card as a new user with valid data provided
+	Given I'm on the InvestHedge Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AU subscription 1st package by credit card as a new user with valid data provided
+	Given I'm on the AU Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AR subscription 1st package by credit card as a new user with valid data provided
+	Given I'm on the AR Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AR subscription 2nd package by credit card as a new user with valid data provided
+	Given I'm on the AR Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get EuroHedge subscription by credit card as a new user with valid data provided
+	Given I'm on the EuroHedge Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AsiaHedge subscription by credit card as a new user with valid data provided
+	Given I'm on the AsiaHedge Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AbsoluteUCITS subscription by credit card as a new user with valid data provided
+	Given I'm on the AbsoluteUCITS Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AbsoluteReturn subscription by credit card as a new user with valid data provided
+	Given I'm on the AbsoluteReturn Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get InvestHedge subscription by credit card as a new user with valid data provided
+	Given I'm on the InvestHedge Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AR subscription 1st package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the AR Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AR subscription 2nd package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the AR Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AU subscription 1st package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the AU Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get EuroHedge subscription 1st package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the Subscribe page
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com 
+Scenario: Subscribe page - Should get EuroHedge subscription 2nd package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AsiaHedge subscription 1st package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the Asia Subscribe page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get AsiaHedge subscription 2nd package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the Asia Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com 
+Scenario: Subscribe page - Should get InvestHedge subscription 1st package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the InvestHedge page and select 1st package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario: Subscribe page - Should get InvestHedge subscription 2nd package by credit card as a new user with valid data provided All Fields Filled
+	Given I'm on the InvestHedge Subscribe page and select 2nd package
+	When I try to get subscription by credit card as a new user with valid data provided All Fields Filled
+	And I fill all required data for credit card
+	Then I should get subscription as a new user
+
+@hedgefundintelligence.com
+Scenario Template: Subscribe page - Fill all fields and Fill billing address 
+	Given I'm on the InvestHedge Subscribe page and select 2nd package
+	When I fill all fields for user details and fill Billing Address
+	And Select "<payment meathod>" and if it's sredit card I fill all required data for credit card
+	Then I should get subscription as a new user
+Examples: 
+	| payment meathod |
+	| Credit Card     |
+	| Invoice         |
+
+
+
+

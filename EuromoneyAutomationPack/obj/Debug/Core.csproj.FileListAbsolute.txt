@@ -1,0 +1,12 @@
+D:\MY\EuromoneyAutomationPack\bin\Debug\phantomjs.exe
+D:\MY\EuromoneyAutomationPack\bin\Debug\phantomjs-license.txt
+D:\MY\EuromoneyAutomationPack\bin\Debug\Configuration\ApplicationConfiguration.xml
+D:\MY\EuromoneyAutomationPack\bin\Debug\Core.dll
+D:\MY\EuromoneyAutomationPack\bin\Debug\Core.pdb
+D:\MY\EuromoneyAutomationPack\bin\Debug\WebDriver.dll
+D:\MY\EuromoneyAutomationPack\bin\Debug\WebDriver.Support.dll
+D:\MY\EuromoneyAutomationPack\bin\Debug\WebDriver.xml
+D:\MY\EuromoneyAutomationPack\bin\Debug\WebDriver.Support.xml
+D:\MY\EuromoneyAutomationPack\obj\Debug\Core.dll
+D:\MY\EuromoneyAutomationPack\obj\Debug\Core.pdb
+D:\MY\EuromoneyAutomationPack\obj\Debug\Core.csprojResolveAssemblyReference.cache

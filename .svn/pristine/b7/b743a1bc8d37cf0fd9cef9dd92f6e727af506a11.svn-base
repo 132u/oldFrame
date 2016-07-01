@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "EuromoneyAutomationPack\Core.csproj", "{FE9B77E7-103F-4EBE-8571-0FE18A933AAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjects", "PageObjects\PageObjects.csproj", "{CDB81262-458D-413B-BC6B-220933650680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spec", "Spec\Spec.csproj", "{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageElementsCheck", "PageElementsCheck\PageElementsCheck.csproj", "{D858E281-1D8E-401F-821F-AD35599BC3A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigManager", "ConfigManager\ConfigManager.csproj", "{AED8A5F2-C105-42D4-9E5E-86C3F0F6649D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigFileCreator", "ConfigFileCreator\ConfigFileCreator.csproj", "{09E7AB4E-9C9F-4BAC-88F0-72CCAD54AC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuromoneyService", "UserManager\EuromoneyService.csproj", "{C359D2BC-9B22-4DC2-9ED1-DB32091B0E07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE9B77E7-103F-4EBE-8571-0FE18A933AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9B77E7-103F-4EBE-8571-0FE18A933AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9B77E7-103F-4EBE-8571-0FE18A933AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9B77E7-103F-4EBE-8571-0FE18A933AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB81262-458D-413B-BC6B-220933650680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB81262-458D-413B-BC6B-220933650680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB81262-458D-413B-BC6B-220933650680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB81262-458D-413B-BC6B-220933650680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6688EE-F10B-4D54-81FF-D9DCEAC0ED97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D858E281-1D8E-401F-821F-AD35599BC3A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D858E281-1D8E-401F-821F-AD35599BC3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D858E281-1D8E-401F-821F-AD35599BC3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D858E281-1D8E-401F-821F-AD35599BC3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED8A5F2-C105-42D4-9E5E-86C3F0F6649D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED8A5F2-C105-42D4-9E5E-86C3F0F6649D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED8A5F2-C105-42D4-9E5E-86C3F0F6649D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED8A5F2-C105-42D4-9E5E-86C3F0F6649D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E7AB4E-9C9F-4BAC-88F0-72CCAD54AC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E7AB4E-9C9F-4BAC-88F0-72CCAD54AC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E7AB4E-9C9F-4BAC-88F0-72CCAD54AC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E7AB4E-9C9F-4BAC-88F0-72CCAD54AC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C359D2BC-9B22-4DC2-9ED1-DB32091B0E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C359D2BC-9B22-4DC2-9ED1-DB32091B0E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C359D2BC-9B22-4DC2-9ED1-DB32091B0E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C359D2BC-9B22-4DC2-9ED1-DB32091B0E07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

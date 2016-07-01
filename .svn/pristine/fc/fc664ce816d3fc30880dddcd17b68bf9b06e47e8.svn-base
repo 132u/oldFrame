@@ -1,0 +1,165 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Core.Helpers;
+using NUnit.Framework;
+using PageObjects.PageObjects;
+using TechTalk.SpecFlow;
+
+namespace Spec.Checkout
+{
+	[Binding]
+	public class YourDetailsSteps
+	{
+		[When(@"I create a new account for US with any (.*) and (.*)")]
+		public void WhenICreateANewAccountForUSWithAnyAnd(string state, string postCode)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Test: " + state, "Engineer", "Tester Corp.", "9876543", string.Empty, "United States", "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, state, string.Empty, postCode)
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new account for Canada with any (.*) and (.*)")]
+		public void WhenICreateANewAccountForCanadaWithAnyAnd(string province, string postCode)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Test: " + province, "Engineer", "Tester Corp.", "9876543", string.Empty, "Canada", "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, string.Empty, province, postCode)
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[Given(@"Given I've selected basic subscription")]
+		public void GivenGivenIVeSelectedBasicSubscription()
+		{
+			LoginRegisterPage checkoutSelectionPage = new HomePage()
+			.Header
+			.NavigateToCheckoutSsubscriptionSelectionPage()
+			.SelectBasicSubscription();
+		}
+
+		[When(@"I register with new email")]
+		public void WhenIRegisterWithNewEmail()
+		{
+			YourDetailsPage yourDetailsPage = new LoginRegisterPage()
+				.CreateNewAccountSuccessfuly(BasicHelper.GetRandomEmail());
+		}
+
+		[When(@"I create a new account with any (.*)")]
+		public void WhenICreateANewAccountWithAny(string country)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Test: " + country.Replace("(", string.Empty).Replace(")", string.Empty), "Engineer", "Tester Corp.", "9876543", string.Empty, country, "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, string.Empty, string.Empty, "34334")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[Then(@"I should subscribe successfully")]
+		public void ThenIShouldSubscribeSuccessfully()
+		{
+			Assert.IsTrue(new ConfirmationPage().PaymentIsSuccessful(), "Payment failed");
+		}
+
+		[When(@"I create a new account with allowed name (.*) and (.*)")]
+		public void WhenICreateANewAccountWithAllowedNameAnd(string firstName, string lastName)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", firstName, lastName, "Engineer", "Tester Corp.", "9876543", string.Empty, "United Kingdom", "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed company name (.*)")]
+		public void WhenICreateANewAccoutWithAllowedCompanyName(string companyName)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", companyName, "9876543", string.Empty, "United Kingdom", "Tester Road", string.Empty, string.Empty, "Tester City", string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed addresses (.*) and (.*) and (.*)")]
+		public void WhenICreateANewAccoutWithAllowedAddressesTesterStreetAndSomeAlleyAndShadyPlace(string addressOne, string addressTwo, string addressThree)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "9876543", string.Empty, "United Kingdom", addressOne, addressTwo, addressThree, "Tester City", string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed city value (.*)")]
+		public void WhenICreateANewAccoutWithAllowedCityValueWarsaw(string city)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "9876543", string.Empty, "United Kingdom", "Tester street", string.Empty, string.Empty, city, string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed fax value (.*)")]
+		public void WhenICreateANewAccoutWithAllowedFaxValue(string fax)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "9876543", fax, "United Kingdom", "Tester street", string.Empty, string.Empty, "Tester city", string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed zip value (.*)")]
+		public void WhenICreateANewAccoutWithAllowedZipValue(string zip)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "9876543", string.Empty, "United Kingdom", "Tester street", string.Empty, string.Empty, "Tester city", string.Empty, string.Empty, string.Empty, zip)
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed county value (.*)")]
+		public void WhenICreateANewAccoutWithAllowedCountyValue(string county)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", "12345678", string.Empty, "United Kingdom", "Tester street", string.Empty, string.Empty, "Tester city", county, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[When(@"I create a new accout with allowed telephone number value (.*)")]
+		public void WhenICreateANewAccoutWithAllowedTelephoneNumberValue(string telephone)
+		{
+			ConfirmationPage confirmationPage = new YourDetailsPage()
+				.EnterDetailsAndGoNext("Mr", "Bob", "Tester", "Engineer", "Tester Corp.", telephone, string.Empty, "United Kingdom", "Tester street", string.Empty, string.Empty, "Tester city", string.Empty, string.Empty, string.Empty, "12345")
+				.GoNext()
+				.ProceedToPaymentPage()
+				.PaySuccesfully("MasterCard", "5555555555554444", "111", "2020");
+		}
+
+		[Then(@"I should stay at your details page")]
+		public void ThenIShouldStayAtYourDetailsPage()
+		{
+			ScenarioContext.Current.Pending();
+		}
+
+		[When(@"I create a new accout with invalid first name (.*)")]
+		public void WhenICreateANewAccoutWithInvalidFirstName(string firstName)
+		{
+			ScenarioContext.Current.Pending();
+		}
+
+		[Then(@"First name is invalid validation message should be displayed.")]
+		public void ThenFirstNameIsInvalidValidationMessageShouldBeDisplayed()
+		{
+			ScenarioContext.Current.Pending();
+		}
+	}
+}

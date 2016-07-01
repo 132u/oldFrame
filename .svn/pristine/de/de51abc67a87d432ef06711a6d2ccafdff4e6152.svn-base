@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PageObjects.PageObjects
+{
+	public partial class CheckoutSelectionPage : PageBase
+	{
+		public LoginRegisterPage SelectBasicSubscription()
+		{
+			this.Next.Click();
+			return new LoginRegisterPage();
+		}
+	}
+}

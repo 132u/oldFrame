@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<Key name="Browser" value="PhantomJS" type="String"/>
+	<Key name="Url" value="http://qat.hedgefundintelligence.com/" type="String"/>
+	<Key name="TestDataKey" value="hedgefundintelligence.com" type="String"/>
+	<Key name="LoginPageUrl" value="Login.html" type="String"/>
+	<Key name="SearchResultsPageUrl" value="Search-Results.html" type="String"/>
+	<Key name="MyAccountPageUrl" value="MyAccount.html" type="String"/>
+	<Key name="MyAccountChangePasswordUrl" value="ChangePassword.html" type="String"/>
+	<Key name="MyAccountPasswordUpdatedUrl" value="ChangePassword.html" type="String"/>
+	<Key name="FreeTrialStepOneUrl" value="Subscribe.aspx?Config=FreeTrial" type="String"/>
+	<Key name="SubscribeStepOneUrl" value="SubscribeNow" type="String"/>
+	<Key name="AboutUsUrl" value="AboutUs.html" type="String"/>
+	<Key name="ContactUsUrl" value="ContactUs.html" type="String"/>
+	<Key name="FeedbackUrl" value="Feedback.html" type="String"/>
+	<Key name="TermsAndConditionsUrl" value="TermsConditions.html" type="String"/>
+	<Key name="PrivacyPolicyUrl" value="PrivacyPolicy.html" type="String"/>
+	<Key name="FAQUrl" value="FAQ.html" type="String"/>
+	<Key name="SectorsUrl" value="Sectors/25194/Sectors.html" type="String" optional="true"/>
+	<Key name="InterviewsUrl" value="Interviews/25239/All-interviews.html" type="String"/>
+	<Key name="CFOsUrl" value="Stub/GTB-CFO.html" type="String"/>
+	<Key name="CMOsUrl" value="Stub/GTB-CMO.html" type="String"/>
+	<Key name="GTBTVUrl" value="stub.aspx?stubid=23956" type="String"/>
+	<Key name="CookiesUrl" value="Cookies.html" type="String"/>
+	<Key name="NewspaperArchiveUrl" value="Issue-Archive.html" type="String"/>
+	<Key name="SponsoredReportsUrl" value="Sponsored-Reports.html" type="String"/>
+	<Key name="EconomicsAndPolicyUrl" value="Economics-and-Policy.html" type="String"/>
+	<Key name="FinancialMarketsUrl" value="Financial-Markets.html" type="String"/>
+	<Key name="DevelopmentUrl" value="Development.html" type="String"/>
+	<Key name="MiddleEastAndAfricaUrl" value="Middle-East-and-Africa.html" type="String"/>
+	<Key name="AmericasUrl" value="Americas.html" type="String"/>
+	<Key name="AsiaUrl" value="Asia.html" type="String"/>
+	<Key name="EuropeUrl" value="Europe.html" type="String"/>
+	<Key name="PollsAndAwardsUrl" value="Polls-and-Awards.html" type="String"/>
+	<Key name="EventsUrl" value="Forthcoming-Events.html" type="String"/>
+	<Key name="CommentAndOpinionUrl" value="Comment-and-Opinion.html" type="String"/>
+	<Key name="FeaturesUrl" value="Features.html" type="String"/>
+	<Key name="NewsUrl" value="News.html" type="String"/>
+	<Key name="ResearchUrl" value="Research.html" type="String"/>
+	<Key name="EMViewUrl" value="EM-View.html" type="String"/>
+	<Key name="RSSUrl" value="Rss-Feeds.html" type="String"/>
+	<Key name="AnalysisUrl" value="Analysis.html" type="String"/>
+	<Key name="RegionsUrl" value="Regions.html" type="String"/>
+	<Key name="VideoUrl" value="Video-Library.html" type="String"/>
+	<Key name="GlobalUrl" value="Global.html" type="String"/>
+	<Key name="NewsletterPreferencesUrl" value="EmailSettings.html" type="String"/>
+	<Key name="MyClippingsUrl" value="MyClippings.html" type="String"/>
+	<Key name="AdvancedSearchUrl" value="Advanced-Search" type="String"/>
+	<Key name="ImplicitlyWait" value="10" type="Int"/>
+	<Key name="WaitBeforeComparingRequiredElements" value="10" type="Int" />
+	<Key name="StaleExceptionTiemout" value="2000" type="Int"/>
+	<Key name="ShortTimeout" value="2000" type="Int"/>
+	<Key name="MediumTimeout" value="10000" type="Int"/>
+	<Key name="LongTimeout" value="30000" type="Int"/>
+	<Key name ="WaitForSuccessTimeout" value="200" type="Int"/>
+	<Key name="CultureInfo" value="en-GB" type="String"/>
+	<Key name="LogFileName" value="TestRun.log" type="String"/>
+	<Key name="ScreenShotsFolder" value="FailedTestsScreens" type="String"/>
+	<Key name="TestsConfigFilePath" value="TestsConfiguration.xml" type="String" />
+	<Key name="ExistingUserName" value="adavidson@euromoneyplc.com" type="String"/>
+	<Key name="ExistingUserPassword" value="pointer" type="String"/>
+	<Key name="ExistingExpiredUserName" value="cscs@sdf.ui" type="String"/>
+	<Key name="ExistingExpiredUserPassword" value="cc12848" type="String"/>
+	<Key name="ChangePasswordTestExistingUserName" value="frameworkTestsEmail@te.st" type="String"/>
+	<Key name="ChangePasswordTestExistingUserPassword" value="fpg20922" type="String"/>
+	<Key name="ChangePasswordTestDifferentUserPassword" value="different_fpg20922" type="String"/>
+	<Key name="IncorrectUserName" value="false_fp_em_user@euromoneyplc.test" type="String"/>
+	<Key name="IncorrectUserPassword" value="false_fpg20922" type="String"/>
+	<Key name="NotExistingUserName" value="02042014_emorg@te.st" type="String"/>
+	<Key name="NotExistingPassword" value="jjhhgg656565@" type="String"/>
+	<Key name="GetAllElementsSuffix" value="//*" type="String"/>
+	<Key name="RandomEmailSuffix" value="@te.st" type="String" />
+	<Key name="CommentTestText" value="Comment." type="String" />
+	<Key name="FaqTopMenuComponent" value="Default" type="String" />
+	<Key name="CookiesTopMenuComponent" value="Cookies" type="String" />
+	<Key name="MailtrapMailboxNumber" value="15106" type="String" />
+	<Key name="MailtrapToken" value="bbaed6b2da700f33f0f42dcdac7ec7f7" type="String" />
+	<Key name="PasswordRetrieveRegex" value="Password:.{4,9}" type="String" />
+	<Key name="PasswordRetrieveFromEmailPrefix" value="Password: " type="String" />
+	<Key name="PasswordRetrieveFromEmailSufix" value="&lt;" type="String" />
+	<Key name="ZeroFreeTrialPage" value="true" type="Bool" />
+	<Key name="RegistrationType" value="FreeTrial" type="string" />
+	<Key name="SubscribtionZeroPage" value="true" type="Bool" />
+	<Key name="CreditCardType" value="MasterCard" type="string" />
+	<Key name="CreditCardNumber" value="5555555555554444" type="string" />
+	<Key name="CreditCardExpirationMonth" value="02" type="string" />
+	<Key name="CreditCardExpirationYear" value="2016" type="string" />
+	<Key name="CreditCardCVN" value="123" type="string" />
+	<Key name="CreditCardTypeVisa" value="Visa" type="string" />
+	<Key name="CreditCardNumberVisa" value="4024007146519862" type="string" />
+	<Key name="ConsumerId" value="168" type="Int" />
+	<Key name="ConsumerPassword" value="" type="String" />
+</Configuration>

@@ -1,0 +1,130 @@
+﻿using ConfigManager;
+using Core;
+using Core.Configuration;
+using Core.Controls;
+using Core.Logger;
+
+namespace PageObjects.PageObjects
+{
+	public class PageBase
+	{
+		public bool Optional { get; set; }
+
+		public PageBase()
+		{
+			Logger.Info(string.Format("Page {0} is being initialized", this.ToString()));
+		}
+
+		public virtual bool PageIsVisible(string parameter = default(string))
+		{
+			return true;
+		}
+
+		/// <summary>
+		/// Check if page is displayed.
+		/// </summary>
+		/// <param name="parameter">Parameter input to method, used if needed.</param>
+		/// <returns>True either when page component is optional or when page is displayed correctly. False if page is not displayed correctly.</returns>
+		public bool PageIsDisplayed(string parameter = default(string))
+		{
+			return this.Optional || PageIsVisible(parameter);
+		}
+
+		protected void PerformActionOnControl(ControlBase control, string parameter)
+		{
+			if (control is Textbox)
+			{
+				this.PerformActionOnTextbox(control as Textbox, parameter);
+			}
+
+			if (control is Dropdown)
+			{
+				this.PerformActionOnDropDown(control as Dropdown, parameter);
+			}
+		}
+
+		protected void PerformActionOnControlByValue(ControlBase control, string parameter)
+		{
+			if (control is Textbox)
+			{
+				this.PerformActionOnTextbox(control as Textbox, parameter);
+			}
+
+			if (control is Dropdown)
+			{
+				this.PerformActionOnDropDownByValue(control as Dropdown, parameter);
+			}
+		}
+
+		protected void PerformActionOnControlRemoveSpaces(ControlBase control, string parameter)
+		{
+			if (control is Dropdown)
+			{
+				this.PerformActionOnDropDownByOptionRemoveSpaces(control as Dropdown, parameter);
+			}
+		}
+
+		protected bool CompareLists(RequiredElements requiredElementsList)
+		{
+			CompareResults result = new CompareResults();
+			for (int i = 0; i < 3; i++)
+			{
+				try
+				{
+					result = ConfigManager.ConfigManager.CompareLists(requiredElementsList, WebBrowser.PageSource);
+					break;
+				}
+				catch (NoElementsToCompareException)
+				{
+					System.Threading.Thread.Sleep(3000);
+				}
+			}
+
+			return result.OverallResult;
+		}
+
+		private void PerformActionOnDropDown(Dropdown dropdown, string parameter)
+		{
+			if (!dropdown.Optional)
+			{
+				if (!string.IsNullOrEmpty(parameter))
+				{
+					dropdown.SelectItemByText(parameter);
+				}
+			}
+		}
+
+		private void PerformActionOnDropDownByValue(Dropdown dropdown, string parameter)
+		{
+			if (!dropdown.Optional)
+			{
+				if (!string.IsNullOrEmpty(parameter))
+				{
+					dropdown.SelectItemByValue(parameter);
+				}
+			}
+		}
+
+		private void PerformActionOnDropDownByOptionRemoveSpaces(Dropdown dropdown, string parameter)
+		{
+			if (!dropdown.Optional)
+			{
+				if (!string.IsNullOrEmpty(parameter))
+				{
+					dropdown.SelectItemByTextNormalizeSpaces(parameter);
+				}
+			}
+		}
+
+		private void PerformActionOnTextbox(Textbox textbox, string parameter)
+		{
+			if (!textbox.Optional)
+			{
+				if (!string.IsNullOrEmpty(parameter))
+				{
+					textbox.Text = parameter;
+				}
+			}
+		}
+	}
+}

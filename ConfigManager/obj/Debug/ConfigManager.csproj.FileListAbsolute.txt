@@ -1,0 +1,17 @@
+D:\MY\ConfigManager\obj\Debug\ConfigManager.csprojResolveAssemblyReference.cache
+D:\MY\ConfigManager\bin\Debug\phantomjs.exe
+D:\MY\ConfigManager\bin\Debug\phantomjs-license.txt
+D:\MY\ConfigManager\bin\Debug\Configuration\ApplicationConfiguration.xml
+D:\MY\ConfigManager\bin\Debug\ConfigManager.dll
+D:\MY\ConfigManager\bin\Debug\ConfigManager.pdb
+D:\MY\ConfigManager\bin\Debug\Core.dll
+D:\MY\ConfigManager\bin\Debug\HtmlAgilityPack.dll
+D:\MY\ConfigManager\bin\Debug\WebDriver.dll
+D:\MY\ConfigManager\bin\Debug\WebDriver.Support.dll
+D:\MY\ConfigManager\bin\Debug\Core.pdb
+D:\MY\ConfigManager\bin\Debug\HtmlAgilityPack.pdb
+D:\MY\ConfigManager\bin\Debug\HtmlAgilityPack.xml
+D:\MY\ConfigManager\bin\Debug\WebDriver.xml
+D:\MY\ConfigManager\bin\Debug\WebDriver.Support.xml
+D:\MY\ConfigManager\obj\Debug\ConfigManager.dll
+D:\MY\ConfigManager\obj\Debug\ConfigManager.pdb

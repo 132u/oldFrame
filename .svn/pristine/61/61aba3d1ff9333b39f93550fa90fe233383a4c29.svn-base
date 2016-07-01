@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PageObjects.PageObjects
+{
+	public partial class ConfirmationPage : PageBase
+	{
+		public bool PaymentIsSuccessful()
+		{
+			return this.Title.IsFound;
+		}
+
+		public int GetNumberOfOrderedSubscriptions()
+		{
+			return int.Parse(this.Quantity.Text);
+		}
+	}
+}

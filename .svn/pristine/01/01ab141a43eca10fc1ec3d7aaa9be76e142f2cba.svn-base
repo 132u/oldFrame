@@ -1,0 +1,513 @@
+﻿using System;
+using Core;
+using Core.Configuration;
+using NUnit.Framework;
+using PageObjects.PageObjects;
+using TechTalk.SpecFlow;
+
+namespace Spec.Subscription
+{
+	[Binding]
+	public class SubscriptionSteps
+	{
+		[When(@"I enter Subscribe page by Header Component link")]
+		public void WhenIEnterSubscribePageByHeaderComponentLink()
+		{
+			new HomePage().Header.NavigateToSubscribePage();
+		}
+
+		[Then(@"Subscribtion One Step page should be displayed correctly")]
+		public void ThenSubscribtionOneStepPageShouldBeDisplayedCorrectly()
+		{
+			Assert.IsTrue(new SubscribeStepOnePage().IsDisplayedCorrectly(), "Subscription step one page is not displayed correctly.");
+		}
+
+		[When(@"I try to get to the step two of subscription")]
+		public void WhenITryToGetToTheStepTwoOfSubscription()
+		{
+			new HomePage()
+						.Header
+						.NavigateToSubscribePage()
+						.NavigateToTheSubscribeStepTwoPage();
+		}
+
+		[Then(@"I should be redirected to the Subscribe Second Step page")]
+		public void ThenIShouldBeRedirectedToTheSubscribeSecondStepPage()
+		{
+			Assert.IsTrue(new SubscriptionPaymentPage().IsDisplayedCorrectly(), "Subscription step two page is not displayed correctly.");
+		}
+
+		[Given(@"I'm on the Subscribe page")]
+		public void GivenIMOnTheSubscribePage()
+		{
+			new HomePage()
+			.Header
+			.NavigateToSubscribePage()
+			.NavigateToTheSubscribeStepTwoPage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the Subscribe page and select (.*)nd package")]
+		public void GivenIMOnTheSubscribePageAndSelectNdPackage(int p0)
+		{
+			new HomePage()
+					.Header
+					.NavigateToSubscribePage()
+					 .NavigateToTheSubscribeStepTwoPageSecondPackage()
+					.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the Asia Subscribe page and select (.*)nd package")]
+		public void GivenIMOnTheAsiaSubscribePageAndSelectNdPackage(int p0)
+		{
+			new HomePage()
+					.Header
+					.NavigateToAsiaHedgeSubscribePage()
+					 .NavigateToTheSubscribeStepTwoPageSecondPackage()
+					.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the Asia Subscribe page and select (.*)st package")]
+		public void GivenIMOnTheAsiaSubscribePageAndSelectStPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToAsiaHedgeSubscribePage()
+			.NavigateToTheSubscribeStepTwoPage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the InvestHedge page and select (.*)st package")]
+		public void GivenIMOnTheInvestHedgePageAndSelectStPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToInvestHedgeSubscribePage()
+			.NavigateToTheSubscribeStepTwoPageSecondPackage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the InvestHedge Subscribe page and select (.*)nd package")]
+		public void GivenIMOnTheInvestHedgeSubscribePageAndSelectNdPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToInvestHedgeSubscribePage()
+					 .NavigateToTheSubscribeStepTwoPageSecondPackage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AU Subscribe page and select (.*)st package")]
+		public void GivenIMOnTheAUSubscribePageAndSelectStPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToAUSubscribePage()
+			.NavigateToTheSubscribeStepTwoPage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AR Subscribe page and select (.*)st package")]
+		public void GivenIMOnTheARSubscribePageAndSelectStPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToARSubscribePage()
+			.NavigateToTheSubscribeStepTwoPage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AR Subscribe page and select (.*)nd package")]
+		public void GivenIMOnTheARSubscribePageAndSelectNdPackage(int p0)
+		{
+			new HomePage()
+			.Header
+			.NavigateToARSubscribePage()
+					 .NavigateToTheSubscribeStepTwoPageSecondPackage()
+			.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[When(@"I try to get subscription by invoice as a new user with valid data provided")]
+		public void WhenITryToGetSubscriptionByInvoiceAsANewUserWithValidDataProvided()
+		{
+			new SubscribeStepThreePage().RegisterForSubscriptionByInvoiceSuccessfuly(
+																	"Mr",
+																	"testFirstName",
+																	"testLastName",
+																	"testJobTitle",
+																	"testCompanyName",
+																	"12345678",
+																	"testAddressName",
+																	"testAddressName",
+																	"testCityName",
+																	"12345",
+																	"United Kingdom",
+																	"Minister",
+																	"Other",
+																	"Invoice",
+																	true,
+																	true);
+		}
+
+		[When(@"I try to get subscription by credit card as a new user with valid data provided")]
+		public void WhenITryToGetSubscriptionByCreditCardAsANewUserWithValidDataProvided()
+		{
+			new SubscribeStepThreePage().RegisterForSubscriptionByCreditCardSuccessfuly(
+																	"Mr",
+																	"testFirstName",
+																	"testLastName",
+																	"testJobTitle",
+																	"testCompanyName",
+																	"12345678",
+																	"testAddressName",
+																	"testAddressName",
+																	"testCityName",
+																	"12345",
+																	"Angola",
+																	"Minister",
+																	"Other",
+																	true,
+																	true,
+																	"Credit Card");
+		}
+
+		[When(@"I fill all required data for credit card")]
+		public void WhenIFillAllRequiredDataForCreditCard()
+		{
+			new SubscriptionPaymentPage().FillCreditCardValidData(
+																	ApplicationConfiguration.CreditCardType,
+																	ApplicationConfiguration.CreditCardNumber,
+																	ApplicationConfiguration.CreditCardExpirationMonth,
+																	ApplicationConfiguration.CreditCardExpirationYear,
+																	ApplicationConfiguration.CreditCardCVN);
+		}
+
+		[Given(@"I'm on the EuroHedge Subscribe page")]
+		public void GivenIMOnTheEuroHedgeSubscribePage()
+		{
+			new HomePage()
+						.Header
+						.NavigateToEuroHedgePage()
+						.NavigateToStepOne()
+						.NavigateToTheSubscribeStepTwoPage()
+						.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the ""(.*)"" page")]
+		public void GivenIMOnThePage()
+		{
+			new HomePage()
+		.Header
+		.NavigateToSubscribePage()
+		 .NavigateToTheSubscribeStepTwoPageSecondPackage()
+		.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AsiaHedge Subscribe page")]
+		public void GivenIMOnTheAsiaHedgeSubscribePage()
+		{
+			new HomePage()
+						.Header
+						.NavigateToAsiaHedgePage()
+						.NavigateToStepOne()
+						.NavigateToTheSubscribeStepTwoPage()
+						.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AbsoluteReturn Subscribe page")]
+		public void GivenIMOnTheAbsoluteReturnSubscribePage()
+		{
+			new HomePage()
+						.Header
+						.NavigateToAbsoluteReturnPage()
+						.NavigateToStepOne()
+						.NavigateToTheSubscribeStepTwoPage()
+						.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the AbsoluteUCITS Subscribe page")]
+		public void GivenIMOnTheAbsoluteUCITSSubscribePage()
+		{
+			new HomePage()
+						.Header
+						.NavigateToAbsoluteUCITSPage()
+						.NavigateToStepOne()
+						.NavigateToTheSubscribeStepTwoPage()
+						.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Given(@"I'm on the InvestHedge Subscribe page")]
+		public void GivenIMOnTheInvestHedgeSubscribePage()
+		{
+			new HomePage()
+						.Header
+						.NavigateToInvestHedgePage()
+						.NavigateToStepOne()
+						.NavigateToTheSubscribeStepTwoPage()
+						.NavigateToTheSubscribeStepThreePage();
+		}
+
+		[Then(@"I should get subscription as a new user")]
+		public void ThenIShouldGetSubscriptionAsANewUser()
+		{
+			Assert.IsTrue(new SubscriptionConfirmationPage().IsDisplayed(), "Subscription Confirmation Page is not displayed correctly.");
+		}
+
+		[When(@"I fill incorrect data for ""(.*)""")]
+		public void WhenIFillIncorrectDataFor(string p0)
+		{
+			new SubscriptionPaymentPage().FillCreditCardValidData(
+																	p0,
+																	ApplicationConfiguration.CreditCardNumber,
+																	ApplicationConfiguration.CreditCardExpirationMonth,
+																	ApplicationConfiguration.CreditCardExpirationYear,
+																	ApplicationConfiguration.CreditCardCVN);
+		}
+
+		[Then(@"I should get warning message '(.*)'")]
+		public void ThenIShouldGetWarningMessage(string p0)
+		{
+			Assert.IsTrue(new SubscriptionPaymentPage().IsDisplayedInvalidInfoCard(), "Warning is not displayed");
+		}
+
+		[When(@"I fill invalid card number data for ""(.*)""")]
+		public void WhenIFillInvalidCardNumberDataFor(string p0)
+		{
+			new SubscriptionPaymentPage().FillCreditCardValidData(
+																	p0,
+																	"sadasdasdasdasdasd21",
+																	ApplicationConfiguration.CreditCardExpirationMonth,
+																	ApplicationConfiguration.CreditCardExpirationYear,
+																	ApplicationConfiguration.CreditCardCVN);
+		}
+
+		[Then(@"I should get warning message about number card")]
+		public void ThenIShouldGetWarningMessageAboutNumberCard()
+		{
+			Assert.IsTrue(new SubscriptionPaymentPage().IsDisplayedInvalidNumberCard(), "Warning for number card is not displayed");
+		}
+
+		[When(@"I set US in Country combobox")]
+		public void WhenISetUSInCountryCombobox()
+		{
+			Assert.IsTrue(new SubscribeStepThreePage().CheckThatStateComboboxIsDisable(), "state is not disable!");
+		}
+
+		[Then(@"open mailtrap")]
+		public void ThenOpenMailtrap()
+		{
+			// There should not be any selenium code in steps definition...
+
+			// WebBrowser.Open("https://mailtrap.io/inboxes/15106/messages");
+			// WebBrowser.Driver.FindElement(By.XPath("//input[@id='user_email']")).SendKeys("ekaterina.borunova@arcadia.spb.ru");
+			// WebBrowser.Driver.FindElement(By.XPath("//input[@id='user_password']")).SendKeys("farsteam53");
+			// WebBrowser.Driver.FindElement(By.XPath("//input[@class='button mrs']")).Click();
+			// WebBrowser.Open("https://mailtrap.io/inboxes/15106/messages");
+			// SubscribeStepTwoPage st = new SubscribeStepTwoPage();
+			// WebBrowser.Driver.FindElement(By.XPath("//input[@class='quick_filter']")).SendKeys(st.RememberEmail);
+			// WebBrowser.Driver.FindElement(By.XPath("//li[@class='email']")).Click();
+		}
+
+		[Then(@"find my password")]
+		public void ThenFindMyPassword()
+		{
+			ScenarioContext.Current.Pending();
+		}
+
+		[Then(@"I login as user with one subscription")]
+		public void ThenILoginAsUserWithOneSubscription()
+		{
+			ScenarioContext.Current.Pending();
+		}
+
+		[When(@"I try to get subscription by credit card as a new user with valid data provided All Fields Filled")]
+		public void WhenITryToGetSubscriptionByCreditCardAsANewUserWithValidDataProvidedAllFieldsFilled()
+		{
+			new SubscribeStepThreePage().RegisterForSubscriptionByCreditCardSuccessfulyFilledALLFIELDS(
+																			"Mr",
+																			"όμικρονFirstNAme",
+																			"First Name123456 A B C D E F Z H Θ I K L M N Ξ O P Ś Q R S T V X Φ Ψ134567890",
+																			"testJobTitle",
+																			"testCompanyName",
+																			"123456789874563",
+																			"testAddressName1",
+																			"testAddressName2",
+																			"testAddressName3",
+																			"testCityName12 Main Street, gdjsksbCondominium/Apartment 34-56",
+																			"ORCOUNTRY",
+																			"K1B 3L4",
+																			"10006-1532",
+																			"Canada",
+																			"Minister",
+																			"Other",
+																			true,
+																			true,
+																			"Credit Card",
+																			"reference",
+																			"MANITOBA",
+																			"FLORIDA                                 ");
+		}
+
+		[Given(@"state combox is disable")]
+		public void GivenStateComboxIsDisable()
+		{
+			ScenarioContext.Current.Pending();
+		}
+
+		[When(@"I fill all required fields and set ""(.*)""")]
+		public void WhenIFillAllRequiredFieldsAndSet(string p0)
+		{
+			new SubscribeStepThreePage().CehckWarningMessages(
+																			"Mr",
+																			"όμικρονFirstNAme",
+																			"First Name123456 A B C D E F Z H Θ I K L M N Ξ O P Ś Q R S T V X Φ Ψ134567890",
+																			"testJobTitle",
+																			"testCompanyName",
+																			"123456789874563",
+																			"testAddressName1",
+																			"testAddressName2",
+																			"testAddressName3",
+																			"testCityName12 Main Street, gdjsksbCondominium/Apartment 34-56",
+																			"ORCOUNTRY",
+																			string.Empty,
+																			string.Empty,
+																			p0,
+																			"Minister",
+																			"Other",
+																			true,
+																			true,
+																			"Credit Card",
+																			"reference",
+																			string.Empty,
+																			string.Empty);
+		}
+
+		[Then(@"warning message appears that State combobox  is required")]
+		public void ThenWarningMessageAppearsThatStateComboboxIsRequired()
+		{
+			Assert.IsTrue(new SubscribeStepThreePage().CheckThatStateWarningMessageIsDisplayed(), "state warning message is not disable!");
+		}
+
+		[Given(@"state combox is read only")]
+		public void GivenStateComboxIsReadOnly()
+		{
+			Assert.IsTrue(new SubscribeStepThreePage().CheckThatStateComboboxIsDisable(), "state combobox is not disable");
+		}
+
+		[Then(@"Payment Page is displayed correctly")]
+		public void ThenPaymentPageIsDisplayedCorrectly()
+		{
+			Assert.IsTrue(new SubscriptionPaymentPage().IsDisplayedCorrectly(), "Payment page is displayed incorrectly");
+		}
+
+		[When(@"I fill all fields and set ""(.*)""")]
+		public void WhenIFillAllFieldsAndSet(string p0)
+		{
+			new SubscribeStepThreePage().RegisterForSubscriptionByCreditCardSuccessfulyFilledALLFIELDS(
+																			"Mr",
+																			"όμικρονFirstNAme",
+																			"First Name123456 A B C D E F Z H Θ I K L M N Ξ O P Ś Q R S T V X Φ Ψ134567890",
+																			"testJobTitle",
+																			"testCompanyName",
+																			"123456789874563",
+																			"testAddressName1",
+																			"testAddressName2",
+																			"testAddressName3",
+																			"testCityName12 Main Street, gdjsksbCondominium/Apartment 34-56",
+																			"ORCOUNTRY",
+																			"K1B 3L4",
+																			"10006-1532",
+																			p0,
+																			"Minister",
+																			"Other",
+																			true,
+																			true,
+																			"Credit Card",
+																			"reference",
+																			"MANITOBA",
+																			"FLORIDA                                 ");
+		}
+
+		[When(@"I set country fill another fields")]
+		public void WhenISetCountryFillAnotherFields()
+		{
+			new SubscribeStepThreePage().SetEachCountry(
+														"Mr",
+														"όμικρονFirstNAme",
+														"First Name123456 A B C D E F Z H Θ I K L M N Ξ O P Ś Q R S T V X Φ Ψ134567890",
+														"testJobTitle",
+														"testCompanyName",
+														"123456789874563",
+														"testAddressName1",
+														"testAddressName2",
+														"testAddressName3",
+														"testCityName12 Main Street, gdjsksbCondominium/Apartment 34-56",
+														"ORCOUNTRY",
+														"K1B 3L4",
+														"10006-1532",
+														"Minister",
+														"Other",
+														true,
+														true,
+														"Credit Card",
+														"reference",
+														"MANITOBA",
+														"FLORIDA");
+		}
+
+		[When(@"I fill all fields for user details and fill Billing Address")]
+		public void WhenIFillAllFieldsForUserDetailsAndFillBillingAddress()
+		{
+			new SubscribeStepThreePage().FillAllFieldsAndBillingAddress(
+																		"Mr",
+																		"First name",
+																		"Last name",
+																		"jobtitle",
+																		"company name",
+																		"4444444444444444444444444444444444444444444444444444",
+																		"addressFirstLine",
+																		"addressSecondLine",
+																		"addressThirdLine",
+																		"city",
+																		"orCountry",
+																		"A0B0B0",
+																		"12345-1234",
+																		"Canada",
+																		"companyPosition",
+																		"Other",
+																		false,
+																		true,
+																		"yourReference",
+																		"ALBERTA",
+																		"Alabama",
+																		true,
+																		"houseNumberBiiling",
+																		"address1Billing",
+																		"address2Billing",
+																		"cityBilling",
+																		"123456789",
+																		"B1C 4E7",
+																		"provinceBilling",
+																		"ALABAMA",
+																		"United States");
+		}
+
+		[When(@"Select ""(.*)"" and if it's sredit card I fill all required data for credit card")]
+		public void WhenSelectAndIfItSSreditCardIFillAllRequiredDataForCreditCard(string p0)
+		{
+			if (p0 == "Credit Card")
+			{
+				new SubscribeStepThreePage().SelectPaymentMethod("Credit Card").FillCreditCardValidData(
+																	ApplicationConfiguration.CreditCardType,
+																	ApplicationConfiguration.CreditCardNumber,
+																	ApplicationConfiguration.CreditCardExpirationMonth,
+																	ApplicationConfiguration.CreditCardExpirationYear,
+																	ApplicationConfiguration.CreditCardCVN);
+			}
+			else
+			{
+				new SubscribeStepThreePage().SelectPaymentMethod(p0);
+			}
+		}
+	}
+}

@@ -1,0 +1,656 @@
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Footer - Should display Cookies page. Running with category: capacityconferences.com
+Info: Open PhantomJS browser
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Check if control name: Cookies, xpath: //a[contains(@title, 'Cookies')] is found.
+Info: Link //a[contains(@title, 'Cookies')],  try to click.
+Info: Link //a[contains(@title, 'Cookies')] clicked.
+Info: Page PageObjects.PageObjects.CookiesPage is being initialized
+Info: Page PageObjects.PageObjects.CookiesPage is being initialized
+Info: Check if control name: Cookies, xpath: //h2[contains(text(), 'COOKIES')] is found.
+Info: Page PageObjects.PageObjects.SidePanelComponent is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.TopMenuComponent is being initialized
+Info: Page PageObjects.PageObjects.BreadcrumbComponent is being initialized
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Footer -  Should display copyrights. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Check if control name: Copyright, xpath: //p[contains(text(), 'copyright')] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Footer - Should display footer. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Comparison result: success. Requied element: FooterComponentRequiredElements, xpath: //div[contains(@class, 'Footer')]
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Footer - Should display Privacy Policy page. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Check if control name: PrivacyPolicy, xpath: //a[contains(text(), 'Privacy Policy')] is found.
+Info: Link //a[contains(text(), 'Privacy Policy')],  try to click.
+Info: Link //a[contains(text(), 'Privacy Policy')] clicked.
+Info: Page PageObjects.PageObjects.PrivacyPolicyPage is being initialized
+Info: Page PageObjects.PageObjects.PrivacyPolicyPage is being initialized
+Info: Check if control name: PrivacyPolicy, xpath: //big[contains(text(), 'PRIVACY STATEMENT')] is found.
+Info: Check if control name: PrivacyPolicy, xpath: //big[contains(text(), 'PRIVACY STATEMENT')] is found.
+Info: Page PageObjects.PageObjects.SidePanelComponent is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.TopMenuComponent is being initialized
+Info: Page PageObjects.PageObjects.BreadcrumbComponent is being initialized
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Footer - Should display Terms and Conditions page. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Control finding omitted because control is set as optional in configuration file.
+Info: Link //a[contains(text(), 'Terms and Conditions')],  try to click.
+Info: Link //a[contains(text(), 'Terms and Conditions')] clicked.
+Info: Page PageObjects.PageObjects.TermsAndConditionsPage is being initialized
+Info: Page PageObjects.PageObjects.TermsAndConditionsPage is being initialized
+Info: Check if control name: TermsAndConditions, xpath: //strong[text()='TERMS AND CONDITIONS'] is found.
+Info: Check if control name: TermsAndConditions, xpath: //strong[text()='TERMS AND CONDITIONS'] is found.
+Info: Page PageObjects.PageObjects.SidePanelComponent is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.TopMenuComponent is being initialized
+Info: Page PageObjects.PageObjects.BreadcrumbComponent is being initialized
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should display login page correctly. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Comparison result: success. Requied element: LoginPageRequiredElements, xpath: //div[@class='login_form']
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should fail to login with correct user name and incorrect password. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should fail to login with incorrect user name and correct password. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should fail to login with incorrect user name and password. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should login with correct credentials. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.MyAccountPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Login - Should logout successfully. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.MyAccountPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.MyAccountPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Try to click button //input[@value='Logout'].
+Info: Check if control name: Logout, xpath: //input[@value='Logout'] is found.
+Info: Button //input[@value='Logout'] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should display search results. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Check if control name: SearchResultsHeader, xpath: //h1[contains(text(),'Search Results')] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should display search results page correclty. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Check if control name: SearchResultsHeader, xpath: //h1[contains(text(),'Search Results')] is found.
+Info: Page PageObjects.PageObjects.SidePanelComponent is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: MyEMAccount WebDriverTimeoutException thrown.
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: Logo, xpath: //a[contains(@id, 'logo')] is found.
+Info: Check if control name: Login, xpath: //div[@class='buttons']//input[@value='Log in'] is found.
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: Page PageObjects.PageObjects.TopMenuComponent is being initialized
+Info: Comparison result: success. Requied element: TopMenuDefaultComponentRequiredElements, xpath: //ul[@class='main_nav']
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Comparison result: success. Requied element: FooterComponentRequiredElements, xpath: //div[contains(@class, 'Footer')]
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should not search when no phrase entered. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Control: SearchResultsHeader WebDriverTimeoutException thrown.
+Info: Check if control name: SearchResultsHeader, xpath: //h1[contains(text(),'Search Results')] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should not search when special characters entered. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Control: HomePageUniqueElement WebDriverTimeoutException thrown.
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Screenshot directory doesn't exist. Creating directory..
+Info: Directory created: D:\EAP_moje\Spec\bin\Debug\FailedTestsScreens\
+Info: Creating screenshot: Search - Should not search when special characters entered.png
+Info: Screenshot created
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should not search when SQL Injection query entered. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Control: HomePageUniqueElement WebDriverTimeoutException thrown.
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Creating screenshot: Search - Should not search when SQL Injection query entered.png
+Info: Screenshot created
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should not search when whitespaces entered. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Try to click button //input[contains(@value, 'Search')].
+Info: Check if control name: SearchButton, xpath: //input[contains(@value, 'Search')] is found.
+Info: Button //input[contains(@value, 'Search')] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Control: SearchResultsHeader WebDriverTimeoutException thrown.
+Info: Check if control name: SearchResultsHeader, xpath: //h1[contains(text(),'Search Results')] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Search - Should perform search when search executed with enter button. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Check if control name: HomePageUniqueElement, xpath: //h1[@class='homeTitle'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], set Text value.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Text value set.
+Info: Check if control name: SearchTextbox, xpath: //input[contains(@id, 'SearchTerm')] is found.
+Info: TextBox //input[contains(@id, 'SearchTerm')], send Enter key.
+Info: TextBox //input[contains(@id, 'SearchTerm')], Enter key sent.
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Page PageObjects.PageObjects.SearchResultsPage is being initialized
+Info: Check if control name: SearchResultsHeader, xpath: //h1[contains(text(),'Search Results')] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: My account - Should display My Account box. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: My account - Should display Password Change page from My Account box link. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Link //div[@class='user-menu-content']//a[text()='Change Password'],  try to click.
+Info: Link //div[@class='user-menu-content']//a[text()='Change Password'] clicked.
+Info: Page PageObjects.PageObjects.ChangePasswordPage is being initialized
+Info: Page PageObjects.PageObjects.ChangePasswordPage is being initialized
+Info: Comparison result: success. Requied element: ChangePasswordPageRequiredElements, xpath: //ul[@class='clr']
+Info: Page PageObjects.PageObjects.SidePanelComponent is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.TopMenuComponent is being initialized
+Info: Comparison result: success. Requied element: TopMenuDefaultComponentRequiredElements, xpath: //ul[@class='main_nav']
+Info: Page PageObjects.PageObjects.BreadcrumbComponent is being initialized
+Info: Page PageObjects.PageObjects.FooterComponent is being initialized
+Info: Comparison result: success. Requied element: FooterComponentRequiredElements, xpath: //div[contains(@class, 'Footer')]
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: My account - Should enter registration details page from My Account box link. Running with category: capacityconferences.com
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Check if control name: MyEvents, xpath: //div[@class='user-menu-content']//a[text()='My Events'] is found.
+Info: Check if control name: MyInterests, xpath: //div[@class='user-menu-content']//a[text()='My Interests'] is found.
+Info: Check if control name: ChangePassword, xpath: //div[@class='user-menu-content']//a[text()='Change Password'] is found.
+Info: Check if control name: Close, xpath: //div[@class='user-menu']//input[@value='Close'] is found.
+Info: Check if control name: Logout, xpath: //div[@class='user-menu-content']//input[@value='Logout'] is found.
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Check if control name: MyDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Link //div[@class='user-menu-content']//a[text()='My Details'],  try to click.
+Info: Link //div[@class='user-menu-content']//a[text()='My Details'] clicked.
+Info: Page PageObjects.PageObjects.RegistrationDetailsPage is being initialized
+Info: Page PageObjects.PageObjects.RegistrationDetailsPage is being initialized
+Info: Comparison result: success. Requied element: RegistrationDetailsPageRequiredElements, xpath: //div[@class='form']
+
+Info: Opening http://qat.capacityconferences.com/ url address for scenario: Registration Details - Should change basic details. Running with category: capacityconferences.com
+Info: Open PhantomJS browser
+Info: Navigate to url: http://qat.capacityconferences.com/
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Navigate to url: http://qat.capacityconferences.com/Login.html
+Info: Page PageObjects.PageObjects.LoginPage is being initialized
+Info: Login page. Email: fp_em_user@future-processing.com, password fpg20922
+Info: Check if control name: Username, xpath: //input[contains(@id, 'UserName')] is found.
+Info: TextBox //input[contains(@id, 'UserName')], set Text value.
+Info: TextBox //input[contains(@id, 'UserName')], Text value set.
+Info: Check if control name: Password, xpath: //input[contains(@id, 'txtPassword')] is found.
+Info: TextBox //input[contains(@id, 'txtPassword')], set Text value.
+Info: TextBox //input[contains(@id, 'txtPassword')], Text value set.
+Info: Check if control name: RememberMe, xpath: //div[@class='login_form']//input[contains(@id, 'RememberMe')] is found.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')], try to deselect element.
+Info: Checkbox //div[@class='login_form']//input[contains(@id, 'RememberMe')] deselected.
+Info: Click login
+Info: Try to click button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')].
+Info: Check if control name: Login, xpath: //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] is found.
+Info: Button //input[contains(@name, 'ContentPlaceHolder') and contains(@name,'btnSubmit')] clicked.
+Info: Page PageObjects.PageObjects.ConfirmTermsPage is being initialized
+Info: Control: PrivacyPolicy WebDriverTimeoutException thrown.
+Info: Check if control name: PrivacyPolicy, xpath: //input[contains(@name, 'privacypolicy')] is found.
+Info: Should navigate to home page.
+Info: Page PageObjects.PageObjects.HomePage is being initialized
+Info: Page PageObjects.PageObjects.HeaderComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Page PageObjects.PageObjects.MyAccountBoxComponent is being initialized
+Info: Control: LoginInfo WebDriverTimeoutException thrown.
+Info: Check if control name: LoginInfo, xpath: //span[@class='login_info'] is found.
+Info: Try to click button //input[@value='My Account'].
+Info: Check if control name: MyEMAccount, xpath: //input[@value='My Account'] is found.
+Info: Button //input[@value='My Account'] clicked.
+Info: Page PageObjects.PageObjects.MyAccountPage is being initialized
+Info: Check if control name: UpdateDetails, xpath: //div[@class='user-menu-content']//a[text()='My Details'] is found.
+Info: Link //div[@class='user-menu-content']//a[text()='My Details'],  try to click.
+Info: Link //div[@class='user-menu-content']//a[text()='My Details'] clicked.
+Info: Page PageObjects.PageObjects.RegistrationDetailsPage is being initialized
+Info: Page PageObjects.PageObjects.RegistrationDetailsPage is being initialized
+Info: Dropdown //select[contains(@id, 'Title')] getting selected option.
+Info: Dropdown //select[contains(@id, 'Title')]: Select Title options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Mr options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Mrs options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Miss options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Ms options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Dr options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Prof options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Sir options found.
+Info: Dropdown //select[contains(@id, 'Title')]: Other options found.
+Info: Dropdown //select[contains(@id, 'Title')] selecting item by text: Mr.
+Info: Control: FirstName WebDriverTimeoutException thrown.
+Info: Check if control name: FirstName, xpath: //input[@id='ctl00_cphMain_AccControl_ArticleContainer_FirstName'] is found.
+Error: Core.Controls.Textbox //input[@id='ctl00_cphMain_AccControl_ArticleContainer_FirstName'] have not been found, thus action cannot be performed.
+Info: Creating screenshot: Registration Details - Should change basic details.png
+Info: Screenshot created
+

@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Core.Controls;
+
+namespace PageObjects.PageObjects
+{
+	public partial class YourDetailsPage : PageBase
+	{
+		public YourDetailsPage EnterDetailsAndGoNext(string title, string firstName, string lastName, string jobTitle, string company, string telephone, string fax, string country, string firstAddress, string secondAddress, string thirdAddress, string town, string county, string state, string province, string postCode)
+		{
+			this.TitleOpener.Click();
+			new Link("Title", this.Title.XPath.Replace("@param", title), 0, false).Click();
+			this.FirstName.Text = firstName;
+			this.LastName.Text = lastName;
+			this.JobTitle.Text = jobTitle;
+			this.Company.Text = company;
+			this.Telephone.Text = telephone;
+			this.Fax.Text = fax;
+			this.CountryOpener.Click();
+			new Link("Country", this.Country.XPath.Replace("@param", country), 0, false).Click();
+			this.FirstAddress.Text = firstAddress;
+			this.SecondAddress.Text = secondAddress;
+			this.ThirdAddress.Text = thirdAddress;
+			this.Town.Text = town;
+
+			if (country != "United States" && country != "Canada")
+			{
+				this.County.Text = county;
+			}
+
+			this.PostCode.Text = postCode;
+
+			if (!string.IsNullOrEmpty(state))
+			{
+				this.StateOpener.Click();
+				new Link("State", this.State.XPath.Replace("@param", state), 0, false).Click();
+			}
+
+			if (!string.IsNullOrEmpty(province))
+			{
+				this.ProvinceOpener.Click();
+				new Link("Province", this.State.XPath.Replace("@param", province), 0, false).Click();
+			}
+
+			this.PrivacyPolicy.Select();
+			this.TermsAndConditions.Select();
+
+			return new YourDetailsPage();
+		}
+
+		public AddressSelectionPage GoNext()
+		{
+			this.Register.Click();
+			return new AddressSelectionPage();
+		}
+
+		public bool FirstNameValidationIsDisplayed()
+		{
+			return this.FirstNameValidation.IsFound;
+		}
+
+		public bool SurnameValidationIsDisplayed()
+		{
+			return this.SurameValidation.IsFound;
+		}
+
+		public bool YourDetailsPageIsDisplayed()
+		{
+			return this.Header.IsFound;
+		}
+
+		public bool CompanyNameValidationIsDisplayed()
+		{
+			return this.CompanyNameValidation.IsFound;
+		}
+
+		public bool AddressOneValidationIsDisplayed()
+		{
+			return this.AddressOneValidation.IsFound;
+		}
+
+		public bool AddressTwoValidationIsDisplayed()
+		{
+			return this.AddressTwoValidation.IsFound;
+		}
+
+		public bool AddressThreeValidationIsDisplayed()
+		{
+			return this.AddressThreeValidation.IsFound;
+		}
+
+		public bool CityValidationIsDisplayed()
+		{
+			return this.CityValidation.IsFound;
+		}
+
+		public bool CountyValidationIsDisplayed()
+		{
+			return this.County.IsFound;
+		}
+
+		public bool FaxValidationIsDisplayed()
+		{
+			return this.Fax.IsFound;
+		}
+
+		public bool ZipValidationIsDisplayed()
+		{
+			return this.ZipValidation.IsFound;
+		}
+
+		public bool TelephoneValidationIsDisplayed()
+		{
+			return this.TelephoneNumber.IsFound;
+		}
+
+	}
+}
